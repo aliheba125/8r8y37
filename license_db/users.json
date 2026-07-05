@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "last_updated": "2026-07-05",
+  "users": {
+    "ADMIN-KEY-001": {
+      "username": "admin",
+      "password_hash": "owner",
+      "owner": "owner",
+      "device_id": "",
+      "device_count_start": "0",
+      "device_count_max": "999999999",
+      "expiry_date": "99999999999999",
+      "period_type": "lifetime",
+      "status": "active"
+    },
+    "TEST-KEY-2026": {
+      "username": "tester",
+      "password_hash": "test123",
+      "owner": "owner",
+      "device_id": "",
+      "device_count_start": "0",
+      "device_count_max": "999999999",
+      "expiry_date": "20270705000000",
+      "period_type": "yearly",
+      "status": "active"
+    }
+  },
+  "config": {
+    "download_url": "https://raw.githubusercontent.com/aliheba125/8r8y37/main/hosted_files/updates/latest.zip",
+    "bypass_url": "https://raw.githubusercontent.com/aliheba125/8r8y37/main/hosted_files/binaries/sock64",
+    "version_code": 4401,
+    "version_name": "4.4.01",
+    "telegram_channel": "",
+    "maintenance": false,
+    "message": ""
+  }
+}
