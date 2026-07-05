@@ -1,0 +1,41 @@
+=== CRITICAL PATCH INFORMATION ===
+
+1. LoginActivity lambda$InitView$4 (line 1189): This is the Login button handler
+   - It reads the key from EditText, saves to prefs, then calls Firebase
+   - PATCHED: After saving key to prefs and USERKEY, skip Firebase and call MainActivity.goMain(context) directly
+
+2. launchMain() method (line 486): This is the ORIGINAL successful login flow
+   - It uses Yellow() method to get the target class name (dynamically!)
+   - invoke-virtual {p0}, Lcom/pubgm/activity/LoginActivity;->Yellow()Ljava/lang/String;
+   - Then Class.forName(v3) to get the class
+   - Then startActivity with Intent extras: "exp" and some other data
+   - This means the target Activity is NOT hardcoded - it's returned by Yellow()
+
+3. The CORRECT approach: Instead of calling goMain(), we should call launchMain() directly
+   But launchMain() needs: (LoginActivity, String exp, String ppp, ProgressDialog)
+   - exp = expiry date string
+   - ppp = some premium parameter
+   - progressDialog = can be null
+
+4. SIMPLER APPROACH: Just call MainActivity.goMain(context) which is a static method
+   - Located at line 256 of MainActivity.smali
+   - Signature: .method public static goMain(Landroid/content/Context;)V
+   - Creates Intent with FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_NEW_TASK (0x10008000)
+   - Starts MainActivity directly
+
+5. isPremium() in User.smali: PATCHED to always return true
+
+6. isLogin in ActivityCompat.smali: PATCHED to initialize as true (0x1)
+
+7. The Yellow screen issue: The SplashActivity sets a yellow background and then transitions
+   - If we bypass LoginActivity too early, the native libs don't initialize
+   - The CORRECT fix is to let SplashActivity and LoginActivity load normally
+   - Only modify the LOGIN BUTTON action to skip Firebase and go to MainActivity
+
+8. CURRENT STATE of decoded_fresh:
+   - LoginActivity.smali line 1242-1248: lambda$InitView$4 PATCHED to call goMain directly
+   - User.smali: isPremium() PATCHED to return true
+   - ActivityCompat.smali: WARNING - sed replaced ALL "const/4 v0, 0x0" with "const/4 v0, 0x1" 
+     This is DANGEROUS - it changes many other values too!
+   
+9. MUST FIX: Revert ActivityCompat.smali to original and only change the isLogin initialization

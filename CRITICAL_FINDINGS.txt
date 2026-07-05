@@ -1,0 +1,132 @@
+=== ZERO LOADER V4.4.01 - COMPLETE FINDINGS ===
+
+== 1. DEVELOPER IDENTITIES ==
+- GitHub: uchihaaymane (https://github.com/uchihaaymane)
+- GitHub User ID: 135393589
+- Username in code: "bubarae"
+- Telegram (bypass tool): @SUFIYAN_TANHA (found in res/raw/bypass)
+- Telegram (servernrot bypass): @ABU_FAHAD3 (found in servernrot.zip/bypass)
+- App name: "Wolf" / "Zero_Loader"
+
+== 2. SERVERS & URLS ==
+- Firebase Project: wolf-e99fb
+- Firebase API Key: AIzaSyAOrhEU4gPb1cij7NTjVvdnx6cOwcy4UKE
+- Firebase App ID: 1:183662681739:android:fdaaf27da5e5e60b893e8e
+- Firebase Storage: wolf-e99fb.firebasestorage.app
+- GCM Sender ID: 183662681739
+- FCM Server URL: https://fcm.googleapis.com/
+- FCM Server Key: AAAAPtHITYM:APA91bFkK42E4XGNwXpF0eKcnl8a6VX6rFG1mfVxwF9wTmjzVM5MQcC6sBUgTRcisZweWbcCeiDBFzpM2YFX8TE4pMtgw9bF5-aFVcAzPlZiy-ausbD0uVfqUdf43827qzMPRsxHNj0K
+- GitHub Download: https://github.com/uchihaaymane/files/releases/download/files/servernrot.zip
+- GitHub Repo ID: 1180953216
+
+== 3. FIREBASE DATABASE STRUCTURE ==
+Nodes: users, group_chats, aplikasi, client
+Fields (AES encrypted with key "Activity"):
+  - Login, Key, Username, MaxDevices, Period, Status, Owner, Active
+  - EXP, UUID, Devices
+  - USER NOT REGISTERED, MAX DEVICE REACHED, USER BLOCKED, EXPIRED KEY
+  - Login Success, Update, version, description, url
+
+== 4. AES ENCRYPTION ==
+- Algorithm: AES/CBC/PKCS7Padding
+- Key derivation: SHA-256 hash of password "Activity"
+- IV: 16 bytes of zeros (CRITICAL WEAKNESS)
+- Charset: UTF-8
+
+== 5. TARGET GAMES ==
+- com.tencent.ig (PUBG Mobile Global)
+- com.pubg.krmobile (PUBG Mobile Korea)
+- com.vng.pubgmobile (PUBG Mobile Vietnam)
+- com.rekoo.pubgm (PUBG Mobile China)
+- com.pubg.imobile (PUBG Mobile India)
+- com.pubgm (generic/virtual)
+
+== 6. SOCIAL APPS TARGETED (for cloning/virtual) ==
+- com.tencent.mobileqq (QQ)
+- com.tencent.mm (WeChat)
+- com.twitter.android (Twitter/X)
+- mark.via.gp (Via Browser)
+
+== 7. NATIVE LIBRARIES ==
+APK contains:
+- libclient.so (ESP/Aimbot - JNI functions: DrawEnemyCount, DrawVehicles, AimbotFOV)
+- libTcore.so (Virtual environment engine)
+- libpine.so (ART hooking framework)
+
+servernrot.zip from GitHub contains:
+- sock (Unix socket daemon for IPC)
+- bypass (memory manipulation tool, reads /proc/%d/maps and /proc/%d/mem)
+- loader/libpubgm.so (xhook-based library hooking tool)
+
+== 8. HOOKING TARGETS (libpubgm.so) ==
+Game libraries targeted:
+- libUE4.so (Unreal Engine 4 - game engine)
+- libTDataMaster.so (game data)
+- libanogs.so (anti-cheat system!)
+- libgcloud.so (Tencent cloud)
+- libAntsVoice.so, libGCloudVoice.so
+- libCrashKit.so, libCrashSight.so
+- libINTLCompliance.so, libINTLFoundation.so
+- libITOP.so
+- libPixUI_PXPlugin.so
+- libRoosterNN.so
+- libTBlueData.so
+- libswappy.so
+- libtgpa.so
+- libtransceiver.so
+- libcubehawk.so
+- libgamemaster.so
+- libhdmpve.so, libhdmpvecore.so
+- libopenplatform.so
+- libmeemo_mmkv.so
+Uses: xhook 1.2.0 (PLT hooking)
+
+== 9. SECURITY VULNERABILITIES ==
+- android:debuggable="true" (CRITICAL)
+- android:allowBackup="true" (HIGH)
+- cleartextTrafficPermitted="true" (HIGH)
+- FCM Server Key exposed in code (CRITICAL)
+- Firebase credentials fully exposed (HIGH)
+- AES with zero IV (MEDIUM)
+- AES key hardcoded as "Activity" (CRITICAL)
+- 188 permissions requested (EXCESSIVE)
+- Runtime.exec() with chmod 777 (HIGH)
+- root-path exposed in FileProvider (MEDIUM)
+
+== 10. OBFUSCATION ==
+- LSParanoid (org.lsposed.lsparanoid) for string encryption
+- 397 strings successfully decrypted
+- No ProGuard/R8 code obfuscation
+- String encryption key: "Activity" for AES values
+
+== 11. PERMISSIONS (188 total) ==
+Critical ones:
+- PROCESS_OUTGOING_CALLS, CALL_PHONE, READ_CALL_LOG, WRITE_CALL_LOG
+- RECEIVE_SMS, SEND_SMS, READ_SMS, WRITE_SMS
+- CAMERA, RECORD_AUDIO
+- READ_CONTACTS, WRITE_CONTACTS
+- SYSTEM_ALERT_WINDOW
+- BIND_VPN_SERVICE
+- REQUEST_INSTALL_PACKAGES
+- All storage permissions
+
+== 12. APP FEATURES ==
+- ESP (Wallhack): Enemy positions, vehicles, items, distances
+- Aimbot: Auto-aim with FOV control
+- Memory Bypass: Circumvent anti-cheat (libanogs.so)
+- Hide Recorder: Hide cheat from screen recording
+- Virtual Environment: Run game in isolated space
+- VPN Proxy: Route traffic through proxy
+- Root detection and usage
+- Anti-crash protection
+- Hide root from game
+- Multi-game support (5 PUBG versions)
+- License system (Key, MaxDevices, Period, Expiry)
+- Group chat feature
+- Auto-update from GitHub
+
+== 13. servernrot.zip DETAILS ==
+Downloaded at runtime from GitHub
+Contains updated bypass/hooking tools
+Files dated May-June 2026
+Stored at: /sdcard/Android/data/com.pubgm/files/servernrot.zip

@@ -1,0 +1,131 @@
+=== ZERO LOADER V4.4.01 - EXECUTION FLOW ANALYSIS ===
+
+== COMPLETE ATTACK CHAIN (from app launch to game hack) ==
+
+PHASE 1: APP INITIALIZATION
+├── BoxApplication.onCreate()
+│   ├── System.loadLibrary("client")  [loads libclient.so]
+│   ├── Checks root access (su binary)
+│   ├── Initializes TCore virtual environment
+│   └── Sets up Firebase connection
+│
+PHASE 2: USER AUTHENTICATION
+├── SplashActivity → LoginActivity
+│   ├── LoginActivity.GetKey() [native - libclient.so @ 0x1ef24]
+│   ├── Reads Firebase /users/{uid} node
+│   ├── AES decrypts stored credentials (key="Activity", IV=zeros)
+│   ├── Validates: Key, MaxDevices, Period, Status, EXP
+│   └── LoginActivity.Yellow() [native - libclient.so @ 0x1f000]
+│
+PHASE 3: GAME SELECTION & INSTALLATION
+├── MainActivity
+│   ├── Reads Firebase /aplikasi for game list
+│   ├── FileHelper.tryInstallWithCopyObb() - installs game in virtual env
+│   ├── Copies OBB from /storage/emulated/0/Android/obb/
+│   ├── ApkEnv.installBySystem() - virtual install
+│   └── chmod 755 on native libraries
+│
+PHASE 4: PAYLOAD DOWNLOAD
+├── FileHelper.downloadFile()
+│   ├── Downloads servernrot.zip from GitHub
+│   │   URL: https://github.com/uchihaaymane/files/releases/download/files/servernrot.zip
+│   ├── Extracts to /sdcard/Android/data/com.pubgm/files/
+│   ├── Contents: sock, bypass, loader/libpubgm.so
+│   └── chmod 777 on all extracted files
+│
+PHASE 5: BYPASS ANTI-CHEAT
+├── MainActivity.BYPASS() [native - libclient.so @ 0x1f1a0]
+│   ├── Executes "bypass" binary via Runtime.exec()
+│   ├── bypass reads /proc/{game_pid}/maps
+│   ├── Finds libanogs.so (anti-cheat) base address
+│   ├── Opens /proc/{game_pid}/mem
+│   ├── Patches anti-cheat memory (NOP operations)
+│   └── Reports "Bypass Active"
+│
+PHASE 6: LIBRARY HOOKING (libpubgm.so)
+├── Loaded via dlopen() into game process
+│   ├── JNI_OnLoad → initializes xhook 1.2.0
+│   ├── Reads /proc/self/maps to find loaded libraries
+│   ├── xhook_register() hooks:
+│   │   ├── libUE4.so (game engine) - intercepts rendering
+│   │   ├── libanogs.so (anti-cheat) - disables detection
+│   │   ├── libgcloud.so (Tencent cloud) - blocks reports
+│   │   └── 25+ other libraries
+│   ├── xhook_refresh() applies all hooks
+│   └── Checks memory permissions (r/w/x flags)
+│
+PHASE 7: SOCKET IPC (Memory Daemon)
+├── MainService.InitBase() [native - starts socket server]
+│   ├── Creates AF_UNIX socket (SOCK_STREAM)
+│   ├── Binds to path (107 bytes, in app private dir)
+│   ├── listen(fd, 8) - accepts up to 8 connections
+│   ├── accept() - waits for sock/sock64 daemon
+│   └── Returns "Server Accept" / "Server Connected"
+│
+├── sock64 daemon (runs as root)
+│   ├── Connects to libclient.so socket
+│   ├── Reads game memory via /proc/{pid}/maps + /proc/{pid}/mem
+│   ├── Searches for game objects:
+│   │   ├── BP_PlayerCharacter (enemy players)
+│   │   ├── BP_PlayerPawn_TPlanAI (AI bots)
+│   │   ├── PickUp / PickUpListWrapperActor (loot items)
+│   │   ├── PlayerDeadInventoryBox_C (death boxes)
+│   │   ├── Projectile_* (grenades, bullets)
+│   │   └── Vehicles (LadaNiva, Mirado)
+│   ├── Extracts per-player data (152 bytes per struct):
+│   │   ├── Position (X, Y, Z) - 3 doubles
+│   │   ├── Rotation - 1 double
+│   │   ├── Health - 1 double
+│   │   ├── Velocity (X, Y, Z) - 3 doubles
+│   │   ├── Distance - 1 double
+│   │   └── Active flag - int32
+│   ├── Sends data to libclient.so via socket (72 bytes per player)
+│   └── Creates virtual touch device (uinput) for aimbot
+│
+PHASE 8: ESP OVERLAY RENDERING
+├── Overlay.DrawOn() [native - libclient.so @ 0x22fa4]
+│   ├── Receives JNIEnv, Canvas, and player data
+│   ├── Calls JNI FindClass/GetMethodID for Canvas methods
+│   ├── For each player in array (up to 32):
+│   │   ├── DrawEnemyCount - shows total enemies
+│   │   ├── DrawHead - draws head indicator
+│   │   ├── DrawName - shows player name
+│   │   ├── DrawNation - shows country flag
+│   │   ├── DrawWeapon - shows equipped weapon
+│   │   ├── DrawTimID - shows team ID
+│   │   ├── DrawOTH - other info
+│   │   ├── DrawLine - line from crosshair to enemy
+│   │   ├── DrawItems - loot items on ground
+│   │   ├── DrawVehicles - vehicle positions
+│   │   └── DrawCircle/DrawRect - bounding boxes
+│   └── Uses sincosf/atan2f for 3D→2D projection
+│
+PHASE 9: AIMBOT
+├── FloatAim.AimbotFOV() [native - libclient.so @ 0x234a8]
+│   ├── Sets FOV radius (boolean mask 0xFF)
+│   ├── Stored at global offset 0x4f000 + 0x4F4
+│   └── sock64 uses uinput to simulate touch input
+│
+├── FloatLogo settings [native]:
+│   ├── Target() @ 0x234f0 → offset 0x4F0 (target type)
+│   ├── AimBy() @ 0x234fc → offset 0x500 (aim method)
+│   ├── Range() @ 0x234d4 → offset 0x508 (range +1)
+│   ├── Ranges() @ 0x234e4 → offset 0x50C
+│   ├── WideView() @ 0x234bc → offset 0x518
+│   ├── SkinCloshes() @ 0x234c8 → offset 0x51C
+│   ├── SettingMemory() - configures memory read params
+│   ├── SettingValue() - sets float values
+│   └── setHealthType() @ 0x23508 → offset 0x62000+0xD44
+
+== DANGEROUS CAPABILITY: DEVICE BRICK ==
+sock64 contains: su -c "rm -rf /data/* && reboot"
+This can be triggered to completely wipe user data and brick the device.
+Purpose: Anti-piracy / anti-dump protection (kills device if tampered with)
+
+== COMMUNICATION SUMMARY ==
+1. Firebase Realtime DB: License validation, game list, group chat
+2. FCM Push: Notifications between users (group chat)
+3. GitHub Releases: Payload updates (servernrot.zip, assets.zip)
+4. Unix Socket (local): IPC between libclient.so ↔ sock64 daemon
+5. /proc/pid/mem: Direct memory read/write to game process
+6. uinput: Virtual touch device for aimbot input simulation

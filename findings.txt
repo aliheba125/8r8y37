@@ -1,0 +1,135 @@
+# APK Analysis Findings - Zero_LoaderV4.4.01.apk
+
+## Basic Info
+- Package: com.pubgm
+- App Name: Zero Loader
+- Size: 21 MB (21,030,762 bytes)
+- compileSdkVersion: 34 (Android 14)
+- debuggable: TRUE (CRITICAL SECURITY ISSUE)
+- allowBackup: TRUE (SECURITY ISSUE)
+- Certificate: CN=Ayaz, L=Bansi, ST=Uttar Pradesh, C=91
+- Valid: Nov 25, 2024 - Nov 19, 2049
+- SHA1: F3:C2:A5:77:78:5A:EC:36:1D:DA:34:56:08:F8:81:01:8B:74:A9:B7
+- Built-By: Signflinger (Android Gradle 8.0.2)
+
+## Firebase/Server Secrets EXPOSED
+- Google API Key: AIzaSyAOrhEU4gPb1cij7NTjVvdnx6cOwcy4UKE
+- Google App ID: 1:183662681739:android:fdaaf27da5e5e60b893e8e
+- Firebase Project: wolf-e99fb
+- Storage Bucket: wolf-e99fb.firebasestorage.app
+- FCM Server Key (CRITICAL): AAAAPtHITYM:APA91bFkK42E4XGNwXpF0eKcnl8a6VX6rFG1mfVxwF9wTmjzVM5MQcC6sBUgTRcisZweWbcCeiDBFzpM2YFX8TE4pMtgw9bF5-aFVcAzPlZiy-ausbD0uVfqUdf43827qzMPRsxHNj0K
+
+## Permissions (188 total!)
+### Dangerous/Critical:
+- PROCESS_OUTGOING_CALLS, CALL_PHONE, READ_CALL_LOG, WRITE_CALL_LOG
+- RECEIVE_SMS, SEND_SMS, READ_SMS, WRITE_SMS, RECEIVE_MMS
+- CAMERA, RECORD_AUDIO, ACCESS_FINE_LOCATION
+- READ_CONTACTS, WRITE_CONTACTS, READ_CALENDAR, WRITE_CALENDAR
+- READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, MANAGE_EXTERNAL_STORAGE
+- INSTALL_PACKAGES, DELETE_PACKAGES, REQUEST_INSTALL_PACKAGES
+- READ_PHONE_STATE, BODY_SENSORS
+- SYSTEM_ALERT_WINDOW (overlay)
+- QUERY_ALL_PACKAGES
+- INTERACT_ACROSS_USERS, INTERACT_ACROSS_USERS_FULL
+- READ_LOGS, CLEAR_APP_USER_DATA, DEVICE_POWER
+- BIND_VPN_SERVICE
+
+## Architecture
+- 4 DEX files (classes.dex through classes4.dex) = ~30 MB total
+- 3 Native libraries (arm64-v8a only):
+  - libclient.so (318 KB) - ESP/Aimbot/Hack functions
+  - libTcore.so (295 KB) - Virtual environment/hooking
+  - libpine.so (54 KB) - ART method hooking (Pine framework)
+- 1 ELF binary: res/raw/bypass - Memory manipulation tool
+- 1390 total files
+
+## Native Library Functions (libclient.so)
+- Java_com_pubgm_activity_LoginActivity_GetKey
+- Java_com_pubgm_activity_MainActivity_GetKey
+- Java_com_pubgm_activity_LoginActivity_Yellow
+- Java_com_pubgm_activity_MainActivity_VERSIONS
+- Java_com_pubgm_activity_MainActivity_BYPASS
+- Java_com_pubgm_floating_Overlay_DrawOn
+- Java_com_pubgm_floating_Overlay_Close
+- Java_com_pubgm_floating_Overlay_getReady
+- Java_com_pubgm_floating_FloatLogo_SettingValue
+- Java_com_pubgm_floating_FloatLogo_SettingMemory
+- Java_com_pubgm_floating_FloatLogo_SettingValueI
+- Java_com_pubgm_floating_FloatAim_AimbotFOV
+- Java_com_pubgm_floating_FloatLogo_WideView
+- Java_com_pubgm_floating_FloatLogo_SkinCloshes
+- Java_com_pubgm_floating_FloatLogo_Range/Ranges
+- Java_com_pubgm_floating_FloatLogo_Target
+- Java_com_pubgm_floating_FloatLogo_AimBy
+- Java_com_pubgm_floating_FloatLogo_setHealthType/setCountType
+- Draw functions: DrawEnemyCount, DrawItems, DrawRect, DrawText, DrawTimID, DrawOTH, DrawFilledCircle, DrawCircle, DrawLine, DrawVehicles, DrawNation, DrawName, DrawHead, DrawFilledRect, DrawWeapon
+
+## libTcore.so - Virtual Environment
+- Hooks: BaseHook, UnixFileSystemHook, VMClassLoaderHook, BinderHook, DexFileHook, RuntimeHook, JniHook
+- hideXposed function
+- /proc/self/maps access
+- SandHook ELF image manipulation
+- Xposed detection: de/robv/android/xposed/, me/weishu/exposed
+
+## libpine.so - ART Hooking Framework
+- Pine framework (by canyie) for ART method hooking
+- Trampolines: direct_jump, bridge_jump, call_origin, backup
+- Can hook any Java method at runtime
+- Source path: D:/ssz/coding/android/AndroidStudioProjects/Pine/
+
+## bypass ELF binary
+- Reads /proc/%d/maps and /proc/%d/mem
+- Writes to process memory: "successfully wrote %d bytes to address 0x%lx"
+- Kills processes: "kill %d"
+- Accesses /data/data/%s/files
+- Anti-dump message: "Dumpers Fucking Lol You Dad Is Here !"
+- Credit: "Telegram : @SUFIYAN_TANHA"
+- Old compiler (clang 6.0.2) - likely borrowed/stolen code
+
+## TCore (Virtual Environment)
+- Full Android virtualization framework (BlackBox-like)
+- Supports: com.pubg.imobile, com.tencent.ig, com.pubg.krmobile, com.vng.pubgmobile, com.rekoo.pubgm
+- Fake services for all Android system services
+- VPN proxy service
+- 50+ ProxyActivity instances (P0-P49)
+- 308 exported components!
+- Hides root, hides Xposed
+- IO redirection
+- DaemonService for persistence
+
+## Security Issues
+1. android:debuggable="true" - CRITICAL
+2. allowBackup="true" - data can be extracted
+3. cleartextTrafficPermitted="true" - no HTTPS enforcement
+4. FCM Server Key hardcoded in source - can send push to all users
+5. Firebase API keys exposed
+6. AES encryption with hardcoded key (in native lib, passed via Deobfuscator)
+7. IV bytes all zeros (new byte[16]) - WEAK CRYPTO
+8. Runtime.exec() with user-controlled input
+9. 308 exported components without proper protection
+10. Root shell execution (Shell.su)
+11. Memory manipulation via /proc/pid/mem
+12. No certificate pinning
+13. Uses deprecated/removed permissions
+14. arm64-v8a only (no x86, no armeabi-v7a support)
+
+## Code Quality Issues
+- LSParanoid obfuscation (Deobfuscator$M5LOADER$app) - 83+ calls in LoginActivity alone
+- Deprecated APIs: FirebaseInstanceIdService
+- AsyncTask usage (deprecated)
+- Empty catch blocks throughout
+- No input validation on shell commands
+- Hardcoded strings via native methods
+- No ProGuard/R8 on Java code (only string obfuscation)
+
+## App Purpose
+This is a GAME CHEAT/HACK tool for PUBG Mobile that:
+1. Runs PUBG in a virtual environment (TCore/BlackBox)
+2. Provides ESP (wallhack) overlay showing enemies, items, vehicles
+3. Provides Aimbot functionality
+4. Memory manipulation for game cheating
+5. Bypasses anti-cheat systems
+6. Hides from screen recorders
+7. Has a key-based licensing system via Firebase
+8. Group chat functionality for users
+9. Downloads additional payloads from server

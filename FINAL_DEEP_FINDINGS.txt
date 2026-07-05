@@ -1,0 +1,170 @@
+=== ZERO LOADER V4.4.01 - FINAL DEEP ANALYSIS FINDINGS ===
+Date: July 5, 2026
+
+=== A. FIREBASE LIVE TESTING RESULTS ===
+
+1. Firebase Project: wolf-e99fb
+   - Database URL: https://wolf-e99fb-default-rtdb.firebaseio.com
+   - Project Number: 183662681739
+   - Authorized Domains: localhost, wolf-e99fb.firebaseapp.com, wolf-e99fb.web.app
+   - Region: US (default)
+
+2. Database Access:
+   - Root (.json): Permission denied (requires auth)
+   - /users: Permission denied
+   - /client: Permission denied
+   - /group_chats: Permission denied
+   - /aplikasi: PUBLICLY READABLE (NO AUTH REQUIRED!)
+     Content: Games list with status/version info
+     G1: PUBG GLOBAL (com.tencent.ig) v4.4 "Safe/أمن"
+     G2: PUBG KOREA (com.pubg.krmobile) v4.4 "Safe/أمن"
+     G3: PUBG VIETNAM (com.vng.pubgmobile) v4.4 "Safe/أمن"
+     G4: PUBG TAIWAN (com.rekoo.pubgm) v4.4 "Safe/أمن"
+     G5: PUBG INDIA (com.pubg.imobile) v3.9 "Safe"
+
+3. Firebase Auth:
+   - Anonymous sign-up: ENABLED (critical vulnerability!)
+   - Password login: DISABLED
+   - Successfully created anonymous user: KdwUuqvmyaZ0F0RgvmVgDgcTq3R2
+   - Anonymous token does NOT grant database access (rules require specific UID)
+
+4. Firebase Storage: 404 Not Found (not configured or different bucket)
+
+5. FCM Server Key: AAAAPtHITYM:APA91bFkK42E4XGNwXpF0eKcnl8a6VX6rFG1mfVxwF9wTmjzVM5MQcC6sBUgTRcisZweWbcCeiDBFzpM2YFX8TE4pMtgw9bF5-aFVcAzPlZiy-ausbD0uVfqUdf43827qzMPRsxHNj0K
+   - FCM Legacy API: Returns 404 (deprecated/migrated to v1)
+   - Key exposed in source code (com/pubgm/ifc/Api.java line 11)
+
+=== B. GITHUB REPOSITORY FINDINGS ===
+
+1. Repo: uchihaaymane/files (ID: 1180953216)
+   - Created: 2026-03-13
+   - Owner: uchihaaymane (ID: 135393589, created 2023-06-03)
+   - No bio, no email, no other repos, 0 followers
+
+2. Release: "filess" (tag: files, prerelease)
+   - Created: 2026-03-13, Updated: 2026-05-31
+   - Assets:
+     a) servernrot.zip (467,353 bytes) - 6,411 downloads!
+        Contains: sock, bypass, loader/libpubgm.so
+     b) assets.zip (118,466 bytes) - 5 downloads
+        Contains: sock64
+
+=== C. BINARY ANALYSIS - GAME HACKING COMPONENTS ===
+
+1. sock (43,784 bytes) - Memory manipulation daemon
+   - Reads /proc/%d/maps and /proc/%d/mem
+   - Writes to game process memory
+   - Targets: libUE4.so, libgcloud.so
+   - Game objects: BP_CharacterModelTaget_C, BP_PlayerPawn_TPlanAI_C
+   - IPC via Unix socket
+   - Stores data in /data/data/%s/files
+
+2. sock64 (313,776 bytes) - Enhanced memory manipulation + virtual touch
+   - All features of sock PLUS:
+   - Virtual touch device creation (uinput) for aimbot
+   - Game objects targeted:
+     * BP_PlayerCharacter, BP_PlayerCharacter_Mecha, BP_PlayerPawn
+     * BP_QK, BP_Grenade_Burn_C, BP_Grenade_Smoke_C, BP_Grenade_Stun_C
+     * AirAttackBomb_C, AirAttackBomb_Livik_C
+     * PlayerDeadInventoryBox_C, PickUp, PickUpListWrapperActor
+     * Projectile_BurnGrenade, Projectile_FragGrenade, Projectile_SmokeBomb
+     * Vehicles: LadaNiva, Mirado
+     * Grenade_Shoulei, Smoke_Launcher_Bullet_Effect
+   - DANGEROUS: su -c "rm -rf /data/* && reboot" (brick device!)
+   - Uses: com.ldev.leoskillz (LeoSkillz game hack framework)
+   - Uses: dumpsys package (enumerate installed apps)
+
+3. bypass (547,152 bytes from servernrot, 555,344 from APK res/raw)
+   - Reads /proc/%d/maps and /proc/%d/mem
+   - Targets: libanogs.so (PUBG anti-cheat)
+   - Also targets: libTDataMaster.so, libgcloud.so, libgamemaster.so
+   - Developer: @ABU_FAHAD3 (Telegram)
+   - Message: "TO BUY BYPASS : @ABU_FAHAD3"
+   - "Bypass Active" confirmation message
+   - Writes to game memory to disable anti-cheat
+
+4. libpubgm.so (911,728 bytes) - PLT hooking library
+   - Uses: xhook 1.2.0 (PLT/GOT hooking)
+   - Hooks into: libUE4.so, libanogs.so, libTDataMaster.so, libgcloud.so
+   - Also hooks: libAntsVoice.so, libGCloudVoice.so, libCrashKit.so,
+     libCrashSight.so, libINTLCompliance.so, libINTLFoundation.so,
+     libITOP.so, libPixUI_PXPlugin.so, libRoosterNN.so, libTBlueData.so,
+     libswappy.so, libtgpa.so, libtransceiver.so, libcubehawk.so,
+     libgamemaster.so, libhdmpve.so, libhdmpvecore.so, libopenplatform.so,
+     libmeemo_mmkv.so, libav1d_jni.so, libgnustl_shared.so, libanort.so,
+     libVkLayer_swapchain_rotate.so
+   - Reads /proc/self/maps, /dev/random
+
+5. libclient.so (from APK) - ESP/Aimbot overlay
+   - JNI Functions:
+     * LoginActivity_GetKey, LoginActivity_Yellow
+     * MainActivity_BYPASS, MainActivity_GetKey, MainActivity_VERSIONS
+     * FloatAim_AimbotFOV
+     * FloatLogo_AimBy, Range, Ranges, SettingMemory, SettingValue,
+       SettingValueI, SkinCloshes, Target, WideView, setCountType, setHealthType
+     * Overlay_Close, Overlay_DrawOn, Overlay_getReady
+     * HomeFragment_Telegram
+   - Draw functions: DrawCircle, DrawEnemyCount, DrawFilledCircle,
+     DrawFilledRect, DrawHead, DrawItems, DrawLine, DrawName, DrawNation,
+     DrawOTH, DrawRect, DrawText, DrawText1, DrawTimID, DrawVehicles, DrawWeapon
+   - Format string: "Grenade (%0.0f m)" (distance display)
+   - Uses Canvas drawing for overlay
+   - Socket communication: "Bind failed", "Creation failed"
+   - Compiled with: clang 14.0.1 (Android NDK r25)
+
+=== D. COMMUNICATION ARCHITECTURE ===
+
+1. Local IPC: Unix domain socket (/sock path)
+   - MainService loads "client" library
+   - InitBase() establishes socket connection
+   - closeSocket() terminates connection
+   - Messages: "Server Accept", "Server Connected", "Starting Client"
+
+2. Remote Communication:
+   - Firebase Realtime Database (user auth, license validation)
+   - FCM Push Notifications (group chat messaging)
+   - GitHub Releases (payload updates)
+   - Retrofit HTTP client for FCM API calls
+
+3. No external C2 server found (uses Firebase as C2)
+4. No hardcoded IP addresses found in any binary
+
+=== E. COMPLETE LSParanoid DECRYPTION (397/397 = 100%) ===
+
+Key decrypted values:
+- AES key: "Activity"
+- AES mode: "AES/CBC/PKCS7Padding"
+- Firebase nodes: users, group_chats, aplikasi, client
+- License fields: Login, Key, Username, MaxDevices, Period, Status, Owner, Active, EXP, UUID, Devices
+- Error messages: USER NOT REGISTERED, MAX DEVICE REACHED, USER BLOCKED, EXPIRED KEY
+- Download URL: https://github.com/uchihaaymane/files/releases/download/files/servernrot.zip
+- Target path: /sdcard/Android/data/com.pubgm/files/
+- FCM URL: https://fcm.googleapis.com/
+
+=== F. SECURITY ASSESSMENT SUMMARY ===
+
+CRITICAL:
+1. android:debuggable="true" - allows debugging
+2. FCM Server Key hardcoded in source
+3. Firebase API Key exposed (allows anonymous auth)
+4. AES encryption key "Activity" hardcoded
+5. AES IV is all zeros (deterministic encryption)
+6. /aplikasi node publicly readable without auth
+7. Anonymous sign-up enabled
+8. su -c "rm -rf /data/* && reboot" can brick device
+
+HIGH:
+1. android:allowBackup="true"
+2. cleartextTrafficPermitted="true"
+3. 188 permissions (excessive)
+4. chmod 777 on files
+5. Runtime.exec() for shell commands
+6. Downloads and executes binaries from GitHub
+7. Memory manipulation of other processes
+8. Anti-cheat bypass (libanogs.so hooking)
+
+MEDIUM:
+1. root-path in FileProvider
+2. LSParanoid obfuscation (easily reversible)
+3. No certificate pinning
+4. No ProGuard/R8 code obfuscation

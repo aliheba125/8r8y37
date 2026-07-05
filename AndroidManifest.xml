@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="com.pubgm" platformBuildVersionCode="34" platformBuildVersionName="14">
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.RECEIVE_MMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.OTHER_SERVICES"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.YouTubeUser"/>
+    <uses-permission android:name="com.android.permission.GET_INSTALLED_APPS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.facebook.katana"/>
+    </queries>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.android.vending"/>
+        <package android:name="com.amazon.venezia"/>
+        <package android:name="com.sec.android.app.samsungapps"/>
+        <package android:name="com.huawei.appmarket"/>
+    </queries>
+    <uses-permission android:name="android.permission.WRITE_SOCIAL_STREAM"/>
+    <uses-permission android:name="android.permission.READ_SOCIAL_STREAM"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.WRITE_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.DETECT_SCREEN_CAPTURE"/>
+    <uses-permission android:name="com.samsung.svoice.sync.READ_DATABASE"/>
+    <uses-permission android:name="com.samsung.svoice.sync.ACCESS_SERVICE"/>
+    <uses-permission android:name="com.samsung.svoice.sync.WRITE_DATABASE"/>
+    <uses-permission android:name="com.sec.android.app.voicenote.Controller"/>
+    <uses-permission android:name="com.sec.android.permission.VOIP_INTERFACE"/>
+    <uses-permission android:name="com.sec.android.permission.LAUNCH_PERSONAL_PAGE_SERVICE"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.READ_RECORD_AUDIO"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_RECORD_AUDIO"/>
+    <uses-permission android:name="com.sec.android.settings.permission.SOFT_RESET"/>
+    <uses-permission android:name="sec.android.permission.READ_MSG_PREF"/>
+    <uses-permission android:name="com.samsung.android.scloud.backup.lib.read"/>
+    <uses-permission android:name="com.samsung.android.scloud.backup.lib.write"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL"/>
+    <uses-permission android:name="com.android.voicemail.permission.READ_WRITE_ALL_VOICEMAIL"/>
+    <uses-permission android:name="com.huawei.authentication.HW_ACCESS_AUTH_SERVICE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="com.google.android.providers.talk.permission.READ_ONLY"/>
+    <uses-permission android:name="com.google.android.providers.talk.permission.WRITE_ONLY"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID_NOTIFICATION"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher2.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.teslacoilsw.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.actionlauncher.playstore.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.mx.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.apusapps.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.tsf.shell.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.lenovo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.bbk.launcher2.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.s.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="cn.nubia.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="cn.nubia.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.SET_TIME"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <uses-permission android:name="android.permission.TRANSMIT_IR"/>
+    <uses-permission android:name="android.permission.USE_SIP"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.GET_INTENT_SENDER_INTENT"/>
+    <uses-permission android:name="android.permission.BIND_DIRECTORY_SEARCH"/>
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.READ_INSTALL_SESSIONS"/>
+    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.READ_CELL_BROADCASTS"/>
+    <uses-permission android:name="android.permission.WRITE_CLIPS"/>
+    <uses-permission android:name="android.permission.READ_CLIPS"/>
+    <uses-permission android:name="android.permission.GET_CLIPS"/>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIMAX_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.CHANGE_WIMAX_STATE"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.BIND_VPN_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG"/>
+    <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED"/>
+    <uses-permission android:name="android.permission.BROADCAST_WAP_PUSH"/>
+    <uses-permission android:name="android.permission.BROADCAST_SMS"/>
+    <uses-permission android:name="android.permission.SEND_RESPOND_VIA_MESSAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="false"/>
+    <uses-permission android:name="android.hardware.usb.host"/>
+    <uses-permission android:name="android.permission.HARDWARE_TEST"/>
+    <uses-permission android:name="android.permission.HIDE_OVERLAY_WINDOWS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <permission android:name="com.pubgm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.pubgm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="Zero Loader" android:largeHeap="true" android:name="com.pubgm.BoxApplication" android:networkSecurityConfig="@xml/network_security_config" android:preserveLegacyExternalStorage="true" android:requestLegacyExternalStorage="true" android:resizeableActivity="true" android:roundIcon="@mipmap/icon_round" android:supportsRtl="false" android:theme="@style/AppTheme">
+        <activity android:exported="true" android:launchMode="singleTop" android:name="com.pubgm.activity.SplashActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.pubgm.activity.LoginActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:exported="false" android:name="com.pubgm.activity.MainActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:launchMode="singleTop" android:name="com.pubgm.activity.GroupActivity" android:screenOrientation="portrait" android:theme="@style/GroupTheme"/>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="com.pubgm.activity.CrashActivity"/>
+        <service android:enabled="true" android:exported="false" android:name="com.pubgm.service.MainService"/>
+        <service android:name="com.pubgm.floating.Overlay"/>
+        <service android:name="com.pubgm.floating.FloatLogo"/>
+        <service android:name="com.pubgm.floating.FloatAim"/>
+        <service android:enabled="true" android:exported="true" android:name="com.pubgm.service.FirebaseIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.pubgm.service.FirebaseMessaging">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.pubgm.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_path"/>
+        </provider>
+        <provider android:authorities="com.pubgm.blackbox.SystemCallProvider" android:exported="false" android:name="com.tcore.core.system.SystemCallProvider" android:process="@string/black_box_service_name"/>
+        <provider android:authorities="com.pubgm.blackbox.FileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.tcore.fake.provider.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepath"/>
+        </provider>
+        <receiver android:enabled="true" android:exported="true" android:name="com.tcore.proxy.ProxyBroadcastReceiver" android:process="@string/black_box_service_name">
+            <intent-filter>
+                <action android:name="com.pubgm.stub_receiver"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:foregroundServiceType="" android:name="com.tcore.core.system.DaemonService" android:process="@string/black_box_service_name"/>
+        <service android:exported="false" android:name="com.tcore.core.system.DaemonService$DaemonInnerService" android:process="@string/black_box_service_name"/>
+        <activity android:excludeFromRecents="true" android:name="com.tcore.app.LauncherActivity" android:theme="@style/LauncherTheme"/>
+        <service android:enabled="true" android:exported="false" android:name="com.tcore.proxy.ProxyVpnService" android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+            <meta-data android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON" android:value="true"/>
+        </service>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P0" android:process=":p0" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P1" android:process=":p1" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P2" android:process=":p2" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P3" android:process=":p3" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P4" android:process=":p4" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P5" android:process=":p5" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P6" android:process=":p6" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P7" android:process=":p7" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P8" android:process=":p8" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P9" android:process=":p9" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P10" android:process=":p10" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P11" android:process=":p11" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P12" android:process=":p12" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P13" android:process=":p13" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P14" android:process=":p14" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P15" android:process=":p15" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P16" android:process=":p16" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P17" android:process=":p17" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P18" android:process=":p18" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P19" android:process=":p19" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P20" android:process=":p20" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P21" android:process=":p21" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P22" android:process=":p22" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P23" android:process=":p23" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P24" android:process=":p24" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P25" android:process=":p25" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P26" android:process=":p26" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P27" android:process=":p27" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P28" android:process=":p28" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P29" android:process=":p29" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P30" android:process=":p30" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P31" android:process=":p31" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P32" android:process=":p32" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P33" android:process=":p33" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P34" android:process=":p34" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P35" android:process=":p35" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P36" android:process=":p36" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P37" android:process=":p37" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P38" android:process=":p38" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P39" android:process=":p39" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P40" android:process=":p40" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P41" android:process=":p41" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P42" android:process=":p42" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P43" android:process=":p43" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P44" android:process=":p44" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P45" android:process=":p45" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P46" android:process=":p46" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P47" android:process=":p47" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P48" android:process=":p48" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.ProxyActivity$P49" android:process=":p49" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@style/BTheme"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P0" android:process=":p0" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P1" android:process=":p1" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P2" android:process=":p2" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P3" android:process=":p3" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P4" android:process=":p4" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P5" android:process=":p5" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P6" android:process=":p6" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P7" android:process=":p7" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P8" android:process=":p8" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P9" android:process=":p9" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P10" android:process=":p10" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P11" android:process=":p11" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P12" android:process=":p12" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P13" android:process=":p13" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P14" android:process=":p14" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P15" android:process=":p15" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P16" android:process=":p16" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P17" android:process=":p17" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P18" android:process=":p18" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P19" android:process=":p19" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P20" android:process=":p20" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P21" android:process=":p21" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P22" android:process=":p22" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P23" android:process=":p23" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P24" android:process=":p24" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P25" android:process=":p25" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P26" android:process=":p26" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P27" android:process=":p27" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P28" android:process=":p28" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P29" android:process=":p29" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P30" android:process=":p30" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P31" android:process=":p31" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P32" android:process=":p32" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P33" android:process=":p33" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P34" android:process=":p34" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P35" android:process=":p35" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P36" android:process=":p36" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P37" android:process=":p37" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P38" android:process=":p38" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P39" android:process=":p39" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P40" android:process=":p40" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P41" android:process=":p41" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P42" android:process=":p42" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P43" android:process=":p43" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P44" android:process=":p44" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P45" android:process=":p45" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P46" android:process=":p46" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P47" android:process=":p47" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P48" android:process=":p48" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:exported="true" android:name="com.tcore.proxy.TransparentProxyActivity$P49" android:process=":p49" android:supportsPictureInPicture="true" android:taskAffinity="com.tcore.task_affinity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P0" android:process=":p0" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P1" android:process=":p1" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P2" android:process=":p2" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P3" android:process=":p3" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P4" android:process=":p4" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P5" android:process=":p5" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P6" android:process=":p6" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P7" android:process=":p7" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P8" android:process=":p8" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P9" android:process=":p9" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P10" android:process=":p10" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P11" android:process=":p11" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P12" android:process=":p12" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P13" android:process=":p13" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P14" android:process=":p14" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P15" android:process=":p15" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P16" android:process=":p16" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P17" android:process=":p17" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P18" android:process=":p18" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P19" android:process=":p19" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P20" android:process=":p20" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P21" android:process=":p21" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P22" android:process=":p22" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P23" android:process=":p23" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P24" android:process=":p24" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P25" android:process=":p25" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P26" android:process=":p26" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P27" android:process=":p27" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P28" android:process=":p28" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P29" android:process=":p29" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P30" android:process=":p30" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P31" android:process=":p31" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P32" android:process=":p32" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P33" android:process=":p33" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P34" android:process=":p34" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P35" android:process=":p35" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P36" android:process=":p36" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P37" android:process=":p37" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P38" android:process=":p38" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P39" android:process=":p39" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P40" android:process=":p40" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P41" android:process=":p41" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P42" android:process=":p42" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P43" android:process=":p43" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P44" android:process=":p44" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P45" android:process=":p45" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P46" android:process=":p46" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P47" android:process=":p47" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P48" android:process=":p48" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:exported="true" android:name="com.tcore.proxy.ProxyPendingActivity$P49" android:process=":p48" android:theme="@android:style/Theme.Translucent"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P0" android:process=":p0"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P1" android:process=":p1"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P2" android:process=":p2"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P3" android:process=":p3"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P4" android:process=":p4"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P5" android:process=":p5"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P6" android:process=":p6"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P7" android:process=":p7"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P8" android:process=":p8"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P9" android:process=":p9"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P10" android:process=":p10"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P11" android:process=":p11"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P12" android:process=":p12"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P13" android:process=":p13"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P14" android:process=":p14"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P15" android:process=":p15"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P16" android:process=":p16"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P17" android:process=":p17"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P18" android:process=":p18"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P19" android:process=":p19"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P20" android:process=":p20"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P21" android:process=":p21"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P22" android:process=":p22"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P23" android:process=":p23"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P24" android:process=":p24"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P25" android:process=":p25"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P26" android:process=":p26"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P27" android:process=":p27"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P28" android:process=":p28"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P29" android:process=":p29"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P30" android:process=":p30"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P31" android:process=":p31"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P32" android:process=":p32"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P33" android:process=":p33"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P34" android:process=":p34"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P35" android:process=":p35"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P36" android:process=":p36"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P37" android:process=":p37"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P38" android:process=":p38"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P39" android:process=":p39"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P40" android:process=":p40"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P41" android:process=":p41"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P42" android:process=":p42"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P43" android:process=":p43"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P44" android:process=":p44"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P45" android:process=":p45"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P46" android:process=":p46"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P47" android:process=":p47"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P48" android:process=":p48"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyService$P49" android:process=":p49"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_0" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P0" android:process=":p0"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_1" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P1" android:process=":p1"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_2" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P2" android:process=":p2"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_3" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P3" android:process=":p3"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_4" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P4" android:process=":p4"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_5" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P5" android:process=":p5"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_6" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P6" android:process=":p6"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_7" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P7" android:process=":p7"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_8" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P8" android:process=":p8"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_9" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P9" android:process=":p9"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_10" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P10" android:process=":p10"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_11" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P11" android:process=":p11"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_12" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P12" android:process=":p12"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_13" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P13" android:process=":p13"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_14" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P14" android:process=":p14"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_15" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P15" android:process=":p15"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_16" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P16" android:process=":p16"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_17" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P17" android:process=":p17"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_18" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P18" android:process=":p18"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_19" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P19" android:process=":p19"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_20" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P20" android:process=":p20"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_21" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P21" android:process=":p21"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_22" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P22" android:process=":p22"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_23" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P23" android:process=":p23"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_24" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P24" android:process=":p24"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_25" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P25" android:process=":p25"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_26" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P26" android:process=":p26"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_27" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P27" android:process=":p27"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_28" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P28" android:process=":p28"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_29" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P29" android:process=":p29"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_30" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P30" android:process=":p30"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_31" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P31" android:process=":p31"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_32" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P32" android:process=":p32"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_33" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P33" android:process=":p33"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_34" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P34" android:process=":p34"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_35" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P35" android:process=":p35"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_36" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P36" android:process=":p36"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_37" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P37" android:process=":p37"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_38" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P38" android:process=":p38"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_39" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P39" android:process=":p39"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_40" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P40" android:process=":p40"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_41" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P41" android:process=":p41"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_42" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P42" android:process=":p42"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_43" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P43" android:process=":p43"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_44" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P44" android:process=":p44"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_45" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P45" android:process=":p45"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_46" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P46" android:process=":p46"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_47" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P47" android:process=":p47"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_48" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P48" android:process=":p48"/>
+        <provider android:authorities="com.pubgm.proxy_content_provider_49" android:exported="true" android:name="com.tcore.proxy.ProxyContentProvider$P49" android:process=":p49"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P0" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p0"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P1" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p1"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P2" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p2"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P3" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p3"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P4" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p4"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P5" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p5"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P6" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p6"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P7" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p7"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P8" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p8"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P9" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p9"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P10" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p10"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P11" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p11"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P12" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p12"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P13" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p13"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P14" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p14"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P15" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p15"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P16" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p16"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P17" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p17"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P18" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p18"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P19" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p19"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P20" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p20"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P21" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p21"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P22" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p22"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P23" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p23"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P24" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p24"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P25" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p25"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P26" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p26"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P27" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p27"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P28" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p28"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P29" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p29"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P30" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p30"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P31" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p31"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P32" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p32"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P33" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p33"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P34" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p34"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P35" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p35"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P36" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p36"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P37" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p37"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P38" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p38"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P39" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p39"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P40" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p40"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P41" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p41"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P42" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p42"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P43" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p43"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P44" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p44"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P45" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p45"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P46" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p46"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P47" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p47"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P48" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p48"/>
+        <service android:exported="true" android:name="com.tcore.proxy.ProxyJobService$P49" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":p49"/>
+        <activity android:name="com.molihuan.pathselector.activity.impl.PathSelectActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.blankj.molihuan.utilcode.util.UtilsTransActivity4MainProcess" android:theme="@style/ActivityTranslucent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:multiprocess="true" android:name="com.blankj.molihuan.utilcode.util.UtilsTransActivity" android:theme="@style/ActivityTranslucent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider android:authorities="com.pubgm.utilcode.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.blankj.molihuan.utilcode.util.UtilsFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/util_code_provider_paths"/>
+        </provider>
+        <service android:exported="false" android:name="com.blankj.molihuan.utilcode.util.MessengerUtils$ServerService">
+            <intent-filter>
+                <action android:name="com.pubgm.messenger"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="genericidp"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="firebase.auth" android:path="/" android:scheme="recaptcha"/>
+            </intent-filter>
+        </activity>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.pubgm.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="com.pubgm.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+    </application>
+</manifest>
