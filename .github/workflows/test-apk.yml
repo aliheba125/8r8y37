@@ -24,7 +24,73 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: Install and test APK on emulator
+      - name: Create test script
+        run: |
+          cat > test_apk.sh << 'SCRIPT'
+          #!/bin/bash
+          set -x
+
+          echo "=== Step 1: Install APK ==="
+          adb install -r Zero_LoaderV4.4.01_FINAL.apk || exit 1
+          echo "SUCCESS: APK installed"
+
+          echo "=== Step 2: Package info ==="
+          adb shell pm list packages | grep pubgm
+          adb shell dumpsys package com.pubgm | grep -E "versionName|versionCode" | head -5
+
+          echo "=== Step 3: Launch app ==="
+          adb shell am start -n com.pubgm/com.pubgm.activity.SplashActivity
+          sleep 8
+
+          echo "=== Step 4: Check if app is running ==="
+          APP_PID=$(adb shell pidof com.pubgm)
+          if [ -z "$APP_PID" ]; then
+            echo "FAILED: App crashed on launch!"
+            adb logcat -d | grep -iE "com.pubgm|FATAL|crash|Exception" | tail -50
+            exit 1
+          fi
+          echo "SUCCESS: App running with PID: $APP_PID"
+
+          echo "=== Step 5: Check current activity ==="
+          adb shell dumpsys activity activities | grep -E "mResumedActivity|mFocusedActivity" | head -2
+
+          echo "=== Step 6: Screenshot before login ==="
+          adb shell screencap -p /sdcard/before_login.png
+          adb pull /sdcard/before_login.png ./before_login.png || true
+
+          echo "=== Step 7: Type key and press Login ==="
+          adb shell input text "TESTKEY123"
+          sleep 1
+          adb shell input tap 160 500
+          sleep 10
+
+          echo "=== Step 8: Check if app survived login ==="
+          APP_PID2=$(adb shell pidof com.pubgm)
+          if [ -z "$APP_PID2" ]; then
+            echo "FAILED: App crashed after login!"
+            adb logcat -d | grep -iE "com.pubgm|FATAL|Exception|VERSIONS|native" | tail -80
+            exit 1
+          fi
+          echo "SUCCESS: App alive after login PID: $APP_PID2"
+
+          echo "=== Step 9: Activity after login ==="
+          adb shell dumpsys activity activities | grep -E "mResumedActivity|mFocusedActivity" | head -2
+
+          echo "=== Step 10: Screenshot after login ==="
+          adb shell screencap -p /sdcard/after_login.png
+          adb pull /sdcard/after_login.png ./after_login.png || true
+
+          echo "=== Step 11: Logcat analysis ==="
+          adb logcat -d | grep -iE "com.pubgm|MainActivity|LoginActivity|VERSIONS|BYPASS|Wolf|goMain|yellow|native|crash|fatal" | tail -80
+
+          echo ""
+          echo "========================================="
+          echo "=== ALL TESTS PASSED ==="
+          echo "========================================="
+          SCRIPT
+          chmod +x test_apk.sh
+
+      - name: Run tests on emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
@@ -32,91 +98,7 @@ jobs:
           target: google_apis
           disable-animations: true
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
-          script: |
-            set -e
-            echo "=== Step 1: Install APK ==="
-            adb install -r Zero_LoaderV4.4.01_FINAL.apk
-            echo "SUCCESS: APK installed"
-
-            echo ""
-            echo "=== Step 2: Get package info ==="
-            adb shell pm list packages | grep pubgm || true
-            adb shell dumpsys package com.pubgm | grep -E "versionName|versionCode" | head -5 || true
-
-            echo ""
-            echo "=== Step 3: Launch app ==="
-            adb shell am start -n com.pubgm/com.pubgm.activity.SplashActivity
-            sleep 8
-
-            echo ""
-            echo "=== Step 4: Check if app is running ==="
-            APP_PID=$(adb shell pidof com.pubgm || echo "")
-            if [ -z "$APP_PID" ]; then
-              echo "FAILED: App crashed on launch!"
-              adb logcat -d | grep -iE "com.pubgm|FATAL|crash|Exception" | tail -50
-              exit 1
-            fi
-            echo "SUCCESS: App running with PID: $APP_PID"
-
-            echo ""
-            echo "=== Step 5: Check for crashes ==="
-            CRASHES=$(adb logcat -d | grep -i "FATAL" | grep -i "pubgm" || echo "")
-            if [ -n "$CRASHES" ]; then
-              echo "WARNING: Crashes detected:"
-              echo "$CRASHES"
-            else
-              echo "SUCCESS: No crashes detected"
-            fi
-
-            echo ""
-            echo "=== Step 6: Check current activity ==="
-            sleep 3
-            adb shell dumpsys activity activities | grep -E "mResumedActivity|mFocusedActivity" | head -2 || true
-
-            echo ""
-            echo "=== Step 7: Take screenshot before login ==="
-            adb shell screencap -p /sdcard/before_login.png
-            adb pull /sdcard/before_login.png ./before_login.png || true
-
-            echo ""
-            echo "=== Step 8: Type key and press Login ==="
-            adb shell input text "TESTKEY123"
-            sleep 1
-            adb shell input tap 540 1400
-            sleep 10
-
-            echo ""
-            echo "=== Step 9: Check if app survived login ==="
-            APP_PID2=$(adb shell pidof com.pubgm || echo "")
-            if [ -z "$APP_PID2" ]; then
-              echo "FAILED: App crashed after login!"
-              adb logcat -d | grep -iE "com.pubgm|FATAL|Exception|VERSIONS|native" | tail -80
-              exit 1
-            fi
-            echo "SUCCESS: App alive after login PID: $APP_PID2"
-
-            echo ""
-            echo "=== Step 10: Check activity after login ==="
-            adb shell dumpsys activity activities | grep -E "mResumedActivity|mFocusedActivity" | head -2 || true
-
-            echo ""
-            echo "=== Step 11: Take screenshot after login ==="
-            adb shell screencap -p /sdcard/after_login.png
-            adb pull /sdcard/after_login.png ./after_login.png || true
-
-            echo ""
-            echo "=== Step 12: Relevant logcat ==="
-            adb logcat -d | grep -iE "com.pubgm|MainActivity|LoginActivity|VERSIONS|BYPASS|Wolf|goMain" | tail -50 || true
-
-            echo ""
-            echo "========================================="
-            echo "=== FINAL RESULT: ALL TESTS PASSED! ==="
-            echo "========================================="
-            echo "  - APK Install: PASS"
-            echo "  - App Launch: PASS"
-            echo "  - No Crash: PASS"
-            echo "  - Login Attempt: PASS"
-            echo "  - App Survived: PASS"
+          script: bash test_apk.sh
 
       - name: Upload screenshots
         if: always()
