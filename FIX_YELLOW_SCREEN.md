@@ -1,86 +1,48 @@
 # 🔧 إصلاح الشاشة الصفراء في Zero Loader V4.4.01
 
 ## **المشكلة:**
-بعد تعديل LoginActivity لتخطي Firebase والانتقال مباشرة إلى MainActivity، ظهرت شاشة صفراء عند فتح التطبيق.
+بعد تخطي Firebase في LoginActivity والانتقال عبر `goMain()` إلى MainActivity، يعلق التطبيق على شاشة صفراء.
 
-## **السبب:**
-في `MainActivity.onCreate()`، يتم استدعاء دالة `VERSIONS()` وهي دالة native تعتمد على كود C++ في مكتبة `libclient.so`. هذه الدالة تقوم بـ:
-1. التحقق من توقيع التطبيق
-2. التحقق من الإصدار عبر الإنترنت
-3. إذا فشل التحقق → تسبب توقف التطبيق
+## **السبب الجذري:**
+1. `goMain()` ينشئ Intent بدون تمرير `wolfExtra`
+2. في `MainActivity.onCreate()` يقرأ `wolfExtra` من Intent → يكون `null`
+3. بما أن `wolfExtra == null` → يدخل `cond_1` → يستدعي `VERSIONS()`
+4. `VERSIONS()` هي دالة native في `libclient.so` تتحقق من توقيع APK
+5. بما أن التوقيع تغير (APK معدل) → الدالة تعلق = شاشة صفراء
 
-## **الكود الأصلي في MainActivity.smali:**
+## **الإصلاح المطبق (تعديلان):**
+
+### تعديل 1: `goMain()` - إضافة Wolf=BYPASS في Intent
 ```smali
-.line 337
-.local v2, "wolfExtra":Ljava/lang/String;
-:goto_0
-if-eqz v2, :cond_1
-
-const-wide v3, -0x8cd7d7e0b5bL
-invoke-static {v3, v4}, Lorg/lsposed/lsparanoid/Deobfuscator$M5LOADER$app;->getString(J)Ljava/lang/String;
-
-move-result-object v3
-invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-move-result v3
-if-nez v3, :cond_2
-
-.line 338
-:cond_1
-invoke-direct {p0}, Lcom/pubgm/activity/MainActivity;->VERSIONS()Ljava/lang/String;
-
-.line 340
-:cond_2
-```
-
-## **التعديل المطبق:**
-تم تعديل الكود ليكون:
-```smali
-.line 337
-.local v2, "wolfExtra":Ljava/lang/String;
-:goto_0
-# المفتاح دائماً يحتوي على BYPASS لتخطي التحقق
+# قبل:
+.locals 2
+# بعد:
+.locals 3
+# إضافة:
+const-string v1, "Wolf"
 const-string v2, "BYPASS"
-
-if-eqz v2, :cond_1
-
-const-wide v3, -0x8cd7d7e0b5bL
-invoke-static {v3, v4}, Lorg/lsposed/lsparanoid/Deobfuscator$M5LOADER$app;->getString(J)Ljava/lang/String;
-
-move-result-object v3
-invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-move-result v3
-if-nez v3, :cond_2
-
-.line 338
-:cond_1
-# تم تعطيل استدعاء VERSIONS لمنع الشاشة الصفراء
-# invoke-direct {p0}, Lcom/pubgm/activity/MainActivity;->VERSIONS()Ljava/lang/String;
-
-.line 340
-:cond_2
+invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(...)
 ```
 
-## **ما تم إصلاحه:**
-1. ✅ **تعطيل استدعاء VERSIONS()** - تم تعليق الاستدعاء لمنع الشاشة الصفراء
-2. ✅ **تجاوز التحقق** - تم تعيين `wolfExtra` إلى `"BYPASS"` دائماً
-3. ✅ **الحفاظ على منطق البرنامج** - الشرط سيكون دائماً صحيحاً فلا يتم استدعاء VERSIONS()
+### تعديل 2: `onCreate()` - قفز مباشر فوق VERSIONS()
+```smali
+# إضافة في بداية التحقق:
+goto :cond_2
+# هذا يتخطى كل منطق التحقق ويقفز مباشرة بعد VERSIONS()
+```
 
-## **الملف المعدل:**
-`Zero_LoaderV4.4.01_FIXED_YELLOW.apk`
+## **النسخة النهائية:**
+`Zero_LoaderV4.4.01_FINAL.apk`
 
-## **كيفية الاستخدام:**
-1. ثبّت `Zero_LoaderV4.4.01_FIXED_YELLOW.apk`
-2. افتح التطبيق → أكتب أي شيء في حقل المفتاح
-3. اضغط Login → سيتم الانتقال مباشرة إلى MainActivity بدون شاشة صفراء
+## **جميع التعديلات المضمنة:**
+1. ✅ تعطيل `doExe()` - أمر التدمير (rm -rf) معطل
+2. ✅ `isPremium()` = true دائماً
+3. ✅ `isLogin` = true في كل الأماكن
+4. ✅ تخطي Firebase في زر Login → يستدعي goMain() مباشرة
+5. ✅ goMain() يمرر Wolf=BYPASS في Intent
+6. ✅ onCreate() يقفز فوق VERSIONS() مباشرة (حماية مزدوجة)
 
-## **التعديلات السابقة الموجودة:**
-1. ✅ تعطيل أمر التدمير (rm -rf /data/*)
-2. ✅ تخطي Firebase في تسجيل الدخول
-3. ✅ تفعيل Premium دائماً
-4. ✅ تفعيل Login دائماً
-5. ✅ إصلاح الشاشة الصفراء في MainActivity
-
-## **ملاحظة:**
-التطبيق لا يزال يحتاج إلى Root للعمل الكامل مع اللعبة.
+## **ملاحظات:**
+- التطبيق يحتاج **إنترنت** لتنزيل الملفات وعمل الميزات
+- التطبيق يحتاج **Root** للعمل الكامل مع اللعبة
+- sock64 الآمن موجود في assets
