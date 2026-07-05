@@ -1,0 +1,447 @@
+
+========================================================================
+Java_com_pubgm_activity_LoginActivity_GetKey  @ 0x1ef54
+========================================================================
+  0x01ef54  sub      sp, sp, #0x20
+  0x01ef58  stp      x29, x30, [sp, #0x10]
+  0x01ef5c  add      x29, sp, #0x10
+  0x01ef60  adrp     x8, #0x4f000
+  0x01ef64  add      x8, x8, #0x598
+  0x01ef68  ldarb    w8, [x8]
+  0x01ef6c  tbz      w8, #0, #0x1eff8
+  0x01ef70  adrp     x8, #0x4f000
+  0x01ef74  ldrb     w8, [x8, #0x595]
+  0x01ef78  cbz      w8, #0x1efdc
+  0x01ef7c  adrp     x9, #0x4f000
+  0x01ef80  add      x9, x9, #0x588
+  0x01ef84  ldrb     w11, [x9, #8]
+  0x01ef88  ldrb     w12, [x9, #9]
+  0x01ef8c  ldrb     w13, [x9, #0xa]
+  0x01ef90  ldrb     w14, [x9, #0xb]
+  0x01ef94  ldrb     w15, [x9, #0xc]
+  0x01ef98  ldr      d0, [x9]
+  0x01ef9c  mov      w10, #0x2e
+  0x01efa0  movi     v1.8b, #0x2e
+  0x01efa4  eor      w8, w8, w10
+  0x01efa8  eor      w11, w11, w10
+  0x01efac  eor      w12, w12, w10
+  0x01efb0  eor      w13, w13, w10
+  0x01efb4  eor      w14, w14, w10
+  0x01efb8  eor      w10, w15, w10
+  0x01efbc  eor      v0.8b, v0.8b, v1.8b
+  0x01efc0  strb     w11, [x9, #8]
+  0x01efc4  strb     w12, [x9, #9]
+  0x01efc8  strb     w13, [x9, #0xa]
+  0x01efcc  str      d0, [x9]
+  0x01efd0  strb     w14, [x9, #0xb]
+  0x01efd4  strb     w10, [x9, #0xc]
+  0x01efd8  strb     w8, [x9, #0xd]
+  0x01efdc  ldr      x8, [x0]
+  0x01efe0  ldp      x29, x30, [sp, #0x10]
+  0x01efe4  adrp     x1, #0x4f000
+  0x01efe8  add      x1, x1, #0x588
+  0x01efec  ldr      x2, [x8, #0x538]
+  0x01eff0  add      sp, sp, #0x20
+  0x01eff4  br       x2
+  0x01eff8  adrp     x8, #0x4f000
+  0x01effc  add      x8, x8, #0x598
+  0x01f000  str      x0, [sp, #8]
+  0x01f004  mov      x0, x8
+  0x01f008  bl       #0x49470   ; -> __cxa_guard_acquire
+  0x01f00c  mov      w8, w0
+  0x01f010  ldr      x0, [sp, #8]
+  0x01f014  cbz      w8, #0x1ef70
+  0x01f018  adrp     x8, #0x13000
+  0x01f01c  ldr      d0, [x8, #0xdf0]
+  0x01f020  adrp     x1, #0x4f000
+  0x01f024  mov      w8, #0x5a
+  0x01f028  adrp     x0, #0x1f000
+  0x01f02c  adrp     x2, #0x4a000
+  0x01f030  add      x1, x1, #0x588
+  0x01f034  movk     w8, #0x4b43, lsl #16
+  0x01f038  mov      w9, #0x2e01
+  0x01f03c  add      x0, x0, #0x1b0
+  0x01f040  add      x2, x2, #0xc80   ; "" @0x4ac80
+  0x01f044  str      w8, [x1, #8]
+  0x01f048  str      d0, [x1]
+  0x01f04c  strh     w9, [x1, #0xc]
+  0x01f050  bl       #0x49450   ; -> __cxa_atexit
+  0x01f054  adrp     x0, #0x4f000
+  0x01f058  add      x0, x0, #0x598
+  0x01f05c  bl       #0x49480   ; -> __cxa_guard_release
+  0x01f060  ldr      x0, [sp, #8]
+  0x01f064  b        #0x1ef70
+  0x01f068  sub      sp, sp, #0x20
+  0x01f06c  stp      x29, x30, [sp, #0x10]
+  0x01f070  add      x29, sp, #0x10
+  0x01f074  adrp     x8, #0x4f000
+  0x01f078  add      x8, x8, #0x5b0
+  0x01f07c  ldarb    w8, [x8]
+  0x01f080  tbz      w8, #0, #0x1f10c
+  0x01f084  adrp     x8, #0x4f000
+  0x01f088  ldrb     w8, [x8, #0x5ad]
+  0x01f08c  cbz      w8, #0x1f0f0
+  0x01f090  adrp     x9, #0x4f000
+  0x01f094  add      x9, x9, #0x5a0
+  0x01f098  ldrb     w11, [x9, #8]
+  0x01f09c  ldrb     w12, [x9, #9]
+  0x01f0a0  ldrb     w13, [x9, #0xa]
+  0x01f0a4  ldrb     w14, [x9, #0xb]
+  0x01f0a8  ldrb     w15, [x9, #0xc]
+  0x01f0ac  ldr      d0, [x9]
+  0x01f0b0  mov      w10, #0x2e
+  0x01f0b4  movi     v1.8b, #0x2e
+  0x01f0b8  eor      w8, w8, w10
+  0x01f0bc  eor      w11, w11, w10
+  0x01f0c0  eor      w12, w12, w10
+  0x01f0c4  eor      w13, w13, w10
+  0x01f0c8  eor      w14, w14, w10
+  0x01f0cc  eor      w10, w15, w10
+  0x01f0d0  eor      v0.8b, v0.8b, v1.8b
+  0x01f0d4  strb     w11, [x9, #8]
+  0x01f0d8  strb     w12, [x9, #9]
+  0x01f0dc  strb     w13, [x9, #0xa]
+  0x01f0e0  str      d0, [x9]
+  0x01f0e4  strb     w14, [x9, #0xb]
+  0x01f0e8  strb     w10, [x9, #0xc]
+  0x01f0ec  strb     w8, [x9, #0xd]
+  0x01f0f0  ldr      x8, [x0]
+  0x01f0f4  ldp      x29, x30, [sp, #0x10]
+  0x01f0f8  adrp     x1, #0x4f000
+  0x01f0fc  add      x1, x1, #0x5a0
+  0x01f100  ldr      x2, [x8, #0x538]
+  0x01f104  add      sp, sp, #0x20
+  0x01f108  br       x2
+  0x01f10c  adrp     x8, #0x4f000
+  0x01f110  add      x8, x8, #0x5b0
+  0x01f114  str      x0, [sp, #8]
+  0x01f118  mov      x0, x8
+  0x01f11c  bl       #0x49470   ; -> __cxa_guard_acquire
+  0x01f120  mov      w8, w0
+  0x01f124  ldr      x0, [sp, #8]
+  0x01f128  cbz      w8, #0x1f084
+  0x01f12c  adrp     x8, #0x13000
+  0x01f130  ldr      d0, [x8, #0xdf0]
+
+========================================================================
+Java_com_pubgm_activity_MainActivity_GetKey  @ 0x1f068
+========================================================================
+  0x01f068  sub      sp, sp, #0x20
+  0x01f06c  stp      x29, x30, [sp, #0x10]
+  0x01f070  add      x29, sp, #0x10
+  0x01f074  adrp     x8, #0x4f000
+  0x01f078  add      x8, x8, #0x5b0
+  0x01f07c  ldarb    w8, [x8]
+  0x01f080  tbz      w8, #0, #0x1f10c
+  0x01f084  adrp     x8, #0x4f000
+  0x01f088  ldrb     w8, [x8, #0x5ad]
+  0x01f08c  cbz      w8, #0x1f0f0
+  0x01f090  adrp     x9, #0x4f000
+  0x01f094  add      x9, x9, #0x5a0
+  0x01f098  ldrb     w11, [x9, #8]
+  0x01f09c  ldrb     w12, [x9, #9]
+  0x01f0a0  ldrb     w13, [x9, #0xa]
+  0x01f0a4  ldrb     w14, [x9, #0xb]
+  0x01f0a8  ldrb     w15, [x9, #0xc]
+  0x01f0ac  ldr      d0, [x9]
+  0x01f0b0  mov      w10, #0x2e
+  0x01f0b4  movi     v1.8b, #0x2e
+  0x01f0b8  eor      w8, w8, w10
+  0x01f0bc  eor      w11, w11, w10
+  0x01f0c0  eor      w12, w12, w10
+  0x01f0c4  eor      w13, w13, w10
+  0x01f0c8  eor      w14, w14, w10
+  0x01f0cc  eor      w10, w15, w10
+  0x01f0d0  eor      v0.8b, v0.8b, v1.8b
+  0x01f0d4  strb     w11, [x9, #8]
+  0x01f0d8  strb     w12, [x9, #9]
+  0x01f0dc  strb     w13, [x9, #0xa]
+  0x01f0e0  str      d0, [x9]
+  0x01f0e4  strb     w14, [x9, #0xb]
+  0x01f0e8  strb     w10, [x9, #0xc]
+  0x01f0ec  strb     w8, [x9, #0xd]
+  0x01f0f0  ldr      x8, [x0]
+  0x01f0f4  ldp      x29, x30, [sp, #0x10]
+  0x01f0f8  adrp     x1, #0x4f000
+  0x01f0fc  add      x1, x1, #0x5a0
+  0x01f100  ldr      x2, [x8, #0x538]
+  0x01f104  add      sp, sp, #0x20
+  0x01f108  br       x2
+  0x01f10c  adrp     x8, #0x4f000
+  0x01f110  add      x8, x8, #0x5b0
+  0x01f114  str      x0, [sp, #8]
+  0x01f118  mov      x0, x8
+  0x01f11c  bl       #0x49470   ; -> __cxa_guard_acquire
+  0x01f120  mov      w8, w0
+  0x01f124  ldr      x0, [sp, #8]
+  0x01f128  cbz      w8, #0x1f084
+  0x01f12c  adrp     x8, #0x13000
+  0x01f130  ldr      d0, [x8, #0xdf0]
+  0x01f134  adrp     x1, #0x4f000
+  0x01f138  mov      w8, #0x5a
+  0x01f13c  adrp     x0, #0x1f000
+  0x01f140  adrp     x2, #0x4a000
+  0x01f144  add      x1, x1, #0x5a0
+  0x01f148  movk     w8, #0x4b43, lsl #16
+  0x01f14c  mov      w9, #0x2e01
+  0x01f150  add      x0, x0, #0x1b0
+  0x01f154  add      x2, x2, #0xc80   ; "" @0x4ac80
+  0x01f158  str      w8, [x1, #8]
+  0x01f15c  str      d0, [x1]
+  0x01f160  strh     w9, [x1, #0xc]
+  0x01f164  bl       #0x49450   ; -> __cxa_atexit
+  0x01f168  adrp     x0, #0x4f000
+  0x01f16c  add      x0, x0, #0x5b0
+  0x01f170  bl       #0x49480   ; -> __cxa_guard_release
+  0x01f174  ldr      x0, [sp, #8]
+  0x01f178  b        #0x1f084
+  0x01f17c  ldr      x8, [x0]
+  0x01f180  adrp     x1, #0x14000
+  0x01f184  add      x1, x1, #0x4b9   ; "com.pubgm.activity.MainActivity" @0x144b9
+  0x01f188  ldr      x2, [x8, #0x538]
+  0x01f18c  br       x2
+  0x01f190  stp      x29, x30, [sp, #-0x10]!
+  0x01f194  mov      x29, sp
+  0x01f198  mov      w0, wzr
+  0x01f19c  bl       #0x49490   ; -> exit
+  0x01f1a0  stp      x29, x30, [sp, #-0x10]!
+  0x01f1a4  mov      x29, sp
+  0x01f1a8  mov      w0, wzr
+  0x01f1ac  bl       #0x49490   ; -> exit
+  0x01f1b0  stur     xzr, [x0, #6]
+  0x01f1b4  str      xzr, [x0]
+  0x01f1b8  ret      
+
+========================================================================
+Java_com_pubgm_activity_LoginActivity_Yellow  @ 0x1f17c
+========================================================================
+  0x01f17c  ldr      x8, [x0]
+  0x01f180  adrp     x1, #0x14000
+  0x01f184  add      x1, x1, #0x4b9   ; "com.pubgm.activity.MainActivity" @0x144b9
+  0x01f188  ldr      x2, [x8, #0x538]
+  0x01f18c  br       x2
+  0x01f190  stp      x29, x30, [sp, #-0x10]!
+  0x01f194  mov      x29, sp
+  0x01f198  mov      w0, wzr
+  0x01f19c  bl       #0x49490   ; -> exit
+  0x01f1a0  stp      x29, x30, [sp, #-0x10]!
+  0x01f1a4  mov      x29, sp
+  0x01f1a8  mov      w0, wzr
+  0x01f1ac  bl       #0x49490   ; -> exit
+  0x01f1b0  stur     xzr, [x0, #6]
+  0x01f1b4  str      xzr, [x0]
+  0x01f1b8  ret      
+
+========================================================================
+Java_com_pubgm_activity_MainActivity_VERSIONS  @ 0x1f190
+========================================================================
+  0x01f190  stp      x29, x30, [sp, #-0x10]!
+  0x01f194  mov      x29, sp
+  0x01f198  mov      w0, wzr
+  0x01f19c  bl       #0x49490   ; -> exit
+  0x01f1a0  stp      x29, x30, [sp, #-0x10]!
+  0x01f1a4  mov      x29, sp
+  0x01f1a8  mov      w0, wzr
+  0x01f1ac  bl       #0x49490   ; -> exit
+  0x01f1b0  stur     xzr, [x0, #6]
+  0x01f1b4  str      xzr, [x0]
+  0x01f1b8  ret      
+
+========================================================================
+Java_com_pubgm_activity_MainActivity_BYPASS  @ 0x1f1a0
+========================================================================
+  0x01f1a0  stp      x29, x30, [sp, #-0x10]!
+  0x01f1a4  mov      x29, sp
+  0x01f1a8  mov      w0, wzr
+  0x01f1ac  bl       #0x49490   ; -> exit
+  0x01f1b0  stur     xzr, [x0, #6]
+  0x01f1b4  str      xzr, [x0]
+  0x01f1b8  ret      
+
+========================================================================
+Java_com_pubgm_floating_Overlay_DrawOn  @ 0x22fa4
+========================================================================
+  0x022fa4  sub      sp, sp, #0x50
+  0x022fa8  stp      x29, x30, [sp, #0x20]
+  0x022fac  str      x21, [sp, #0x30]
+  0x022fb0  stp      x20, x19, [sp, #0x40]
+  0x022fb4  add      x29, sp, #0x20
+  0x022fb8  mrs      x20, tpidr_el0
+  0x022fbc  ldr      x8, [x20, #0x28]
+  0x022fc0  adrp     x21, #0x62000
+  0x022fc4  add      x21, x21, #0xdf8
+  0x022fc8  stur     x8, [x29, #-8]
+  0x022fcc  stp      x0, x2, [x21]
+  0x022fd0  str      x3, [x21, #0x10]
+  0x022fd4  cbz      x0, #0x230b4
+  0x022fd8  cbz      x2, #0x230b4
+  0x022fdc  cbz      x3, #0x230b4
+  0x022fe0  ldr      x8, [x0]
+  0x022fe4  ldr      q0, [x21]
+  0x022fe8  ldr      x9, [x21, #0x10]
+  0x022fec  mov      x1, x3
+  0x022ff0  ldr      x8, [x8, #0xf8]
+  0x022ff4  str      q0, [sp]
+  0x022ff8  str      x9, [sp, #0x10]
+  0x022ffc  blr      x8
+  0x023000  ldr      x8, [x21]
+  0x023004  adrp     x2, #0x15000
+  0x023008  adrp     x3, #0x15000
+  0x02300c  mov      x1, x0
+  0x023010  ldr      x9, [x8]
+  0x023014  add      x2, x2, #0x243   ; "getWidth" @0x15243
+  0x023018  add      x3, x3, #0x48b   ; "()I" @0x1548b
+  0x02301c  mov      x0, x8
+  0x023020  ldr      x9, [x9, #0x108]
+  0x023024  blr      x9
+  0x023028  ldr      x8, [x21]
+  0x02302c  ldr      x1, [x21, #0x10]
+  0x023030  mov      x2, x0
+  0x023034  mov      x0, x8
+  0x023038  bl       #0x23780
+  0x02303c  mov      w19, w0
+  0x023040  ldr      x0, [x21]
+  0x023044  mov      w2, wzr
+  0x023048  cbz      x0, #0x230a8
+  0x02304c  ldr      x8, [x21, #8]
+  0x023050  cbz      x8, #0x230a8
+  0x023054  ldr      x1, [x21, #0x10]
+  0x023058  cbz      x1, #0x230a8
+  0x02305c  ldr      x8, [x0]
+  0x023060  ldr      x8, [x8, #0xf8]
+  0x023064  blr      x8
+  0x023068  ldr      x8, [x21]
+  0x02306c  adrp     x2, #0x14000
+  0x023070  adrp     x3, #0x15000
+  0x023074  mov      x1, x0
+  0x023078  ldr      x9, [x8]
+  0x02307c  add      x2, x2, #0xc61   ; "getHeight" @0x14c61
+  0x023080  add      x3, x3, #0x48b   ; "()I" @0x1548b
+  0x023084  mov      x0, x8
+  0x023088  ldr      x9, [x9, #0x108]
+  0x02308c  blr      x9
+  0x023090  ldr      x8, [x21]
+  0x023094  ldr      x1, [x21, #0x10]
+  0x023098  mov      x2, x0
+  0x02309c  mov      x0, x8
+  0x0230a0  bl       #0x23780
+  0x0230a4  mov      w2, w0
+  0x0230a8  mov      x0, sp
+  0x0230ac  mov      w1, w19
+  0x0230b0  bl       #0x1f69c
+  0x0230b4  ldr      x8, [x20, #0x28]
+  0x0230b8  ldur     x9, [x29, #-8]
+  0x0230bc  cmp      x8, x9
+  0x0230c0  b.ne     #0x230d8
+  0x0230c4  ldp      x20, x19, [sp, #0x40]
+  0x0230c8  ldr      x21, [sp, #0x30]
+  0x0230cc  ldp      x29, x30, [sp, #0x20]
+  0x0230d0  add      sp, sp, #0x50
+  0x0230d4  ret      
+
+========================================================================
+Java_com_pubgm_fragments_HomeFragment_Telegram  @ 0x230dc
+========================================================================
+  0x0230dc  sub      sp, sp, #0x20
+  0x0230e0  stp      x29, x30, [sp, #0x10]
+  0x0230e4  add      x29, sp, #0x10
+  0x0230e8  adrp     x8, #0x62000
+  0x0230ec  add      x8, x8, #0xe98
+  0x0230f0  ldarb    w8, [x8]
+  0x0230f4  tbz      w8, #0, #0x23180
+  0x0230f8  adrp     x8, #0x62000
+  0x0230fc  ldrb     w8, [x8, #0xe95]
+  0x023100  cbz      w8, #0x23164
+  0x023104  adrp     x9, #0x62000
+  0x023108  add      x9, x9, #0xe88
+  0x02310c  ldrb     w11, [x9, #8]
+  0x023110  ldrb     w12, [x9, #9]
+  0x023114  ldrb     w13, [x9, #0xa]
+  0x023118  ldrb     w14, [x9, #0xb]
+  0x02311c  ldrb     w15, [x9, #0xc]
+  0x023120  ldr      d0, [x9]
+  0x023124  mov      w10, #0x2e
+  0x023128  movi     v1.8b, #0x2e
+  0x02312c  eor      w8, w8, w10
+  0x023130  eor      w11, w11, w10
+  0x023134  eor      w12, w12, w10
+  0x023138  eor      w13, w13, w10
+  0x02313c  eor      w14, w14, w10
+  0x023140  eor      w10, w15, w10
+  0x023144  eor      v0.8b, v0.8b, v1.8b
+  0x023148  strb     w11, [x9, #8]
+  0x02314c  strb     w12, [x9, #9]
+  0x023150  strb     w13, [x9, #0xa]
+  0x023154  str      d0, [x9]
+  0x023158  strb     w14, [x9, #0xb]
+  0x02315c  strb     w10, [x9, #0xc]
+  0x023160  strb     w8, [x9, #0xd]
+  0x023164  ldr      x8, [x0]
+  0x023168  ldp      x29, x30, [sp, #0x10]
+  0x02316c  adrp     x1, #0x62000
+  0x023170  add      x1, x1, #0xe88
+  0x023174  ldr      x2, [x8, #0x538]
+  0x023178  add      sp, sp, #0x20
+  0x02317c  br       x2
+  0x023180  adrp     x8, #0x62000
+  0x023184  add      x8, x8, #0xe98
+  0x023188  str      x0, [sp, #8]
+  0x02318c  mov      x0, x8
+  0x023190  bl       #0x49470   ; -> __cxa_guard_acquire
+  0x023194  mov      w8, w0
+  0x023198  ldr      x0, [sp, #8]
+  0x02319c  cbz      w8, #0x230f8
+  0x0231a0  adrp     x8, #0x13000
+  0x0231a4  ldr      d0, [x8, #0xdf0]
+  0x0231a8  adrp     x1, #0x62000
+  0x0231ac  mov      w8, #0x5a
+  0x0231b0  adrp     x0, #0x1f000
+  0x0231b4  adrp     x2, #0x4a000
+  0x0231b8  add      x1, x1, #0xe88
+  0x0231bc  movk     w8, #0x4b43, lsl #16
+  0x0231c0  mov      w9, #0x2e01
+  0x0231c4  add      x0, x0, #0x1b0
+  0x0231c8  add      x2, x2, #0xc80   ; "" @0x4ac80
+  0x0231cc  str      w8, [x1, #8]
+  0x0231d0  str      d0, [x1]
+  0x0231d4  strh     w9, [x1, #0xc]
+  0x0231d8  bl       #0x49450   ; -> __cxa_atexit
+  0x0231dc  adrp     x0, #0x62000
+  0x0231e0  add      x0, x0, #0xe98
+  0x0231e4  bl       #0x49480   ; -> __cxa_guard_release
+  0x0231e8  ldr      x0, [sp, #8]
+  0x0231ec  b        #0x230f8
+  0x0231f0  stp      x29, x30, [sp, #-0x10]!
+  0x0231f4  mov      x29, sp
+  0x0231f8  adrp     x8, #0x4f000
+  0x0231fc  ldr      w0, [x8, #0x5c0]
+  0x023200  cmp      w0, #1
+  0x023204  b.lt     #0x2320c
+  0x023208  bl       #0x494d0   ; -> close
+  0x02320c  adrp     x8, #0x4f000
+  0x023210  ldr      w0, [x8, #0x5bc]
+  0x023214  cmp      w0, #1
+  0x023218  b.lt     #0x23224
+  0x02321c  ldp      x29, x30, [sp], #0x10
+  0x023220  b        #0x494d0   ; -> close
+  0x023224  ldp      x29, x30, [sp], #0x10
+  0x023228  ret      
+
+========================================================================
+Java_com_pubgm_floating_Overlay_Close  @ 0x231f0
+========================================================================
+  0x0231f0  stp      x29, x30, [sp, #-0x10]!
+  0x0231f4  mov      x29, sp
+  0x0231f8  adrp     x8, #0x4f000
+  0x0231fc  ldr      w0, [x8, #0x5c0]
+  0x023200  cmp      w0, #1
+  0x023204  b.lt     #0x2320c
+  0x023208  bl       #0x494d0   ; -> close
+  0x02320c  adrp     x8, #0x4f000
+  0x023210  ldr      w0, [x8, #0x5bc]
+  0x023214  cmp      w0, #1
+  0x023218  b.lt     #0x23224
+  0x02321c  ldp      x29, x30, [sp], #0x10
+  0x023220  b        #0x494d0   ; -> close
+  0x023224  ldp      x29, x30, [sp], #0x10
+  0x023228  ret      
