@@ -1,0 +1,231 @@
+
+==========================================================================
+BINARY: sock daemon  (/projects/sandbox/decompiled_apk/assets/servernrot/sock)
+==========================================================================
+  Entry: 0x16b0
+  init_array fns: ['0xffffffffffffffff', '0xffffffffffffffff']
+  Watched import PLT stubs: [('0x1360', 'popen'), ('0x1380', 'open'), ('0x13e0', 'read'), ('0x1600', 'connect'), ('0x1620', 'fopen'), ('0x1630', 'socket'), ('0x1650', 'pclose')]
+
+  ── Call sites to watched imports ──
+    read: 2 calls @ ['0x1d68', '0x1dc0']
+    fopen: 2 calls @ ['0x2758', '0x28e8']
+    popen: 1 calls @ ['0x2828']
+    pclose: 1 calls @ ['0x2848']
+    socket: 1 calls @ ['0x336c']
+    connect: 1 calls @ ['0x33d4']
+    open: 1 calls @ ['0x34a4']
+
+  ── Context around key call sites (with string resolution) ──
+
+    ┌─ near popen @ 0x2828
+      0x27e8  stp     x20, x19, [sp, #0x40]
+      0x27ec  stp     x29, x30, [sp, #0x50]
+      0x27f0  add     x29, sp, #0x50
+      0x27f4  sub     sp, sp, #0x1e0
+      0x27f8  mrs     x28, tpidr_el0
+      0x27fc  ldr     x8, [x28, #0x28]
+      0x2800  mov     x19, x0
+      0x2804  adrp    x1, #0x8000
+      0x2808  add     x1, x1, #0xca0   ; "pidof %s"
+      0x280c  sub     x0, x29, #0xa8
+      0x2810  mov     x2, x19
+      0x2814  stur    x8, [x29, #-0x60]
+      0x2818  bl      #0x1580   ; -> sprintf
+      0x281c  adrp    x1, #0x8000
+      0x2820  add     x1, x1, #0xca9
+      0x2824  sub     x0, x29, #0xa8
+      0x2828  bl      #0x1360   ; -> popen
+      0x282c  mov     x20, x0
+      0x2830  cbz     x0, #0x285c
+      0x2834  add     x0, sp, #0x88
+
+    ┌─ near connect @ 0x33d4
+      0x3394  mov     w1, wzr
+      0x3398  bl      #0x1610   ; -> memset
+      0x339c  adrp    x20, #0x1a000
+      0x33a0  add     x20, x20, #0x2cc
+      0x33a4  mov     w2, #0x6e
+      0x33a8  mov     x0, x20
+      0x33ac  mov     w1, wzr
+      0x33b0  bl      #0x1610   ; -> memset
+      0x33b4  mov     x0, x20
+      0x33b8  strh    w21, [x0], #2
+      0x33bc  mov     w2, #0x6b
+      0x33c0  mov     x1, x19
+      0x33c4  bl      #0x1530   ; -> strncpy
+      0x33c8  ldr     w0, [x22, #0x2c4]
+      0x33cc  mov     w2, #0x6e
+      0x33d0  mov     x1, x20
+      0x33d4  bl      #0x1600   ; -> connect
+      0x33d8  cmn     w0, #1
+      0x33dc  b.eq    #0x7d84
+      0x33e0  adrp    x0, #0x8000
+
+    ┌─ near socket @ 0x336c
+      0x332c  add     x29, sp, #0x90
+      0x3330  sub     sp, sp, #0x13, lsl #12
+      0x3334  sub     sp, sp, #0xd90
+      0x3338  mrs     x19, tpidr_el0
+      0x333c  ldr     x8, [x19, #0x28]
+      0x3340  add     x24, sp, #0x13, lsl #12
+      0x3344  add     x24, x24, #0xd10
+      0x3348  adrp    x23, #0x1a000
+      0x334c  adrp    x25, #0x1a000
+      0x3350  mov     w0, #1
+      0x3354  mov     w1, #1
+      0x3358  mov     w2, wzr
+      0x335c  str     x8, [x24, #0x68]
+      0x3360  strb    wzr, [x23, #0x47c]
+      0x3364  strb    wzr, [x25, #0x480]
+      0x3368  mov     w21, #1
+      0x336c  bl      #0x1630   ; -> socket
+      0x3370  adrp    x22, #0x1a000
+      0x3374  cmn     w0, #1
+      0x3378  str     w0, [x22, #0x2c4]
+
+    ┌─ near fopen @ 0x2758
+      0x2718  add     x29, sp, #0x20
+      0x271c  sub     sp, sp, #0x430
+      0x2720  mrs     x21, tpidr_el0
+      0x2724  ldr     x8, [x21, #0x28]
+      0x2728  adrp    x2, #0x8000
+      0x272c  add     x2, x2, #0xc70   ; "/proc/%d/maps"
+      0x2730  sub     x0, x29, #0x48
+      0x2734  stur    x8, [x29, #-0x28]
+      0x2738  adrp    x8, #0x1a000
+      0x273c  ldr     w3, [x8, #0x2c0]
+      0x2740  mov     w1, #0x20
+      0x2744  str     xzr, [sp]
+      0x2748  bl      #0x1440   ; -> snprintf
+      0x274c  adrp    x1, #0x8000
+      0x2750  add     x1, x1, #0xc7e   ; "rt"
+      0x2754  sub     x0, x29, #0x48
+      0x2758  bl      #0x1620   ; -> fopen
+      0x275c  mov     x19, x0
+      0x2760  cbz     x0, #0x27b0
+      0x2764  adrp    x20, #0x8000
+
+  ── All notable strings ──
+    '/data/data'
+    '/data/data/%s/files'
+    '/proc'
+    '/proc/'
+    '/proc/%d/maps'
+    '/proc/%d/mem'
+    '/proc/%s/cmdline'
+    'com.pubg.imobile'
+    'com.pubg.krmobile'
+    'com.rekoo.pubgm'
+    'com.tencent.ig'
+    'com.vng.pubgmobile'
+    'kill %s'
+    'libUE4.so'
+    'libgcloud.so'
+    'pidof %s'
+    'successfully wrote %d bytes to address 0x%lx'
+
+==========================================================================
+BINARY: bypass ELF  (/projects/sandbox/decompiled_apk/assets/servernrot/bypass)
+==========================================================================
+  Entry: 0xe3a8
+  init_array fns: ['0xffffffffffffffff', '0xffffffffffffffff', '0xde00', '0xdf44', '0xdf78', '0xdf9c']
+  Watched import PLT stubs: [('0xd6f0', 'fopen'), ('0xdb40', 'system'), ('0xdcc0', 'mprotect'), ('0xddc0', 'open')]
+
+  ── Call sites to watched imports ──
+    system: 3 calls @ ['0xe798', '0xec94', '0x129b4']
+    fopen: 2 calls @ ['0xe840', '0xeb1c']
+    open: 1 calls @ ['0xf3b0']
+
+  ── Context around key call sites (with string resolution) ──
+
+    ┌─ near system @ 0xe798
+      0xe758  ldrb    w10, [x8, #0x41]
+      0xe75c  mov     w11, #0xa3
+      0xe760  eor     w9, w9, w11
+      0xe764  mov     w11, #0xc5
+      0xe768  eor     v1.16b, v1.16b, v0.16b
+      0xe76c  eor     v2.16b, v2.16b, v0.16b
+      0xe770  eor     v3.16b, v3.16b, v0.16b
+      0xe774  eor     v0.16b, v4.16b, v0.16b
+      0xe778  eor     w10, w10, w11
+      0xe77c  stp     q1, q2, [x8]
+      0xe780  strb    w9, [x8, #0x40]
+      0xe784  strb    w10, [x8, #0x41]
+      0xe788  stp     q3, q0, [x8, #0x20]
+      0xe78c  strb    wzr, [x8, #0x42]
+      0xe790  adrp    x0, #0x96000
+      0xe794  add     x0, x0, #0x70
+      0xe798  bl      #0xdb40   ; -> system
+      0xe79c  mov     w0, #2
+      0xe7a0  bl      #0xd9f0   ; -> sleep
+      0xe7a4  mov     w0, wzr
+
+    ┌─ near fopen @ 0xe840
+      0xe800  stp     x29, x30, [sp, #0x20]
+      0xe804  add     x29, sp, #0x20
+      0xe808  sub     sp, sp, #0x430
+      0xe80c  mrs     x21, tpidr_el0
+      0xe810  ldr     x8, [x21, #0x28]
+      0xe814  adrp    x2, #0x65000
+      0xe818  mov     x20, x1
+      0xe81c  mov     w3, w0
+      0xe820  add     x2, x2, #0x733   ; "/proc/%d/maps"
+      0xe824  sub     x0, x29, #0x48
+      0xe828  mov     w1, #0x20
+      0xe82c  stur    x8, [x29, #-0x28]
+      0xe830  bl      #0xda40   ; -> snprintf
+      0xe834  adrp    x1, #0x67000
+      0xe838  add     x1, x1, #0x9fb
+      0xe83c  sub     x0, x29, #0x48
+      0xe840  bl      #0xd6f0   ; -> fopen
+      0xe844  mov     x19, x0
+      0xe848  cbz     x0, #0xe894
+      0xe84c  add     x0, sp, #8
+
+    ┌─ near open @ 0xf3b0
+      0xf370  adrp    x0, #0x65000
+      0xf374  add     x0, x0, #0x801
+      0xf378  bl      #0xdd60   ; -> puts
+      0xf37c  adrp    x0, #0x65000
+      0xf380  add     x0, x0, #0x9e0
+      0xf384  bl      #0xdd60   ; -> puts
+      0xf388  adrp    x0, #0x65000
+      0xf38c  add     x0, x0, #0x9f2
+      0xf390  bl      #0xdd60   ; -> puts
+      0xf394  adrp    x1, #0x65000
+      0xf398  add     x1, x1, #0xa16   ; "/proc/%d/mem"
+      0xf39c  sub     x0, x29, #0xa8
+      0xf3a0  mov     w2, w21
+      0xf3a4  bl      #0xd8b0   ; -> sprintf
+      0xf3a8  sub     x0, x29, #0xa8
+      0xf3ac  mov     w1, #2
+      0xf3b0  bl      #0xddc0   ; -> open
+      0xf3b4  adrp    x23, #0x96000
+      0xf3b8  cmn     w0, #1
+      0xf3bc  str     w0, [x23, #0x48]
+
+  ── All notable strings ──
+    '/data/data'
+    '/data/data/%s/files'
+    '/proc'
+    '/proc/%d/maps'
+    '/proc/%d/mem'
+    '/proc/%s/cmdline'
+    'Bypass Active'
+    'N10__cxxabiv129__pointer_to_member_type_infoE'
+    'NSt6__ndk17codecvtIDic9mbstate_tEE'
+    'NSt6__ndk17codecvtIDsc9mbstate_tEE'
+    'NSt6__ndk17codecvtIcc9mbstate_tEE'
+    'NSt6__ndk17codecvtIwc9mbstate_tEE'
+    "allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size"
+    'codecvt_byname<wchar_t, char, mbstate_t>::codecvt_byname failed to construct for '
+    'kill %d'
+    'libAntsVoice.so'
+    'libCrashKit.so'
+    'libCrashSight.so'
+    'libGCloudVoice.so'
+    'libINTLCompliance.so'
+    'libINTLFoundation.so'
+    'libITOP.so'
+    'libPixUI_PXPlugin.so'
+    'libRoosterNN.so'
