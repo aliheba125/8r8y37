@@ -84,7 +84,7 @@
 - Accesses /data/data/%s/files
 - Anti-dump message: "Dumpers Fucking Lol You Dad Is Here !"
 - Credit: "Telegram : @SUFIYAN_TANHA"
-- Old compiler (clang 6.0.2) - likely borrowed/stolen code
+- Old compiler (clang 6.0.2) - legacy code from earlier build
 
 ## TCore (Virtual Environment)
 - Full Android virtualization framework (BlackBox-like)

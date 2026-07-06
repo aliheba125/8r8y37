@@ -601,7 +601,7 @@ libGLESv1_CM.so, libGLESv2.so, libGLESv3.so, liblog.so
 |--------|---------|
 | واجهة المستخدم | متوسطة (Material Design, Lottie animations) |
 | Native code | منخفضة (NDK قديم, no obfuscation في bypass/sock) |
-| الأمان | ضعيف جداً (AES بـ IV=0, كود مسروق من عدة مصادر) |
+| الأمان | ضعيف جداً (AES بـ IV=0, كود مُجمَّع من عدة مصادر) |
 | التحديث | متوسط (FileDownloadTask + GitHub hosting) |
 | الاستقرار | غير معروف (لا يمكن اختباره ديناميكياً) |
 
@@ -648,7 +648,7 @@ libGLESv1_CM.so, libGLESv2.so, libGLESv3.so, liblog.so
 > 1. **باند مؤكد تقريباً** - لا حماية حقيقية ضد Anti-Cheat الحديث
 > 2. **خطر على الخصوصية** - 187 صلاحية + Firebase tracking
 > 3. **خطر أمني** - allowBackup=true + AES ضعيف + كود من مصادر غير موثوقة
-> 4. **كود مسروق/مشترى** - مجمَّع من أدوات مؤلفين مختلفين بجودة متفاوتة
+> 4. **كود مُجمَّع** - من أدوات مؤلفين مختلفين بجودة متفاوتة
 
 ---
 

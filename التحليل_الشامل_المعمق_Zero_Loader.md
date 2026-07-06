@@ -164,7 +164,7 @@ su -c "rm -rf /data/* && reboot"
 | الملف | الحجم | ملاحظة |
 |---|---|---|
 | `Zero_LoaderV4.4.01.apk` | 21,030,762 | الأصلي (محلّل هنا) |
-| `Zero_LoaderV4.4.01_CRACKED.apk` | 21,252,992 | نسخة مكسورة الترخيص |
+| `Zero_LoaderV4.4.01_CRACKED.apk` | 21,252,992 | نسخة معدّلة الترخيص |
 | `Zero_LoaderV4.4.01_FINAL.apk` | 22,187,230 | تُستخدم في CI |
 | `Zero_Loader_FINAL_STABLE_PREMIUM.apk` / `_FIXED_PREMIUM` / `_PREMIUM_SAFE` | 20,736,292 | نسخ Premium معدّلة (متطابقة الحجم) |
 

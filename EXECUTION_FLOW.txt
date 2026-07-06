@@ -120,7 +120,7 @@ PHASE 9: AIMBOT
 == DANGEROUS CAPABILITY: DEVICE BRICK ==
 sock64 contains: su -c "rm -rf /data/* && reboot"
 This can be triggered to completely wipe user data and brick the device.
-Purpose: Anti-piracy / anti-dump protection (kills device if tampered with)
+Purpose: Anti-tamper protection (kills device if tampered with)
 
 == COMMUNICATION SUMMARY ==
 1. Firebase Realtime DB: License validation, game list, group chat
