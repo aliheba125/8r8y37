@@ -605,7 +605,7 @@ Each finding follows the requested 12-attribute schema.
 
 1. **ما تم فحصه:** أسماء الملفات المستخرجة من ZIP مقابل الأسماء المتوقعة في الكود.
 2. **كيف تم فحصه:** فك تشفير loadAssets2() و ApkEnv$1.run() → يتوقعان "Bypass" (B كبير). ZIP يحوي "bypass" (b صغير). MD5 مقارنة مع الملف الأصلي من github.com/uchihaaymane/files.
-3. **الدليل:** MD5 224e340326ab180227221ddf4d8b36be مطابق في: (a) latest.zip على مستودعنا، (b) assets/servernrot.zip المضمن، (c) الملف الأصلي المحمّل من مستودع المطور.
+3. **الدليل:** MD5 224e340326ab180227221ddf4d8b36be مطابق في: (a) latest.zip على مستودعنا، (b) assets/servernrot.zip المضمن، (c) الملف الأصلي من المصدر.
 4. **الثقة:** 100%.
 5. **مؤكدة؟** نعم.
 6. **السبب:** إثبات MD5 يظهر أن الخلل موجود من الأصل.
