@@ -42,9 +42,12 @@ API Key:           AIzaSyAOrhEU4gPb1cij7NTjVvdnx6cOwcy4UKE
 
 ## الطريقة 1: إنشاء مفتاح في قاعدة البيانات (بدون تعديل التطبيق)
 
+### السكربت الجاهز (حمّله مباشرة):
+> **[`create_key.py`](create_key.py)** ← حمّل هذا الملف وشغّله
+
 ### المتطلبات:
 - Python 3 + مكتبة `requests`
-- النسخة الأصلية: `Zero_LoaderV4.4.01.apk`
+- النسخة الأصلية: [`Zero_LoaderV4.4.01.apk`](https://github.com/aliheba125/8r8y37/releases/download/4.4.01/Zero_LoaderV4.4.01.apk)
 
 ### الكود الكامل:
 
@@ -218,16 +221,17 @@ jarsigner -sigalg SHA256withRSA -digestalg SHA-256 -keystore release.keystore -s
 
 ## الملفات في هذا المستودع
 
-| الملف | الوصف |
-|-------|-------|
-| `Zero_LoaderV4.4.01.apk` | النسخة الأصلية (تحتاج مفتاح Firebase) |
-| `Zero_LoaderV4.4.01_UNLIMITED.apk` | النسخة المعدّلة (تدخل بأي كلمة) |
-| `keygen.py` | مولد مفاتيح + فك تشفير AES |
-| `firebase_exploit_poc.py` | فحص أمني لـ Firebase |
-| `firebase_deep_scan.py` | ماسح شامل لقاعدة البيانات |
-| `LoginActivity.smali` | كود التحقق (مرجع) |
-| `AUDIT_v4_LICENSE_SYSTEM.md` | تحليل نظام الترخيص الكامل |
-| `FORENSIC_AUDIT_FINAL.md` | التقرير الجنائي النهائي |
+| الملف | الوصف | رابط مباشر |
+|-------|-------|-----------|
+| **`create_key.py`** | **سكربت إنشاء المفاتيح (الطريقة 1)** | [تحميل](create_key.py) |
+| `Zero_LoaderV4.4.01.apk` | النسخة الأصلية (تحتاج مفتاح Firebase) | [تحميل](https://github.com/aliheba125/8r8y37/releases/download/4.4.01/Zero_LoaderV4.4.01.apk) |
+| `Zero_LoaderV4.4.01_UNLIMITED.apk` | النسخة المعدّلة (تدخل بأي كلمة) | [تحميل](Zero_LoaderV4.4.01_UNLIMITED.apk) |
+| `keygen.py` | مولد مفاتيح + فك تشفير AES | [عرض](keygen.py) |
+| `firebase_exploit_poc.py` | فحص أمني لـ Firebase | [عرض](firebase_exploit_poc.py) |
+| `firebase_deep_scan.py` | ماسح شامل لقاعدة البيانات | [عرض](firebase_deep_scan.py) |
+| `LoginActivity.smali` | كود التحقق (مرجع) | [عرض](LoginActivity.smali) |
+| `AUDIT_v4_LICENSE_SYSTEM.md` | تحليل نظام الترخيص الكامل | [قراءة](AUDIT_v4_LICENSE_SYSTEM.md) |
+| `FORENSIC_AUDIT_FINAL.md` | التقرير الجنائي النهائي | [قراءة](FORENSIC_AUDIT_FINAL.md) |
 
 ---
 
