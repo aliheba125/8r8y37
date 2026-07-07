@@ -1,0 +1,22 @@
+----------------------------------------
+Diagnostic Summary
+----------------------------------------
+Session ID: 0
+Process PID: 27977
+Duration: 4m 4s
+Events Logged: 4
+LoginSessions: 0
+startActivity: 0
+blockedHttpView: 0
+onNewIntent: 0
+Exceptions: 0
+Export Status: SUCCESS
+Output File:
+Download/pubg_diag_27977.log
+----------------------------------------
+
+---- FULL LOG (oldest first) ----
+#1 [٠٢:١٨:٣٦.٢٧٧] S0 LOADLIB_boxapp_ok
+#2 [٠٢:١٨:٣٦.٢٧٩] S0 APP_attachBaseContext
+#3 [٠٢:١٨:٣٦.٢٨١] S0 CRASH_HANDLER_INSTALLED
+#4 [٠٢:١٨:٣٦.٣٨٠] S0 APP_onCreate

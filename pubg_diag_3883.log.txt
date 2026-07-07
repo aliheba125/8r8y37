@@ -1,0 +1,335 @@
+----------------------------------------
+Diagnostic Summary
+----------------------------------------
+Session ID: 0
+Process PID: 3883
+Duration: 0m 12s
+Events Logged: 317
+LoginSessions: 0
+startActivity: 0
+blockedHttpView: 0
+onNewIntent: 0
+Exceptions: 0
+Export Status: SUCCESS
+Output File:
+Download/pubg_diag_3883.log
+----------------------------------------
+
+---- FULL LOG (oldest first) ----
+#1 [٠٢:١٨:٤٩.٢٥٩] S0 LOADLIB_boxapp_ok
+#2 [٠٢:١٨:٤٩.٢٦١] S0 APP_attachBaseContext
+#3 [٠٢:١٨:٤٩.٢٦٢] S0 CRASH_HANDLER_INSTALLED
+#4 [٠٢:١٨:٤٩.٢٩٥] S0 HOOK_REGISTER setTaskDescription
+#5 [٠٢:١٨:٤٩.٢٩٧] S0 HOOK_REGISTER getCallingPackage
+#6 [٠٢:١٨:٤٩.٢٩٨] S0 HOOK_REGISTER getCallingActivity
+#7 [٠٢:١٨:٤٩.٢٩٩] S0 HOOK_REGISTER startIntentSenderForResult
+#8 [٠٢:١٨:٤٩.٣٠٠] S0 HOOK_REGISTER startActivity
+#9 [٠٢:١٨:٤٩.٣٠١] S0 HOOK_REGISTER startActivities
+#10 [٠٢:١٨:٤٩.٣٠٢] S0 HOOK_REGISTER getAppTasks
+#11 [٠٢:١٨:٤٩.٣٠٣] S0 HOOK_REGISTER finishActivity
+#12 [٠٢:١٨:٤٩.٣٠٤] S0 HOOK_REGISTER activityResumed
+#13 [٠٢:١٨:٤٩.٣٠٥] S0 HOOK_REGISTER activityDestroyed
+#14 [٠٢:١٨:٤٩.٣٠٧] S0 HOOK_REGISTER getNetworkStatsUidDetail
+#15 [٠٢:١٨:٤٩.٣٠٩] S0 HOOK_REGISTER listen
+#16 [٠٢:١٨:٤٩.٣١٠] S0 HOOK_REGISTER listenForSubscriber
+#17 [٠٢:١٨:٤٩.٣١٣] S0 HOOK_REGISTER cancelToast
+#18 [٠٢:١٨:٤٩.٣١٤] S0 HOOK_REGISTER enqueueToastEx
+#19 [٠٢:١٨:٤٩.٣١٥] S0 HOOK_REGISTER enqueueToastForLog
+#20 [٠٢:١٨:٤٩.٣١٦] S0 HOOK_REGISTER enqueueToast
+#21 [٠٢:١٨:٤٩.٣١٧] S0 HOOK_REGISTER getNotificationChannelGroups
+#22 [٠٢:١٨:٤٩.٣١٨] S0 HOOK_REGISTER deleteNotificationChannelGroup
+#23 [٠٢:١٨:٤٩.٣١٩] S0 HOOK_REGISTER createNotificationChannelGroups
+#24 [٠٢:١٨:٤٩.٣٢٠] S0 HOOK_REGISTER deleteNotificationChannel
+#25 [٠٢:١٨:٤٩.٣٢١] S0 HOOK_REGISTER createNotificationChannels
+#26 [٠٢:١٨:٤٩.٣٢٢] S0 HOOK_REGISTER enqueueNotificationWithTag
+#27 [٠٢:١٨:٤٩.٣٢٣] S0 HOOK_REGISTER cancelNotificationWithTag
+#28 [٠٢:١٨:٤٩.٣٢٣] S0 HOOK_REGISTER getNotificationChannels
+#29 [٠٢:١٨:٤٩.٣٢٤] S0 HOOK_REGISTER getNotificationChannel
+#30 [٠٢:١٨:٤٩.٣٢٨] S0 HOOK_REGISTER establishVpn
+#31 [٠٢:١٨:٤٩.٣٢٩] S0 HOOK_REGISTER prepareVpn
+#32 [٠٢:١٨:٤٩.٣٣٠] S0 HOOK_REGISTER setVpnPackageAuthorization
+#33 [٠٢:١٨:٤٩.٣٣٢] S0 HOOK_REGISTER sendMultipartText
+#34 [٠٢:١٨:٤٩.٣٣٣] S0 HOOK_REGISTER sendText
+#35 [٠٢:١٨:٤٩.٣٣٣] S0 HOOK_REGISTER sendData
+#36 [٠٢:١٨:٤٩.٣٣٤] S0 HOOK_REGISTER copyMessageToIccEf
+#37 [٠٢:١٨:٤٩.٣٣٥] S0 HOOK_REGISTER updateMessageOnIccEf
+#38 [٠٢:١٨:٤٩.٣٣٦] S0 HOOK_REGISTER getAllMessagesFromIccEf
+#39 [٠٢:١٨:٤٩.٣٣٧] S0 HOOK_REGISTER sendMultipartTextForSubscriber
+#40 [٠٢:١٨:٤٩.٣٣٧] S0 HOOK_REGISTER sendTextForSubscriber
+#41 [٠٢:١٨:٤٩.٣٣٨] S0 HOOK_REGISTER sendDataForSubscriber
+#42 [٠٢:١٨:٤٩.٣٣٩] S0 HOOK_REGISTER copyMessageToIccEfForSubscriber
+#43 [٠٢:١٨:٤٩.٣٤٠] S0 HOOK_REGISTER updateMessageOnIccEfForSubscriber
+#44 [٠٢:١٨:٤٩.٣٤٠] S0 HOOK_REGISTER getAllMessagesFromIccEfForSubscriber
+#45 [٠٢:١٨:٤٩.٣٤٢] S0 HOOK_REGISTER getLine1NumberForSubscriber
+#46 [٠٢:١٨:٤٩.٣٤٥] S0 HOOK_REGISTER setTaskDescription
+#47 [٠٢:١٨:٤٩.٣٤٦] S0 HOOK_REGISTER activityDestroyed
+#48 [٠٢:١٨:٤٩.٣٤٦] S0 HOOK_REGISTER activityResumed
+#49 [٠٢:١٨:٤٩.٣٤٧] S0 HOOK_REGISTER finishActivity
+#50 [٠٢:١٨:٤٩.٣٥١] S0 HOOK_REGISTER setSplashScreenTheme
+#51 [٠٢:١٨:٤٩.٣٥٢] S0 HOOK_REGISTER checkPermission
+#52 [٠٢:١٨:٤٩.٣٥٣] S0 HOOK_REGISTER checkPackageStartable
+#53 [٠٢:١٨:٤٩.٣٥٣] S0 HOOK_REGISTER queryIntentActivities
+#54 [٠٢:١٨:٤٩.٣٥٣] S0 HOOK_REGISTER getPackageInfoVersioned
+#55 [٠٢:١٨:٤٩.٣٥٤] S0 HOOK_REGISTER getPreferredActivities
+#56 [٠٢:١٨:٤٩.٣٥٤] S0 HOOK_REGISTER canForwardTo
+#57 [٠٢:١٨:٤٩.٣٥٥] S0 HOOK_REGISTER getComponentEnabledSetting
+#58 [٠٢:١٨:٤٩.٣٥٥] S0 HOOK_REGISTER getSharedLibraries
+#59 [٠٢:١٨:٤٩.٣٥٥] S0 HOOK_REGISTER getPermissions
+#60 [٠٢:١٨:٤٩.٣٥٦] S0 HOOK_REGISTER getInstallerPackageName
+#61 [٠٢:١٨:٤٩.٣٥٦] S0 HOOK_REGISTER getPackagesForUid
+#62 [٠٢:١٨:٤٩.٣٥٧] S0 HOOK_REGISTER canRequestPackageInstalls
+#63 [٠٢:١٨:٤٩.٣٥٧] S0 HOOK_REGISTER resolveContentProvider
+#64 [٠٢:١٨:٤٩.٣٥٧] S0 HOOK_REGISTER queryIntentReceivers
+#65 [٠٢:١٨:٤٩.٣٥٨] S0 HOOK_REGISTER queryContentProviders
+#66 [٠٢:١٨:٤٩.٣٥٨] S0 HOOK_REGISTER getApplicationInfo
+#67 [٠٢:١٨:٤٩.٣٥٩] S0 HOOK_REGISTER getInstalledPackages
+#68 [٠٢:١٨:٤٩.٣٥٩] S0 HOOK_REGISTER getPackageGids
+#69 [٠٢:١٨:٤٩.٣٥٩] S0 HOOK_REGISTER getInstalledApplications
+#70 [٠٢:١٨:٤٩.٣٦٠] S0 HOOK_REGISTER getServiceInfo
+#71 [٠٢:١٨:٤٩.٣٦٠] S0 HOOK_REGISTER getPackageUidEtc
+#72 [٠٢:١٨:٤٩.٣٦٠] S0 HOOK_REGISTER getActivityInfo
+#73 [٠٢:١٨:٤٩.٣٦١] S0 HOOK_REGISTER getReceiverInfo
+#74 [٠٢:١٨:٤٩.٣٦١] S0 HOOK_REGISTER getProviderInfo
+#75 [٠٢:١٨:٤٩.٣٦٢] S0 HOOK_REGISTER setApplicationBlockedSettingAsUser
+#76 [٠٢:١٨:٤٩.٣٦٢] S0 HOOK_REGISTER getPackageUid
+#77 [٠٢:١٨:٤٩.٣٦٢] S0 HOOK_REGISTER getPackageInfo
+#78 [٠٢:١٨:٤٩.٣٦٣] S0 HOOK_REGISTER setComponentEnabledSetting
+#79 [٠٢:١٨:٤٩.٣٦٣] S0 HOOK_REGISTER resolveService
+#80 [٠٢:١٨:٤٩.٣٦٣] S0 HOOK_REGISTER resolveIntent
+#81 [٠٢:١٨:٤٩.٣٦٥] S0 HOOK_REGISTER pushDynamicShortcut
+#82 [٠٢:١٨:٤٩.٣٦٥] S0 HOOK_REGISTER createShortcutResultIntent
+#83 [٠٢:١٨:٤٩.٣٦٥] S0 HOOK_REGISTER addDynamicShortcuts
+#84 [٠٢:١٨:٤٩.٣٦٥] S0 HOOK_REGISTER setDynamicShortcuts
+#85 [٠٢:١٨:٤٩.٣٦٦] S0 HOOK_REGISTER requestPinShortcut
+#86 [٠٢:١٨:٤٩.٣٦٨] S0 HOOK_REGISTER setExtraLocationControllerPackageEnabled
+#87 [٠٢:١٨:٤٩.٣٦٩] S0 HOOK_REGISTER isProviderEnabledForUser
+#88 [٠٢:١٨:٤٩.٣٦٩] S0 HOOK_REGISTER getAllProviders
+#89 [٠٢:١٨:٤٩.٣٦٩] S0 HOOK_REGISTER getBestProvider
+#90 [٠٢:١٨:٤٩.٣٦٩] S0 HOOK_REGISTER removeGpsStatusListener
+#91 [٠٢:١٨:٤٩.٣٧٠] S0 HOOK_REGISTER getProviderProperties
+#92 [٠٢:١٨:٤٩.٣٧٠] S0 HOOK_REGISTER removeUpdates
+#93 [٠٢:١٨:٤٩.٣٧٠] S0 HOOK_REGISTER requestLocationUpdates
+#94 [٠٢:١٨:٤٩.٣٧١] S0 HOOK_REGISTER getLastKnownLocation
+#95 [٠٢:١٨:٤٩.٣٧١] S0 HOOK_REGISTER getLastLocation
+#96 [٠٢:١٨:٤٩.٣٧١] S0 HOOK_REGISTER registerGnssStatusCallback
+#97 [٠٢:١٨:٤٩.٣٧٢] S0 HOOK_REGISTER getApplicationRestrictions
+#98 [٠٢:١٨:٤٩.٣٧٤] S0 HOOK_REGISTER unregisterAccountListener
+#99 [٠٢:١٨:٤٩.٣٧٤] S0 HOOK_REGISTER registerAccountListener
+#100 [٠٢:١٨:٤٩.٣٧٤] S0 HOOK_REGISTER getAccountsAndVisibilityForPackage
+#101 [٠٢:١٨:٤٩.٣٧٥] S0 HOOK_REGISTER getAccountVisibility
+#102 [٠٢:١٨:٤٩.٣٧٥] S0 HOOK_REGISTER setAccountVisibility
+#103 [٠٢:١٨:٤٩.٣٧٥] S0 HOOK_REGISTER addAccountExplicitlyWithVisibility
+#104 [٠٢:١٨:٤٩.٣٧٥] S0 HOOK_REGISTER getPackagesAndVisibilityForAccount
+#105 [٠٢:١٨:٤٩.٣٧٥] S0 HOOK_REGISTER getAuthTokenLabel
+#106 [٠٢:١٨:٤٩.٣٧٦] S0 HOOK_REGISTER accountAuthenticated
+#107 [٠٢:١٨:٤٩.٣٧٦] S0 HOOK_REGISTER confirmCredentialsAsUser
+#108 [٠٢:١٨:٤٩.٣٧٦] S0 HOOK_REGISTER editProperties
+#109 [٠٢:١٨:٤٩.٣٧٦] S0 HOOK_REGISTER updateCredentials
+#110 [٠٢:١٨:٤٩.٣٧٧] S0 HOOK_REGISTER addAccountAsUser
+#111 [٠٢:١٨:٤٩.٣٧٧] S0 HOOK_REGISTER addAccount
+#112 [٠٢:١٨:٤٩.٣٧٧] S0 HOOK_REGISTER getAuthToken
+#113 [٠٢:١٨:٤٩.٣٧٧] S0 HOOK_REGISTER updateAppPermission
+#114 [٠٢:١٨:٤٩.٣٧٧] S0 HOOK_REGISTER setUserData
+#115 [٠٢:١٨:٤٩.٣٧٨] S0 HOOK_REGISTER clearPassword
+#116 [٠٢:١٨:٤٩.٣٧٨] S0 HOOK_REGISTER setPassword
+#117 [٠٢:١٨:٤٩.٣٧٨] S0 HOOK_REGISTER setAuthToken
+#118 [٠٢:١٨:٤٩.٣٧٨] S0 HOOK_REGISTER peekAuthToken
+#119 [٠٢:١٨:٤٩.٣٧٩] S0 HOOK_REGISTER invalidateAuthToken
+#120 [٠٢:١٨:٤٩.٣٧٩] S0 HOOK_REGISTER copyAccountToUser
+#121 [٠٢:١٨:٤٩.٣٧٩] S0 HOOK_REGISTER removeAccountExplicitly
+#122 [٠٢:١٨:٤٩.٣٧٩] S0 HOOK_REGISTER removeAccountAsUser
+#123 [٠٢:١٨:٤٩.٣٧٩] S0 HOOK_REGISTER addAccountExplicitly
+#124 [٠٢:١٨:٤٩.٣٨٠] S0 HOOK_REGISTER getAccountsAsUser
+#125 [٠٢:١٨:٤٩.٣٨٠] S0 HOOK_REGISTER getAccountsByFeatures
+#126 [٠٢:١٨:٤٩.٣٨٠] S0 HOOK_REGISTER getAccountByTypeAndFeatures
+#127 [٠٢:١٨:٤٩.٣٨٠] S0 HOOK_REGISTER getAccountsByTypeForPackage
+#128 [٠٢:١٨:٤٩.٣٨١] S0 HOOK_REGISTER getAccountsForPackage
+#129 [٠٢:١٨:٤٩.٣٨١] S0 HOOK_REGISTER getAuthenticatorTypes
+#130 [٠٢:١٨:٤٩.٣٨١] S0 HOOK_REGISTER getUserData
+#131 [٠٢:١٨:٤٩.٣٨١] S0 HOOK_REGISTER getPassword
+#132 [٠٢:١٨:٤٩.٣٨٢] S0 HOOK_REGISTER startActivityAsUser
+#133 [٠٢:١٨:٤٩.٣٨٢] S0 HOOK_REGISTER getTargetUserProfiles
+#134 [٠٢:١٨:٤٩.٣٨٤] S0 HOOK_REGISTER enqueue
+#135 [٠٢:١٨:٤٩.٣٨٥] S0 HOOK_REGISTER cancelAll
+#136 [٠٢:١٨:٤٩.٣٨٥] S0 HOOK_REGISTER cancel
+#137 [٠٢:١٨:٤٩.٣٨٥] S0 HOOK_REGISTER schedule
+#138 [٠٢:١٨:٤٩.٣٨٦] S0 HOOK_REGISTER executeGetCredential
+#139 [٠٢:١٨:٤٩.٣٨٨] S0 HOOK_REGISTER isHardwareDetected
+#140 [٠٢:١٨:٤٩.٣٨٩] S0 HOOK_REGISTER hasEnrolledFingerprints
+#141 [٠٢:١٨:٤٩.٣٨٩] S0 HOOK_REGISTER authenticate
+#142 [٠٢:١٨:٤٩.٣٨٩] S0 HOOK_REGISTER cancelAuthentication
+#143 [٠٢:١٨:٤٩.٣٨٩] S0 HOOK_REGISTER getEnrolledFingerprints
+#144 [٠٢:١٨:٤٩.٣٩٠] S0 HOOK_REGISTER getAuthenticatorId
+#145 [٠٢:١٨:٤٩.٣٩٠] S0 HOOK_REGISTER requestBufferForProcess
+#146 [٠٢:١٨:٤٩.٣٩١] S0 HOOK_REGISTER startSession
+#147 [٠٢:١٨:٤٩.٣٩٢] S0 HOOK_REGISTER getSystemRoutesForPackage
+#148 [٠٢:١٨:٤٩.٣٩٣] S0 HOOK_REGISTER getSystemRoutes
+#149 [٠٢:١٨:٤٩.٣٩٣] S0 HOOK_REGISTER registerRouter2
+#150 [٠٢:١٨:٤٩.٣٩٣] S0 HOOK_REGISTER registerClientAsUser
+#151 [٠٢:١٨:٤٩.٣٩٥] S0 HOOK_REGISTER execve
+#152 [٠٢:١٨:٤٩.٣٩٥] S0 HOOK_REGISTER stat
+#153 [٠٢:١٨:٤٩.٣٩٥] S0 HOOK_REGISTER getuid
+#154 [٠٢:١٨:٤٩.٣٩٦] S0 HOOK_REGISTER getEnabledInputMethodList
+#155 [٠٢:١٨:٤٩.٣٩٦] S0 HOOK_REGISTER getInputMethodList
+#156 [٠٢:١٨:٤٩.٣٩٧] S0 HOOK_REGISTER startInputOrWindowGainedFocus
+#157 [٠٢:١٨:٤٩.٣٩٧] S0 HOOK_REGISTER windowGainedFocus
+#158 [٠٢:١٨:٤٩.٣٩٧] S0 HOOK_REGISTER startInput
+#159 [٠٢:١٨:٤٩.٤٠٠] S0 HOOK_REGISTER createSession
+#160 [٠٢:١٨:٤٩.٤٠١] S0 HOOK_REGISTER establishVpn
+#161 [٠٢:١٨:٤٩.٤٠١] S0 HOOK_REGISTER prepareVpn
+#162 [٠٢:١٨:٤٩.٤٠١] S0 HOOK_REGISTER setVpnPackageAuthorization
+#163 [٠٢:١٨:٤٩.٤٠٣] S0 HOOK_REGISTER isDeviceProvisioned
+#164 [٠٢:١٨:٤٩.٤٠٣] S0 HOOK_REGISTER getProfileOwnerName
+#165 [٠٢:١٨:٤٩.٤٠٤] S0 HOOK_REGISTER getDeviceOwnerName
+#166 [٠٢:١٨:٤٩.٤٠٤] S0 HOOK_REGISTER getDeviceOwnerComponent
+#167 [٠٢:١٨:٤٩.٤٠٤] S0 HOOK_REGISTER getStorageEncryptionStatus
+#168 [٠٢:١٨:٤٩.٤٠٧] S0 HOOK_REGISTER updateConfiguration
+#169 [٠٢:١٨:٤٩.٤٠٧] S0 HOOK_REGISTER unregisterUidObserver
+#170 [٠٢:١٨:٤٩.٤٠٧] S0 HOOK_REGISTER unregisterReceiver
+#171 [٠٢:١٨:٤٩.٤٠٧] S0 HOOK_REGISTER setServiceForeground
+#172 [٠٢:١٨:٤٩.٤٠٧] S0 HOOK_REGISTER setRequestedOrientation
+#173 [٠٢:١٨:٤٩.٤٠٨] S0 HOOK_REGISTER registerUidObserver
+#174 [٠٢:١٨:٤٩.٤٠٨] S0 HOOK_REGISTER getUidForIntentSender
+#175 [٠٢:١٨:٤٩.٤٠٨] S0 HOOK_REGISTER getPackageForIntentSender
+#176 [٠٢:١٨:٤٩.٤٠٨] S0 HOOK_REGISTER getHistoricalProcessExitReasons
+#177 [٠٢:١٨:٤٩.٤٠٨] S0 HOOK_REGISTER getCurrentUser
+#178 [٠٢:١٨:٤٩.٤٠٩] S0 HOOK_REGISTER finishReceiver
+#179 [٠٢:١٨:٤٩.٤٠٩] S0 HOOK_REGISTER checkUriPermission
+#180 [٠٢:١٨:٤٩.٤٠٩] S0 HOOK_REGISTER checkPermission
+#181 [٠٢:١٨:٤٩.٤٠٩] S0 HOOK_REGISTER unbindService
+#182 [٠٢:١٨:٤٩.٤٠٩] S0 HOOK_REGISTER stopServiceToken
+#183 [٠٢:١٨:٤٩.٤١٠] S0 HOOK_REGISTER stopService
+#184 [٠٢:١٨:٤٩.٤١٠] S0 HOOK_REGISTER startService
+#185 [٠٢:١٨:٤٩.٤١٠] S0 HOOK_REGISTER setTaskDescription
+#186 [٠٢:١٨:٤٩.٤١٠] S0 HOOK_REGISTER sendIntentSender
+#187 [٠٢:١٨:٤٩.٤١١] S0 HOOK_REGISTER registerReceiverWithFeature
+#188 [٠٢:١٨:٤٩.٤١١] S0 HOOK_REGISTER registerReceiver
+#189 [٠٢:١٨:٤٩.٤١١] S0 HOOK_REGISTER publishService
+#190 [٠٢:١٨:٤٩.٤١١] S0 HOOK_REGISTER peekService
+#191 [٠٢:١٨:٤٩.٤١١] S0 HOOK_REGISTER grantUriPermission
+#192 [٠٢:١٨:٤٩.٤١٢] S0 HOOK_REGISTER getServices
+#193 [٠٢:١٨:٤٩.٤١٢] S0 HOOK_REGISTER getRunningAppProcesses
+#194 [٠٢:١٨:٤٩.٤١٢] S0 HOOK_REGISTER getIntentSenderWithSourceToken
+#195 [٠٢:١٨:٤٩.٤١٢] S0 HOOK_REGISTER getIntentSenderWithFeature
+#196 [٠٢:١٨:٤٩.٤١٢] S0 HOOK_REGISTER getIntentSender
+#197 [٠٢:١٨:٤٩.٤١٣] S0 HOOK_REGISTER getContentProvider
+#198 [٠٢:١٨:٤٩.٤١٣] S0 HOOK_REGISTER broadcastIntentWithFeature
+#199 [٠٢:١٨:٤٩.٤١٣] S0 HOOK_REGISTER broadcastIntent
+#200 [٠٢:١٨:٤٩.٤١٣] S0 HOOK_REGISTER bindServiceInstance
+#201 [٠٢:١٨:٤٩.٤١٤] S0 HOOK_REGISTER bindService
+#202 [٠٢:١٨:٤٩.٤١٤] S0 HOOK_REGISTER bindIsolatedService
+#203 [٠٢:١٨:٤٩.٤١٤] S0 HOOK_REGISTER getCallingPackage
+#204 [٠٢:١٨:٤٩.٤١٤] S0 HOOK_REGISTER getCallingActivity
+#205 [٠٢:١٨:٤٩.٤١٤] S0 HOOK_REGISTER startIntentSenderForResult
+#206 [٠٢:١٨:٤٩.٤١٥] S0 HOOK_REGISTER startActivity
+#207 [٠٢:١٨:٤٩.٤١٥] S0 HOOK_REGISTER startActivities
+#208 [٠٢:١٨:٤٩.٤١٥] S0 HOOK_REGISTER getAppTasks
+#209 [٠٢:١٨:٤٩.٤١٥] S0 HOOK_REGISTER finishActivity
+#210 [٠٢:١٨:٤٩.٤١٥] S0 HOOK_REGISTER activityResumed
+#211 [٠٢:١٨:٤٩.٤١٥] S0 HOOK_REGISTER activityDestroyed
+#212 [٠٢:١٨:٤٩.٤١٨] S0 HOOK_REGISTER setMicrophoneMute
+#213 [٠٢:١٨:٤٩.٤١٨] S0 HOOK_REGISTER isHardwareDetected
+#214 [٠٢:١٨:٤٩.٤١٨] S0 HOOK_REGISTER adjustVolume
+#215 [٠٢:١٨:٤٩.٤١٨] S0 HOOK_REGISTER adjustLocalOrRemoteStreamVolume
+#216 [٠٢:١٨:٤٩.٤١٩] S0 HOOK_REGISTER adjustSuggestedStreamVolume
+#217 [٠٢:١٨:٤٩.٤١٩] S0 HOOK_REGISTER adjustStreamVolume
+#218 [٠٢:١٨:٤٩.٤١٩] S0 HOOK_REGISTER adjustMasterVolume
+#219 [٠٢:١٨:٤٩.٤١٩] S0 HOOK_REGISTER setStreamVolume
+#220 [٠٢:١٨:٤٩.٤١٩] S0 HOOK_REGISTER setMasterVolume
+#221 [٠٢:١٨:٤٩.٤٢٠] S0 HOOK_REGISTER setRingerModeExternal
+#222 [٠٢:١٨:٤٩.٤٢٠] S0 HOOK_REGISTER setRingerModeInternal
+#223 [٠٢:١٨:٤٩.٤٢٠] S0 HOOK_REGISTER setMode
+#224 [٠٢:١٨:٤٩.٤٢٠] S0 HOOK_REGISTER avrcpSupportsAbsoluteVolume
+#225 [٠٢:١٨:٤٩.٤٢٠] S0 HOOK_REGISTER abandonAudioFocus
+#226 [٠٢:١٨:٤٩.٤٢١] S0 HOOK_REGISTER requestAudioFocus
+#227 [٠٢:١٨:٤٩.٤٢١] S0 HOOK_REGISTER setWiredDeviceConnectionState
+#228 [٠٢:١٨:٤٩.٤٢١] S0 HOOK_REGISTER setSpeakerphoneOn
+#229 [٠٢:١٨:٤٩.٤٢١] S0 HOOK_REGISTER setBluetoothScoOn
+#230 [٠٢:١٨:٤٩.٤٢١] S0 HOOK_REGISTER stopBluetoothSco
+#231 [٠٢:١٨:٤٩.٤٢١] S0 HOOK_REGISTER startBluetoothSco
+#232 [٠٢:١٨:٤٩.٤٢٢] S0 HOOK_REGISTER disableSafeMediaVolume
+#233 [٠٢:١٨:٤٩.٤٢٢] S0 HOOK_REGISTER registerRemoteControlClient
+#234 [٠٢:١٨:٤٩.٤٢٢] S0 HOOK_REGISTER unregisterAudioFocusClient
+#235 [٠٢:١٨:٤٩.٤٢٣] S0 HOOK_REGISTER getSerialForPackage
+#236 [٠٢:١٨:٤٩.٤٢٤] S0 HOOK_REGISTER getUsers
+#237 [٠٢:١٨:٤٩.٤٢٤] S0 HOOK_REGISTER getProfileParent
+#238 [٠٢:١٨:٤٩.٤٢٥] S0 HOOK_REGISTER getApplicationRestrictions
+#239 [٠٢:١٨:٤٩.٤٢٥] S0 HOOK_REGISTER hasScheduleExactAlarm
+#240 [٠٢:١٨:٤٩.٤٢٦] S0 HOOK_REGISTER canScheduleExactAlarms
+#241 [٠٢:١٨:٤٩.٤٢٦] S0 HOOK_REGISTER setTime
+#242 [٠٢:١٨:٤٩.٤٢٦] S0 HOOK_REGISTER setTimeZone
+#243 [٠٢:١٨:٤٩.٤٢٦] S0 HOOK_REGISTER set
+#244 [٠٢:١٨:٤٩.٤٢٧] S0 HOOK_REGISTER noteOperation
+#245 [٠٢:١٨:٤٩.٤٢٨] S0 HOOK_REGISTER checkOperation
+#246 [٠٢:١٨:٤٩.٤٢٨] S0 HOOK_REGISTER checkPackage
+#247 [٠٢:١٨:٤٩.٤٢٨] S0 HOOK_REGISTER noteProxyOperation
+#248 [٠٢:١٨:٤٩.٤٢٩] S0 HOOK_REGISTER notifyChange
+#249 [٠٢:١٨:٤٩.٤٣٠] S0 HOOK_REGISTER registerContentObserver
+#250 [٠٢:١٨:٤٩.٤٣٠] S0 HOOK_REGISTER interrupt
+#251 [٠٢:١٨:٤٩.٤٣١] S0 HOOK_REGISTER sendAccessibilityEvent
+#252 [٠٢:١٨:٤٩.٤٣١] S0 HOOK_REGISTER addClient
+#253 [٠٢:١٨:٤٩.٤٣١] S0 HOOK_REGISTER getInstalledAccessibilityServiceList
+#254 [٠٢:١٨:٤٩.٤٣١] S0 HOOK_REGISTER getEnabledAccessibilityServiceList
+#255 [٠٢:١٨:٤٩.٤٣١] S0 HOOK_REGISTER addAccessibilityInteractionConnection
+#256 [٠٢:١٨:٤٩.٤٣١] S0 HOOK_REGISTER getWindowToken
+#257 [٠٢:١٨:٤٩.٤٣٣] S0 HOOK_REGISTER isPackageWaterfallExpanded
+#258 [٠٢:١٨:٤٩.٤٣٣] S0 HOOK_REGISTER setScreenCaptureDisabled
+#259 [٠٢:١٨:٤٩.٤٣٤] S0 HOOK_REGISTER addAppToken
+#260 [٠٢:١٨:٤٩.٤٣٤] S0 HOOK_REGISTER overridePendingAppTransition
+#261 [٠٢:١٨:٤٩.٤٣٤] S0 HOOK_REGISTER overridePendingAppTransitionInPlace
+#262 [٠٢:١٨:٤٩.٤٣٤] S0 HOOK_REGISTER setAppStartingWindow
+#263 [٠٢:١٨:٤٩.٤٣٤] S0 HOOK_REGISTER openSession
+#264 [٠٢:١٨:٤٩.٤٣٥] S0 HOOK_REGISTER dataChanged
+#265 [٠٢:١٨:٤٩.٤٣٦] S0 HOOK_REGISTER clearBackupData
+#266 [٠٢:١٨:٤٩.٤٣٦] S0 HOOK_REGISTER agentConnected
+#267 [٠٢:١٨:٤٩.٤٣٦] S0 HOOK_REGISTER agentDisconnected
+#268 [٠٢:١٨:٤٩.٤٣٦] S0 HOOK_REGISTER restoreAtInstall
+#269 [٠٢:١٨:٤٩.٤٣٦] S0 HOOK_REGISTER setBackupEnabled
+#270 [٠٢:١٨:٤٩.٤٣٧] S0 HOOK_REGISTER setBackupProvisioned
+#271 [٠٢:١٨:٤٩.٤٣٧] S0 HOOK_REGISTER backupNow
+#272 [٠٢:١٨:٤٩.٤٣٧] S0 HOOK_REGISTER fullBackup
+#273 [٠٢:١٨:٤٩.٤٣٧] S0 HOOK_REGISTER fullTransportBackup
+#274 [٠٢:١٨:٤٩.٤٣٧] S0 HOOK_REGISTER fullRestore
+#275 [٠٢:١٨:٤٩.٤٣٧] S0 HOOK_REGISTER acknowledgeFullBackupOrRestore
+#276 [٠٢:١٨:٤٩.٤٣٧] S0 HOOK_REGISTER getCurrentTransport
+#277 [٠٢:١٨:٤٩.٤٣٨] S0 HOOK_REGISTER listAllTransports
+#278 [٠٢:١٨:٤٩.٤٣٨] S0 HOOK_REGISTER selectBackupTransport
+#279 [٠٢:١٨:٤٩.٤٣٨] S0 HOOK_REGISTER isBackupEnabled
+#280 [٠٢:١٨:٤٩.٤٣٨] S0 HOOK_REGISTER setBackupPassword
+#281 [٠٢:١٨:٤٩.٤٣٨] S0 HOOK_REGISTER hasBackupPassword
+#282 [٠٢:١٨:٤٩.٤٣٨] S0 HOOK_REGISTER beginRestoreSession
+#283 [٠٢:١٨:٤٩.٤٤٠] S0 HOOK_REGISTER mkdirs
+#284 [٠٢:١٨:٤٩.٤٤٠] S0 HOOK_REGISTER getVolumeList
+#285 [٠٢:١٨:٤٩.٤٤٠] S0 HOOK_REGISTER fixupAppDir
+#286 [٠٢:١٨:٤٩.٤٤٣] S0 GUEST_callApplicationOnCreate
+#287 [٠٢:١٨:٤٩.٤٤٤] S0 APP_onCreate
+#288 [٠٢:١٨:٤٩.٤٧٨] S0 LOADLIB_Tcore_ok
+#289 [٠٢:١٨:٤٩.٤٩٣] S0 GETPKGINFO pkg=com.tencent.ig
+#290 [٠٢:١٨:٤٩.٨٣٤] S0     ^ (previous line repeated 2 more times)
+#291 [٠٢:١٨:٤٩.٨٣٤] S0 GETPKGINFO pkg=com.android.vending
+#292 [٠٢:١٨:٤٩.٨٣٥] S0 GETPKGINFO pkg=com.google.android.gms
+#293 [٠٢:١٨:٤٩.٩٢٤] S0     ^ (previous line repeated 1 more times)
+#294 [٠٢:١٨:٤٩.٩٢٥] S0 GUEST_callApplicationOnCreate
+#295 [٠٢:١٨:٤٩.٩٣٢] S0 GETPKGINFO pkg=com.google.android.webview
+#296 [٠٢:١٨:٤٩.٩٤٣] S0 BINDSVC act=com.google.android.c2dm.intent.REGISTER dat=null cmp=null pkg=com.google.android.gms
+#297 [٠٢:١٨:٤٩.٩٥٣] S0 BINDSVC act=com.google.android.gms.phenotype.service.START dat=null cmp=null pkg=com.google.android.gms
+#298 [٠٢:١٨:٥٠.٠٠٢] S0 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#299 [٠٢:١٨:٥٠.٠١٠] S0 BINDSVC act=com.google.android.gms.phenotype.service.START dat=null cmp=null pkg=com.google.android.gms
+#300 [٠٢:١٨:٥٠.٠١٣] S0 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#301 [٠٢:١٨:٥٠.٠١٨] S0 GETPKGINFO pkg=com.google.android.webview
+#302 [٠٢:١٨:٥٠.٠٣٣] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#303 [٠٢:١٨:٥٠.٠٥٨] S0 GETPKGINFO pkg=com.tencent.ig
+#304 [٠٢:١٨:٥٠.١٠١] S0 GETPKGINFO pkg=com.android.vending
+#305 [٠٢:١٨:٥٠.١١٧] S0 GETPKGINFO pkg=com.google.android.gms
+#306 [٠٢:١٨:٥٠.١٢٥] S0 BINDSVC act=com.google.android.gms.safetynet.service.START dat=null cmp=null pkg=com.google.android.gms
+#307 [٠٢:١٨:٥٠.١٣٥] S0 BINDSVC act=com.google.android.chimera.BoundService.START dat=chimera-action:com.google.android.gms.safebrowsing.SafeBrowsingService.START cmp=ComponentInfo{com.google.android.gms/com.google.android.gms.chimera.GmsBoundBrokerService} pkg=null
+#308 [٠٢:١٨:٥٠.١٤٠] S0 BINDSVC act=com.google.android.gms.usagereporting.service.START dat=null cmp=null pkg=com.google.android.gms
+#309 [٠٢:١٨:٥٠.٢٢٥] S0 GETPKGINFO pkg=com.android.vending
+#310 [٠٢:١٨:٥٠.٢٢٧] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#311 [٠٢:١٨:٥٠.٤٠٩] S0     ^ (previous line repeated 1 more times)
+#312 [٠٢:١٨:٥٠.٤٠٩] S0 RESOLVE_SVC act=ReceiverService dat=null cmp=null pkg=com.facebook.katana
+#313 [٠٢:١٨:٥٠.٤٠٩] S0     ^ (previous line repeated 1 more times)
+#314 [٠٢:١٨:٥٠.٤٠٩] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#315 [٠٢:١٨:٥٠.٤١٠] S0 RESOLVE_SVC act=ReceiverService dat=null cmp=null pkg=com.facebook.wakizashi
+#316 [٠٢:١٨:٥٥.١٨٠] S0 BINDSVC act=com.google.android.chimera.BoundService.START dat=chimera-action:com.google.android.gms.common.telemetry.service.START cmp=ComponentInfo{com.google.android.gms/com.google.android.gms.chimera.PersistentApiService} pkg=null
+#317 [٠٢:١٩:٠٠.٠١٢] S0 BINDSVC act=com.google.android.gms.phenotype.service.START dat=null cmp=null pkg=com.google.android.gms
