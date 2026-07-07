@@ -717,7 +717,7 @@
 .end method
 
 .method public static summary()V
-    .locals 4
+    .locals 8
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -801,13 +801,59 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    sget-wide v3, Lcom/tcore/utils/DiagLog;->START_TIME:J
+    sget-wide v4, Lcom/tcore/utils/DiagLog;->START_TIME:J
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " memFreeMB="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Runtime;->freeMemory()J
+
+    move-result-wide v2
+
+    const-wide/32 v4, 0x100000
+
+    div-long/2addr v2, v4
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " memTotalMB="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Runtime;->totalMemory()J
+
+    move-result-wide v2
+
+    const-wide/32 v4, 0x100000
+
+    div-long/2addr v2, v4
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " pid="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, " ====="
 
@@ -1076,6 +1122,35 @@
 
     :catch_1
     move-exception v1
+
+    return-void
+.end method
+
+
+.method public static initCrashHandler()V
+    .locals 2
+
+    :try_start_0
+    invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/tcore/utils/DiagLog$CH;
+
+    invoke-direct {v1, v0}, Lcom/tcore/utils/DiagLog$CH;-><init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+
+    invoke-static {v1}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+
+    const-string v0, "CRASH_HANDLER_INSTALLED"
+
+    invoke-static {v0}, Lcom/tcore/utils/DiagLog;->s(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
 
     return-void
 .end method
