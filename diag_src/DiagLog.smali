@@ -10,12 +10,24 @@
 
 .field private static final SESSION:Ljava/util/concurrent/atomic/AtomicInteger;
 
+.field private static final C_START:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field private static final C_BLOCK:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field private static final C_NEWI:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field private static final C_EX:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field private static START_TIME:J
+
 .field private static FILE:Ljava/io/File;
+
+.field private static exported:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -28,6 +40,36 @@
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     sput-object v0, Lcom/tcore/utils/DiagLog;->SESSION:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    sput-object v0, Lcom/tcore/utils/DiagLog;->C_START:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    sput-object v0, Lcom/tcore/utils/DiagLog;->C_BLOCK:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    sput-object v0, Lcom/tcore/utils/DiagLog;->C_NEWI:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    sput-object v0, Lcom/tcore/utils/DiagLog;->C_EX:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    sput-wide v0, Lcom/tcore/utils/DiagLog;->START_TIME:J
 
     return-void
 .end method
@@ -313,6 +355,56 @@
     return-void
 .end method
 
+.method private static count(Ljava/lang/String;)V
+    .locals 1
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    const-string v0, "STARTACT"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lcom/tcore/utils/DiagLog;->C_START:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    :cond_1
+    const-string v0, "BLOCK"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Lcom/tcore/utils/DiagLog;->C_BLOCK:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    :cond_2
+    const-string v0, "onNewIntent"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    sget-object v0, Lcom/tcore/utils/DiagLog;->C_NEWI:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    :cond_3
+    return-void
+.end method
+
 .method private static maybeSession(Ljava/lang/String;)V
     .locals 3
 
@@ -374,6 +466,8 @@
 
 .method public static intent(Ljava/lang/String;Landroid/content/Intent;)V
     .locals 5
+
+    invoke-static {p0}, Lcom/tcore/utils/DiagLog;->count(Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -593,6 +687,10 @@
 .method public static ex(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
 
+    sget-object v0, Lcom/tcore/utils/DiagLog;->C_EX:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -614,6 +712,370 @@
     move-result-object v0
 
     invoke-static {v0}, Lcom/tcore/utils/DiagLog;->line(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static summary()V
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "===== SESSION SUMMARY :: events="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lcom/tcore/utils/DiagLog;->SEQ:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " loginSessions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lcom/tcore/utils/DiagLog;->SESSION:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " startActivity="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lcom/tcore/utils/DiagLog;->C_START:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " blockedHttpView="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lcom/tcore/utils/DiagLog;->C_BLOCK:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " onNewIntent="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lcom/tcore/utils/DiagLog;->C_NEWI:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " exceptions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lcom/tcore/utils/DiagLog;->C_EX:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " uptimeMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    sget-wide v3, Lcom/tcore/utils/DiagLog;->START_TIME:J
+
+    sub-long/2addr v1, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " ====="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tcore/utils/DiagLog;->out(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static exportFromHost(Landroid/content/Context;)V
+    .locals 9
+
+    sget-boolean v0, Lcom/tcore/utils/DiagLog;->exported:Z
+
+    if-eqz v0, :cond_go
+
+    return-void
+
+    :cond_go
+    :try_start_0
+    invoke-static {}, Lcom/tcore/utils/DiagLog;->summary()V
+
+    const/4 v0, 0x6
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v2, "logcat"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    const-string v2, "-d"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
+
+    const-string v2, "-v"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x3
+
+    const-string v2, "time"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x4
+
+    const-string v2, "PUBGDIAG:V"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x5
+
+    const-string v2, "*:S"
+
+    aput-object v2, v0, v1
+
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Process;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/io/BufferedReader;
+
+    new-instance v2, Ljava/io/InputStreamReader;
+
+    invoke-direct {v2, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+
+    invoke-direct {v1, v2}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    :goto_read
+    invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :done_read
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, "\n"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v3
+
+    const v4, 0xf4240
+
+    if-lt v3, v4, :goto_read
+
+    :done_read
+    invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "LOGIN SESSION"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    const-string v4, "BLOCK_HTTP_VIEW"
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    or-int/2addr v3, v4
+
+    const-string v4, "FBHOOK"
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    or-int/2addr v3, v4
+
+    const-string v4, "WEBVIEWHOOK"
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    or-int/2addr v3, v4
+
+    if-nez v3, :cond_have
+
+    return-void
+
+    :cond_have
+    const/4 v3, 0x1
+
+    sput-boolean v3, Lcom/tcore/utils/DiagLog;->exported:Z
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/io/File;
+
+    const-string v5, "pubg_login_export.txt"
+
+    invoke-direct {v4, v3, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    new-instance v3, Ljava/io/FileWriter;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, v4, v5}, Ljava/io/FileWriter;-><init>(Ljava/io/File;Z)V
+
+    invoke-virtual {v3, v2}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Diagnostic log saved:\n"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-static {p0, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/widget/Toast;->show()V
+
+    const-string v2, "com.pubgm.provider"
+
+    invoke-static {p0, v2, v4}, Landroidx/core/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    new-instance v3, Landroid/content/Intent;
+
+    const-string v4, "android.intent.action.SEND"
+
+    invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v4, "text/plain"
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v4, "android.intent.extra.STREAM"
+
+    invoke-virtual {v3, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    const-string v4, "Send login diagnostic log"
+
+    invoke-static {v3, v4}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object v3
+
+    const/high16 v4, 0x10000000
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {p0, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-static {p0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/Toast;->show()V
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+
+    return-void
+
+    :catch_1
+    move-exception v1
 
     return-void
 .end method
