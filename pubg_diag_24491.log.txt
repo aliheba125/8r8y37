@@ -1,0 +1,514 @@
+----------------------------------------
+Diagnostic Summary
+----------------------------------------
+Session ID: 2
+Process PID: 24491
+Duration: 1m 25s
+Events Logged: 494
+LoginSessions: 2
+startActivity: 8
+blockedHttpView: 0
+onNewIntent: 0
+Exceptions: 0
+Export Status: SUCCESS
+Output File:
+Download/pubg_diag_24491.log
+----------------------------------------
+
+---- FULL LOG (oldest first) ----
+#1 [٠٣:٤٠:٤٣.٤٩١] S0 LOADLIB_boxapp_ok
+#2 [٠٣:٤٠:٤٣.٤٩٣] S0 APP_attachBaseContext
+#3 [٠٣:٤٠:٤٣.٤٩٤] S0 CRASH_HANDLER_INSTALLED
+#4 [٠٣:٤٠:٤٣.٥٣٣] S0 HOOK_REGISTER setTaskDescription
+#5 [٠٣:٤٠:٤٣.٥٣٥] S0 HOOK_REGISTER getCallingPackage
+#6 [٠٣:٤٠:٤٣.٥٣٦] S0 HOOK_REGISTER getCallingActivity
+#7 [٠٣:٤٠:٤٣.٥٣٧] S0 HOOK_REGISTER startIntentSenderForResult
+#8 [٠٣:٤٠:٤٣.٥٣٩] S0 HOOK_REGISTER startActivity
+#9 [٠٣:٤٠:٤٣.٥٤٠] S0 HOOK_REGISTER startActivities
+#10 [٠٣:٤٠:٤٣.٥٤١] S0 HOOK_REGISTER getAppTasks
+#11 [٠٣:٤٠:٤٣.٥٤٢] S0 HOOK_REGISTER finishActivity
+#12 [٠٣:٤٠:٤٣.٥٤٣] S0 HOOK_REGISTER activityResumed
+#13 [٠٣:٤٠:٤٣.٥٤٤] S0 HOOK_REGISTER activityDestroyed
+#14 [٠٣:٤٠:٤٣.٥٤٦] S0 HOOK_REGISTER getNetworkStatsUidDetail
+#15 [٠٣:٤٠:٤٣.٥٤٩] S0 HOOK_REGISTER listen
+#16 [٠٣:٤٠:٤٣.٥٥١] S0 HOOK_REGISTER listenForSubscriber
+#17 [٠٣:٤٠:٤٣.٥٥٥] S0 HOOK_REGISTER cancelToast
+#18 [٠٣:٤٠:٤٣.٥٥٦] S0 HOOK_REGISTER enqueueToastEx
+#19 [٠٣:٤٠:٤٣.٥٥٧] S0 HOOK_REGISTER enqueueToastForLog
+#20 [٠٣:٤٠:٤٣.٥٥٨] S0 HOOK_REGISTER enqueueToast
+#21 [٠٣:٤٠:٤٣.٥٥٩] S0 HOOK_REGISTER getNotificationChannelGroups
+#22 [٠٣:٤٠:٤٣.٥٦٠] S0 HOOK_REGISTER deleteNotificationChannelGroup
+#23 [٠٣:٤٠:٤٣.٥٦١] S0 HOOK_REGISTER createNotificationChannelGroups
+#24 [٠٣:٤٠:٤٣.٥٦٢] S0 HOOK_REGISTER deleteNotificationChannel
+#25 [٠٣:٤٠:٤٣.٥٦٤] S0 HOOK_REGISTER createNotificationChannels
+#26 [٠٣:٤٠:٤٣.٥٦٥] S0 HOOK_REGISTER enqueueNotificationWithTag
+#27 [٠٣:٤٠:٤٣.٥٦٦] S0 HOOK_REGISTER cancelNotificationWithTag
+#28 [٠٣:٤٠:٤٣.٥٦٦] S0 HOOK_REGISTER getNotificationChannels
+#29 [٠٣:٤٠:٤٣.٥٦٧] S0 HOOK_REGISTER getNotificationChannel
+#30 [٠٣:٤٠:٤٣.٥٧٢] S0 HOOK_REGISTER establishVpn
+#31 [٠٣:٤٠:٤٣.٥٧٤] S0 HOOK_REGISTER prepareVpn
+#32 [٠٣:٤٠:٤٣.٥٧٥] S0 HOOK_REGISTER setVpnPackageAuthorization
+#33 [٠٣:٤٠:٤٣.٥٧٧] S0 HOOK_REGISTER sendMultipartText
+#34 [٠٣:٤٠:٤٣.٥٧٨] S0 HOOK_REGISTER sendText
+#35 [٠٣:٤٠:٤٣.٥٧٨] S0 HOOK_REGISTER sendData
+#36 [٠٣:٤٠:٤٣.٥٧٩] S0 HOOK_REGISTER copyMessageToIccEf
+#37 [٠٣:٤٠:٤٣.٥٨٠] S0 HOOK_REGISTER updateMessageOnIccEf
+#38 [٠٣:٤٠:٤٣.٥٨١] S0 HOOK_REGISTER getAllMessagesFromIccEf
+#39 [٠٣:٤٠:٤٣.٥٨١] S0 HOOK_REGISTER sendMultipartTextForSubscriber
+#40 [٠٣:٤٠:٤٣.٥٨٢] S0 HOOK_REGISTER sendTextForSubscriber
+#41 [٠٣:٤٠:٤٣.٥٨٣] S0 HOOK_REGISTER sendDataForSubscriber
+#42 [٠٣:٤٠:٤٣.٥٨٣] S0 HOOK_REGISTER copyMessageToIccEfForSubscriber
+#43 [٠٣:٤٠:٤٣.٥٨٤] S0 HOOK_REGISTER updateMessageOnIccEfForSubscriber
+#44 [٠٣:٤٠:٤٣.٥٨٥] S0 HOOK_REGISTER getAllMessagesFromIccEfForSubscriber
+#45 [٠٣:٤٠:٤٣.٥٨٦] S0 HOOK_REGISTER getLine1NumberForSubscriber
+#46 [٠٣:٤٠:٤٣.٥٨٩] S0 HOOK_REGISTER setTaskDescription
+#47 [٠٣:٤٠:٤٣.٥٩٠] S0 HOOK_REGISTER activityDestroyed
+#48 [٠٣:٤٠:٤٣.٥٩١] S0 HOOK_REGISTER activityResumed
+#49 [٠٣:٤٠:٤٣.٥٩١] S0 HOOK_REGISTER finishActivity
+#50 [٠٣:٤٠:٤٣.٥٩٦] S0 HOOK_REGISTER setSplashScreenTheme
+#51 [٠٣:٤٠:٤٣.٥٩٦] S0 HOOK_REGISTER checkPermission
+#52 [٠٣:٤٠:٤٣.٥٩٧] S0 HOOK_REGISTER checkPackageStartable
+#53 [٠٣:٤٠:٤٣.٥٩٧] S0 HOOK_REGISTER queryIntentActivities
+#54 [٠٣:٤٠:٤٣.٥٩٧] S0 HOOK_REGISTER getPackageInfoVersioned
+#55 [٠٣:٤٠:٤٣.٥٩٨] S0 HOOK_REGISTER getPreferredActivities
+#56 [٠٣:٤٠:٤٣.٥٩٨] S0 HOOK_REGISTER canForwardTo
+#57 [٠٣:٤٠:٤٣.٥٩٨] S0 HOOK_REGISTER getComponentEnabledSetting
+#58 [٠٣:٤٠:٤٣.٥٩٩] S0 HOOK_REGISTER getSharedLibraries
+#59 [٠٣:٤٠:٤٣.٥٩٩] S0 HOOK_REGISTER getPermissions
+#60 [٠٣:٤٠:٤٣.٥٩٩] S0 HOOK_REGISTER getInstallerPackageName
+#61 [٠٣:٤٠:٤٣.٦٠٠] S0 HOOK_REGISTER getPackagesForUid
+#62 [٠٣:٤٠:٤٣.٦٠٠] S0 HOOK_REGISTER canRequestPackageInstalls
+#63 [٠٣:٤٠:٤٣.٦٠١] S0 HOOK_REGISTER resolveContentProvider
+#64 [٠٣:٤٠:٤٣.٦٠١] S0 HOOK_REGISTER queryIntentReceivers
+#65 [٠٣:٤٠:٤٣.٦٠١] S0 HOOK_REGISTER queryContentProviders
+#66 [٠٣:٤٠:٤٣.٦٠٢] S0 HOOK_REGISTER getApplicationInfo
+#67 [٠٣:٤٠:٤٣.٦٠٢] S0 HOOK_REGISTER getInstalledPackages
+#68 [٠٣:٤٠:٤٣.٦٠٢] S0 HOOK_REGISTER getPackageGids
+#69 [٠٣:٤٠:٤٣.٦٠٣] S0 HOOK_REGISTER getInstalledApplications
+#70 [٠٣:٤٠:٤٣.٦٠٣] S0 HOOK_REGISTER getServiceInfo
+#71 [٠٣:٤٠:٤٣.٦٠٣] S0 HOOK_REGISTER getPackageUidEtc
+#72 [٠٣:٤٠:٤٣.٦٠٣] S0 HOOK_REGISTER getActivityInfo
+#73 [٠٣:٤٠:٤٣.٦٠٤] S0 HOOK_REGISTER getReceiverInfo
+#74 [٠٣:٤٠:٤٣.٦٠٤] S0 HOOK_REGISTER getProviderInfo
+#75 [٠٣:٤٠:٤٣.٦٠٤] S0 HOOK_REGISTER setApplicationBlockedSettingAsUser
+#76 [٠٣:٤٠:٤٣.٦٠٥] S0 HOOK_REGISTER getPackageUid
+#77 [٠٣:٤٠:٤٣.٦٠٥] S0 HOOK_REGISTER getPackageInfo
+#78 [٠٣:٤٠:٤٣.٦٠٥] S0 HOOK_REGISTER setComponentEnabledSetting
+#79 [٠٣:٤٠:٤٣.٦٠٥] S0 HOOK_REGISTER resolveService
+#80 [٠٣:٤٠:٤٣.٦٠٦] S0 HOOK_REGISTER resolveIntent
+#81 [٠٣:٤٠:٤٣.٦٠٧] S0 HOOK_REGISTER pushDynamicShortcut
+#82 [٠٣:٤٠:٤٣.٦٠٧] S0 HOOK_REGISTER createShortcutResultIntent
+#83 [٠٣:٤٠:٤٣.٦٠٨] S0 HOOK_REGISTER addDynamicShortcuts
+#84 [٠٣:٤٠:٤٣.٦٠٨] S0 HOOK_REGISTER setDynamicShortcuts
+#85 [٠٣:٤٠:٤٣.٦٠٨] S0 HOOK_REGISTER requestPinShortcut
+#86 [٠٣:٤٠:٤٣.٦١١] S0 HOOK_REGISTER setExtraLocationControllerPackageEnabled
+#87 [٠٣:٤٠:٤٣.٦١١] S0 HOOK_REGISTER isProviderEnabledForUser
+#88 [٠٣:٤٠:٤٣.٦١١] S0 HOOK_REGISTER getAllProviders
+#89 [٠٣:٤٠:٤٣.٦١٢] S0 HOOK_REGISTER getBestProvider
+#90 [٠٣:٤٠:٤٣.٦١٢] S0 HOOK_REGISTER removeGpsStatusListener
+#91 [٠٣:٤٠:٤٣.٦١٢] S0 HOOK_REGISTER getProviderProperties
+#92 [٠٣:٤٠:٤٣.٦١٣] S0 HOOK_REGISTER removeUpdates
+#93 [٠٣:٤٠:٤٣.٦١٣] S0 HOOK_REGISTER requestLocationUpdates
+#94 [٠٣:٤٠:٤٣.٦١٣] S0 HOOK_REGISTER getLastKnownLocation
+#95 [٠٣:٤٠:٤٣.٦١٣] S0 HOOK_REGISTER getLastLocation
+#96 [٠٣:٤٠:٤٣.٦١٤] S0 HOOK_REGISTER registerGnssStatusCallback
+#97 [٠٣:٤٠:٤٣.٦١٥] S0 HOOK_REGISTER getApplicationRestrictions
+#98 [٠٣:٤٠:٤٣.٦١٨] S0 HOOK_REGISTER unregisterAccountListener
+#99 [٠٣:٤٠:٤٣.٦١٨] S0 HOOK_REGISTER registerAccountListener
+#100 [٠٣:٤٠:٤٣.٦١٨] S0 HOOK_REGISTER getAccountsAndVisibilityForPackage
+#101 [٠٣:٤٠:٤٣.٦١٩] S0 HOOK_REGISTER getAccountVisibility
+#102 [٠٣:٤٠:٤٣.٦١٩] S0 HOOK_REGISTER setAccountVisibility
+#103 [٠٣:٤٠:٤٣.٦١٩] S0 HOOK_REGISTER addAccountExplicitlyWithVisibility
+#104 [٠٣:٤٠:٤٣.٦١٩] S0 HOOK_REGISTER getPackagesAndVisibilityForAccount
+#105 [٠٣:٤٠:٤٣.٦١٩] S0 HOOK_REGISTER getAuthTokenLabel
+#106 [٠٣:٤٠:٤٣.٦٢٠] S0 HOOK_REGISTER accountAuthenticated
+#107 [٠٣:٤٠:٤٣.٦٢٠] S0 HOOK_REGISTER confirmCredentialsAsUser
+#108 [٠٣:٤٠:٤٣.٦٢٠] S0 HOOK_REGISTER editProperties
+#109 [٠٣:٤٠:٤٣.٦٢٠] S0 HOOK_REGISTER updateCredentials
+#110 [٠٣:٤٠:٤٣.٦٢١] S0 HOOK_REGISTER addAccountAsUser
+#111 [٠٣:٤٠:٤٣.٦٢١] S0 HOOK_REGISTER addAccount
+#112 [٠٣:٤٠:٤٣.٦٢١] S0 HOOK_REGISTER getAuthToken
+#113 [٠٣:٤٠:٤٣.٦٢١] S0 HOOK_REGISTER updateAppPermission
+#114 [٠٣:٤٠:٤٣.٦٢١] S0 HOOK_REGISTER setUserData
+#115 [٠٣:٤٠:٤٣.٦٢٢] S0 HOOK_REGISTER clearPassword
+#116 [٠٣:٤٠:٤٣.٦٢٢] S0 HOOK_REGISTER setPassword
+#117 [٠٣:٤٠:٤٣.٦٢٢] S0 HOOK_REGISTER setAuthToken
+#118 [٠٣:٤٠:٤٣.٦٢٢] S0 HOOK_REGISTER peekAuthToken
+#119 [٠٣:٤٠:٤٣.٦٢٢] S0 HOOK_REGISTER invalidateAuthToken
+#120 [٠٣:٤٠:٤٣.٦٢٢] S0 HOOK_REGISTER copyAccountToUser
+#121 [٠٣:٤٠:٤٣.٦٢٣] S0 HOOK_REGISTER removeAccountExplicitly
+#122 [٠٣:٤٠:٤٣.٦٢٣] S0 HOOK_REGISTER removeAccountAsUser
+#123 [٠٣:٤٠:٤٣.٦٢٣] S0 HOOK_REGISTER addAccountExplicitly
+#124 [٠٣:٤٠:٤٣.٦٢٣] S0 HOOK_REGISTER getAccountsAsUser
+#125 [٠٣:٤٠:٤٣.٦٢٤] S0 HOOK_REGISTER getAccountsByFeatures
+#126 [٠٣:٤٠:٤٣.٦٢٤] S0 HOOK_REGISTER getAccountByTypeAndFeatures
+#127 [٠٣:٤٠:٤٣.٦٢٤] S0 HOOK_REGISTER getAccountsByTypeForPackage
+#128 [٠٣:٤٠:٤٣.٦٢٤] S0 HOOK_REGISTER getAccountsForPackage
+#129 [٠٣:٤٠:٤٣.٦٢٤] S0 HOOK_REGISTER getAuthenticatorTypes
+#130 [٠٣:٤٠:٤٣.٦٢٥] S0 HOOK_REGISTER getUserData
+#131 [٠٣:٤٠:٤٣.٦٢٥] S0 HOOK_REGISTER getPassword
+#132 [٠٣:٤٠:٤٣.٦٢٦] S0 HOOK_REGISTER startActivityAsUser
+#133 [٠٣:٤٠:٤٣.٦٢٦] S0 HOOK_REGISTER getTargetUserProfiles
+#134 [٠٣:٤٠:٤٣.٦٢٨] S0 HOOK_REGISTER enqueue
+#135 [٠٣:٤٠:٤٣.٦٢٨] S0 HOOK_REGISTER cancelAll
+#136 [٠٣:٤٠:٤٣.٦٢٩] S0 HOOK_REGISTER cancel
+#137 [٠٣:٤٠:٤٣.٦٢٩] S0 HOOK_REGISTER schedule
+#138 [٠٣:٤٠:٤٣.٦٣٠] S0 HOOK_REGISTER executeGetCredential
+#139 [٠٣:٤٠:٤٣.٦٣٢] S0 HOOK_REGISTER isHardwareDetected
+#140 [٠٣:٤٠:٤٣.٦٣٢] S0 HOOK_REGISTER hasEnrolledFingerprints
+#141 [٠٣:٤٠:٤٣.٦٣٢] S0 HOOK_REGISTER authenticate
+#142 [٠٣:٤٠:٤٣.٦٣٣] S0 HOOK_REGISTER cancelAuthentication
+#143 [٠٣:٤٠:٤٣.٦٣٣] S0 HOOK_REGISTER getEnrolledFingerprints
+#144 [٠٣:٤٠:٤٣.٦٣٣] S0 HOOK_REGISTER getAuthenticatorId
+#145 [٠٣:٤٠:٤٣.٦٣٣] S0 HOOK_REGISTER requestBufferForProcess
+#146 [٠٣:٤٠:٤٣.٦٣٤] S0 HOOK_REGISTER startSession
+#147 [٠٣:٤٠:٤٣.٦٣٦] S0 HOOK_REGISTER getSystemRoutesForPackage
+#148 [٠٣:٤٠:٤٣.٦٣٦] S0 HOOK_REGISTER getSystemRoutes
+#149 [٠٣:٤٠:٤٣.٦٣٦] S0 HOOK_REGISTER registerRouter2
+#150 [٠٣:٤٠:٤٣.٦٣٦] S0 HOOK_REGISTER registerClientAsUser
+#151 [٠٣:٤٠:٤٣.٦٣٨] S0 HOOK_REGISTER getEnabledInputMethodList
+#152 [٠٣:٤٠:٤٣.٦٣٨] S0 HOOK_REGISTER getInputMethodList
+#153 [٠٣:٤٠:٤٣.٦٣٨] S0 HOOK_REGISTER startInputOrWindowGainedFocus
+#154 [٠٣:٤٠:٤٣.٦٣٨] S0 HOOK_REGISTER windowGainedFocus
+#155 [٠٣:٤٠:٤٣.٦٣٩] S0 HOOK_REGISTER startInput
+#156 [٠٣:٤٠:٤٣.٦٣٩] S0 HOOK_REGISTER createSession
+#157 [٠٣:٤٠:٤٣.٦٤٠] S0 HOOK_REGISTER establishVpn
+#158 [٠٣:٤٠:٤٣.٦٤٠] S0 HOOK_REGISTER prepareVpn
+#159 [٠٣:٤٠:٤٣.٦٤١] S0 HOOK_REGISTER setVpnPackageAuthorization
+#160 [٠٣:٤٠:٤٣.٦٤٣] S0 HOOK_REGISTER isDeviceProvisioned
+#161 [٠٣:٤٠:٤٣.٦٤٣] S0 HOOK_REGISTER getProfileOwnerName
+#162 [٠٣:٤٠:٤٣.٦٤٣] S0 HOOK_REGISTER getDeviceOwnerName
+#163 [٠٣:٤٠:٤٣.٦٤٤] S0 HOOK_REGISTER getDeviceOwnerComponent
+#164 [٠٣:٤٠:٤٣.٦٤٤] S0 HOOK_REGISTER getStorageEncryptionStatus
+#165 [٠٣:٤٠:٤٣.٦٤٧] S0 HOOK_REGISTER updateConfiguration
+#166 [٠٣:٤٠:٤٣.٦٤٨] S0 HOOK_REGISTER unregisterUidObserver
+#167 [٠٣:٤٠:٤٣.٦٤٨] S0 HOOK_REGISTER unregisterReceiver
+#168 [٠٣:٤٠:٤٣.٦٤٨] S0 HOOK_REGISTER setServiceForeground
+#169 [٠٣:٤٠:٤٣.٦٤٨] S0 HOOK_REGISTER setRequestedOrientation
+#170 [٠٣:٤٠:٤٣.٦٤٩] S0 HOOK_REGISTER registerUidObserver
+#171 [٠٣:٤٠:٤٣.٦٤٩] S0 HOOK_REGISTER getUidForIntentSender
+#172 [٠٣:٤٠:٤٣.٦٤٩] S0 HOOK_REGISTER getPackageForIntentSender
+#173 [٠٣:٤٠:٤٣.٦٤٩] S0 HOOK_REGISTER getHistoricalProcessExitReasons
+#174 [٠٣:٤٠:٤٣.٦٤٩] S0 HOOK_REGISTER getCurrentUser
+#175 [٠٣:٤٠:٤٣.٦٥٠] S0 HOOK_REGISTER finishReceiver
+#176 [٠٣:٤٠:٤٣.٦٥٠] S0 HOOK_REGISTER checkUriPermission
+#177 [٠٣:٤٠:٤٣.٦٥٠] S0 HOOK_REGISTER checkPermission
+#178 [٠٣:٤٠:٤٣.٦٥٠] S0 HOOK_REGISTER unbindService
+#179 [٠٣:٤٠:٤٣.٦٥٠] S0 HOOK_REGISTER stopServiceToken
+#180 [٠٣:٤٠:٤٣.٦٥١] S0 HOOK_REGISTER stopService
+#181 [٠٣:٤٠:٤٣.٦٥١] S0 HOOK_REGISTER startService
+#182 [٠٣:٤٠:٤٣.٦٥١] S0 HOOK_REGISTER setTaskDescription
+#183 [٠٣:٤٠:٤٣.٦٥١] S0 HOOK_REGISTER sendIntentSender
+#184 [٠٣:٤٠:٤٣.٦٥٢] S0 HOOK_REGISTER registerReceiverWithFeature
+#185 [٠٣:٤٠:٤٣.٦٥٢] S0 HOOK_REGISTER registerReceiver
+#186 [٠٣:٤٠:٤٣.٦٥٢] S0 HOOK_REGISTER publishService
+#187 [٠٣:٤٠:٤٣.٦٥٢] S0 HOOK_REGISTER peekService
+#188 [٠٣:٤٠:٤٣.٦٥٢] S0 HOOK_REGISTER grantUriPermission
+#189 [٠٣:٤٠:٤٣.٦٥٣] S0 HOOK_REGISTER getServices
+#190 [٠٣:٤٠:٤٣.٦٥٣] S0 HOOK_REGISTER getRunningAppProcesses
+#191 [٠٣:٤٠:٤٣.٦٥٤] S0 HOOK_REGISTER getIntentSenderWithSourceToken
+#192 [٠٣:٤٠:٤٣.٦٥٤] S0 HOOK_REGISTER getIntentSenderWithFeature
+#193 [٠٣:٤٠:٤٣.٦٥٤] S0 HOOK_REGISTER getIntentSender
+#194 [٠٣:٤٠:٤٣.٦٥٤] S0 HOOK_REGISTER getContentProvider
+#195 [٠٣:٤٠:٤٣.٦٥٥] S0 HOOK_REGISTER broadcastIntentWithFeature
+#196 [٠٣:٤٠:٤٣.٦٥٥] S0 HOOK_REGISTER broadcastIntent
+#197 [٠٣:٤٠:٤٣.٦٥٥] S0 HOOK_REGISTER bindServiceInstance
+#198 [٠٣:٤٠:٤٣.٦٥٥] S0 HOOK_REGISTER bindService
+#199 [٠٣:٤٠:٤٣.٦٥٥] S0 HOOK_REGISTER bindIsolatedService
+#200 [٠٣:٤٠:٤٣.٦٥٦] S0 HOOK_REGISTER getCallingPackage
+#201 [٠٣:٤٠:٤٣.٦٥٦] S0 HOOK_REGISTER getCallingActivity
+#202 [٠٣:٤٠:٤٣.٦٥٦] S0 HOOK_REGISTER startIntentSenderForResult
+#203 [٠٣:٤٠:٤٣.٦٥٦] S0 HOOK_REGISTER startActivity
+#204 [٠٣:٤٠:٤٣.٦٥٦] S0 HOOK_REGISTER startActivities
+#205 [٠٣:٤٠:٤٣.٦٥٦] S0 HOOK_REGISTER getAppTasks
+#206 [٠٣:٤٠:٤٣.٦٥٦] S0 HOOK_REGISTER finishActivity
+#207 [٠٣:٤٠:٤٣.٦٥٧] S0 HOOK_REGISTER activityResumed
+#208 [٠٣:٤٠:٤٣.٦٥٧] S0 HOOK_REGISTER activityDestroyed
+#209 [٠٣:٤٠:٤٣.٦٥٩] S0 HOOK_REGISTER setMicrophoneMute
+#210 [٠٣:٤٠:٤٣.٦٦٠] S0 HOOK_REGISTER isHardwareDetected
+#211 [٠٣:٤٠:٤٣.٦٦٠] S0 HOOK_REGISTER adjustVolume
+#212 [٠٣:٤٠:٤٣.٦٦٠] S0 HOOK_REGISTER adjustLocalOrRemoteStreamVolume
+#213 [٠٣:٤٠:٤٣.٦٦٠] S0 HOOK_REGISTER adjustSuggestedStreamVolume
+#214 [٠٣:٤٠:٤٣.٦٦١] S0 HOOK_REGISTER adjustStreamVolume
+#215 [٠٣:٤٠:٤٣.٦٦١] S0 HOOK_REGISTER adjustMasterVolume
+#216 [٠٣:٤٠:٤٣.٦٦١] S0 HOOK_REGISTER setStreamVolume
+#217 [٠٣:٤٠:٤٣.٦٦١] S0 HOOK_REGISTER setMasterVolume
+#218 [٠٣:٤٠:٤٣.٦٦١] S0 HOOK_REGISTER setRingerModeExternal
+#219 [٠٣:٤٠:٤٣.٦٦١] S0 HOOK_REGISTER setRingerModeInternal
+#220 [٠٣:٤٠:٤٣.٦٦١] S0 HOOK_REGISTER setMode
+#221 [٠٣:٤٠:٤٣.٦٦٢] S0 HOOK_REGISTER avrcpSupportsAbsoluteVolume
+#222 [٠٣:٤٠:٤٣.٦٦٢] S0 HOOK_REGISTER abandonAudioFocus
+#223 [٠٣:٤٠:٤٣.٦٦٢] S0 HOOK_REGISTER requestAudioFocus
+#224 [٠٣:٤٠:٤٣.٦٦٢] S0 HOOK_REGISTER setWiredDeviceConnectionState
+#225 [٠٣:٤٠:٤٣.٦٦٢] S0 HOOK_REGISTER setSpeakerphoneOn
+#226 [٠٣:٤٠:٤٣.٦٦٢] S0 HOOK_REGISTER setBluetoothScoOn
+#227 [٠٣:٤٠:٤٣.٦٦٣] S0 HOOK_REGISTER stopBluetoothSco
+#228 [٠٣:٤٠:٤٣.٦٦٣] S0 HOOK_REGISTER startBluetoothSco
+#229 [٠٣:٤٠:٤٣.٦٦٣] S0 HOOK_REGISTER disableSafeMediaVolume
+#230 [٠٣:٤٠:٤٣.٦٦٣] S0 HOOK_REGISTER registerRemoteControlClient
+#231 [٠٣:٤٠:٤٣.٦٦٣] S0 HOOK_REGISTER unregisterAudioFocusClient
+#232 [٠٣:٤٠:٤٣.٦٦٤] S0 HOOK_REGISTER getSerialForPackage
+#233 [٠٣:٤٠:٤٣.٦٦٥] S0 HOOK_REGISTER getUsers
+#234 [٠٣:٤٠:٤٣.٦٦٥] S0 HOOK_REGISTER getProfileParent
+#235 [٠٣:٤٠:٤٣.٦٦٥] S0 HOOK_REGISTER getApplicationRestrictions
+#236 [٠٣:٤٠:٤٣.٦٦٦] S0 HOOK_REGISTER hasScheduleExactAlarm
+#237 [٠٣:٤٠:٤٣.٦٦٦] S0 HOOK_REGISTER canScheduleExactAlarms
+#238 [٠٣:٤٠:٤٣.٦٦٦] S0 HOOK_REGISTER setTime
+#239 [٠٣:٤٠:٤٣.٦٦٧] S0 HOOK_REGISTER setTimeZone
+#240 [٠٣:٤٠:٤٣.٦٦٧] S0 HOOK_REGISTER set
+#241 [٠٣:٤٠:٤٣.٦٦٨] S0 HOOK_REGISTER execve
+#242 [٠٣:٤٠:٤٣.٦٦٨] S0 HOOK_REGISTER stat
+#243 [٠٣:٤٠:٤٣.٦٦٨] S0 HOOK_REGISTER getuid
+#244 [٠٣:٤٠:٤٣.٦٧٠] S0 HOOK_REGISTER noteOperation
+#245 [٠٣:٤٠:٤٣.٦٧٠] S0 HOOK_REGISTER checkOperation
+#246 [٠٣:٤٠:٤٣.٦٧٠] S0 HOOK_REGISTER checkPackage
+#247 [٠٣:٤٠:٤٣.٦٧٠] S0 HOOK_REGISTER noteProxyOperation
+#248 [٠٣:٤٠:٤٣.٦٧٣] S0 HOOK_REGISTER notifyChange
+#249 [٠٣:٤٠:٤٣.٦٧٤] S0 HOOK_REGISTER registerContentObserver
+#250 [٠٣:٤٠:٤٣.٦٧٥] S0 HOOK_REGISTER interrupt
+#251 [٠٣:٤٠:٤٣.٦٧٥] S0 HOOK_REGISTER sendAccessibilityEvent
+#252 [٠٣:٤٠:٤٣.٦٧٥] S0 HOOK_REGISTER addClient
+#253 [٠٣:٤٠:٤٣.٦٧٥] S0 HOOK_REGISTER getInstalledAccessibilityServiceList
+#254 [٠٣:٤٠:٤٣.٦٧٥] S0 HOOK_REGISTER getEnabledAccessibilityServiceList
+#255 [٠٣:٤٠:٤٣.٦٧٦] S0 HOOK_REGISTER addAccessibilityInteractionConnection
+#256 [٠٣:٤٠:٤٣.٦٧٦] S0 HOOK_REGISTER getWindowToken
+#257 [٠٣:٤٠:٤٣.٦٧٨] S0 HOOK_REGISTER isPackageWaterfallExpanded
+#258 [٠٣:٤٠:٤٣.٦٧٨] S0 HOOK_REGISTER setScreenCaptureDisabled
+#259 [٠٣:٤٠:٤٣.٦٧٨] S0 HOOK_REGISTER addAppToken
+#260 [٠٣:٤٠:٤٣.٦٧٨] S0 HOOK_REGISTER overridePendingAppTransition
+#261 [٠٣:٤٠:٤٣.٦٧٩] S0 HOOK_REGISTER overridePendingAppTransitionInPlace
+#262 [٠٣:٤٠:٤٣.٦٧٩] S0 HOOK_REGISTER setAppStartingWindow
+#263 [٠٣:٤٠:٤٣.٦٧٩] S0 HOOK_REGISTER openSession
+#264 [٠٣:٤٠:٤٣.٦٨٠] S0 HOOK_REGISTER dataChanged
+#265 [٠٣:٤٠:٤٣.٦٨٠] S0 HOOK_REGISTER clearBackupData
+#266 [٠٣:٤٠:٤٣.٦٨١] S0 HOOK_REGISTER agentConnected
+#267 [٠٣:٤٠:٤٣.٦٨١] S0 HOOK_REGISTER agentDisconnected
+#268 [٠٣:٤٠:٤٣.٦٨١] S0 HOOK_REGISTER restoreAtInstall
+#269 [٠٣:٤٠:٤٣.٦٨١] S0 HOOK_REGISTER setBackupEnabled
+#270 [٠٣:٤٠:٤٣.٦٨١] S0 HOOK_REGISTER setBackupProvisioned
+#271 [٠٣:٤٠:٤٣.٦٨١] S0 HOOK_REGISTER backupNow
+#272 [٠٣:٤٠:٤٣.٦٨١] S0 HOOK_REGISTER fullBackup
+#273 [٠٣:٤٠:٤٣.٦٨٢] S0 HOOK_REGISTER fullTransportBackup
+#274 [٠٣:٤٠:٤٣.٦٨٢] S0 HOOK_REGISTER fullRestore
+#275 [٠٣:٤٠:٤٣.٦٨٢] S0 HOOK_REGISTER acknowledgeFullBackupOrRestore
+#276 [٠٣:٤٠:٤٣.٦٨٢] S0 HOOK_REGISTER getCurrentTransport
+#277 [٠٣:٤٠:٤٣.٦٨٢] S0 HOOK_REGISTER listAllTransports
+#278 [٠٣:٤٠:٤٣.٦٨٢] S0 HOOK_REGISTER selectBackupTransport
+#279 [٠٣:٤٠:٤٣.٦٨٣] S0 HOOK_REGISTER isBackupEnabled
+#280 [٠٣:٤٠:٤٣.٦٨٣] S0 HOOK_REGISTER setBackupPassword
+#281 [٠٣:٤٠:٤٣.٦٨٣] S0 HOOK_REGISTER hasBackupPassword
+#282 [٠٣:٤٠:٤٣.٦٨٣] S0 HOOK_REGISTER beginRestoreSession
+#283 [٠٣:٤٠:٤٣.٦٨٥] S0 HOOK_REGISTER mkdirs
+#284 [٠٣:٤٠:٤٣.٦٨٥] S0 HOOK_REGISTER getVolumeList
+#285 [٠٣:٤٠:٤٣.٦٨٥] S0 HOOK_REGISTER fixupAppDir
+#286 [٠٣:٤٠:٤٣.٦٨٨] S0 GUEST_callApplicationOnCreate
+#287 [٠٣:٤٠:٤٣.٦٩٠] S0 APP_onCreate
+#288 [٠٣:٤٠:٤٣.٧٦٣] S0 LOADLIB_Tcore_ok
+#289 [٠٣:٤٠:٤٣.٧٨٩] S0 GETPKGINFO pkg=com.tencent.ig
+#290 [٠٣:٤٠:٤٣.٨٩٦] S0 GETPKGINFO pkg=com.android.vending
+#291 [٠٣:٤٠:٤٣.٨٩٧] S0 GETPKGINFO pkg=com.google.android.gms
+#292 [٠٣:٤٠:٤٣.٩٠٢] S0 GETPKGINFO pkg=com.android.vending
+#293 [٠٣:٤٠:٤٣.٩٠٣] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#294 [٠٣:٤٠:٤٣.٩٢٢] S0     ^ (previous line repeated 1 more times)
+#295 [٠٣:٤٠:٤٣.٩٢٣] S0 GUEST_callApplicationOnCreate
+#296 [٠٣:٤٠:٤٣.٩٢٧] S0 GETPKGINFO pkg=com.google.android.gms
+#297 [٠٣:٤٠:٤٣.٩٢٨] S0 GETPKGINFO pkg=com.tencent.ig
+#298 [٠٣:٤٠:٤٣.٩٩٤] S0 BINDSVC act=com.google.android.gms.phenotype.service.START dat=null cmp=null pkg=com.google.android.gms
+#299 [٠٣:٤٠:٤٤.٠٠٢] S0 ACT_onCreate com.epicgames.ue4.SplashActivity
+#300 [٠٣:٤٠:٤٤.٠٢٢] S0 GETPKGINFO pkg=com.tencent.ig
+#301 [٠٣:٤٠:٤٤.١٥٣] S0 STARTACT act=android.intent.action.MAIN dat=null cmp=ComponentInfo{com.tencent.ig/com.epicgames.ue4.GameActivity} pkg=null
+#302 [٠٣:٤٠:٤٤.٢٢٠] S0 ACT_onCreate com.epicgames.ue4.GameActivity
+#303 [٠٣:٤٠:٤٤.٤١٥] S0 GETPKGINFO pkg=com.android.vending
+#304 [٠٣:٤٠:٤٤.٤٢٢] S0 BINDSVC act=com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE dat=null cmp=ComponentInfo{com.android.vending/com.google.android.finsky.externalreferrer.GetInstallReferrerService} pkg=null
+#305 [٠٣:٤٠:٤٤.٦١٢] S0 BINDSVC act=com.google.android.gms.phenotype.service.START dat=null cmp=null pkg=com.google.android.gms
+#306 [٠٣:٤٠:٤٤.٦٥٥] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#307 [٠٣:٤٠:٤٤.٧٠٩] S0 RESOLVE_SVC act=ReceiverService dat=null cmp=null pkg=com.facebook.katana
+#308 [٠٣:٤٠:٤٤.٧١٠] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#309 [٠٣:٤٠:٤٤.٧١٢] S0     ^ (previous line repeated 1 more times)
+#310 [٠٣:٤٠:٤٤.٧١٢] S0 RESOLVE_SVC act=ReceiverService dat=null cmp=null pkg=com.facebook.wakizashi
+#311 [٠٣:٤٠:٤٥.١٠١] S0 BINDSVC act=com.google.android.c2dm.intent.REGISTER dat=null cmp=null pkg=com.google.android.gms
+#312 [٠٣:٤٠:٤٦.٦٧٤] S0 HOOK_REGISTER relayout
+#313 [٠٣:٤٠:٤٦.٦٧٥] S0 HOOK_REGISTER grantInputChannel
+#314 [٠٣:٤٠:٤٦.٦٧٥] S0 HOOK_REGISTER addWithoutInputChannel
+#315 [٠٣:٤٠:٤٦.٦٧٥] S0 HOOK_REGISTER addToDisplayWithoutInputChannel
+#316 [٠٣:٤٠:٤٦.٦٧٥] S0 HOOK_REGISTER addToDisplayAsUser
+#317 [٠٣:٤٠:٤٦.٦٧٦] S0 HOOK_REGISTER addToDisplay
+#318 [٠٣:٤٠:٤٦.٧٠٣] S0 GETPKGINFO pkg=com.tencent.ig
+#319 [٠٣:٤٠:٤٧.٥١٩] S0     ^ (previous line repeated 1 more times)
+#320 [٠٣:٤٠:٤٧.٦٣١] S0     ^ (previous line repeated 1 more times)
+#321 [٠٣:٤٠:٤٧.٦٣٢] S0 BINDSVC act=com.google.android.c2dm.intent.REGISTER dat=null cmp=null pkg=com.google.android.gms
+#322 [٠٣:٤٠:٤٧.٦٣٦] S0 GETPKGINFO pkg=com.google.android.gms
+#323 [٠٣:٤٠:٤٧.٦٥١] S0 GETPKGINFO pkg=com.android.vending
+#324 [٠٣:٤٠:٤٧.٦٥٣] S0     ^ (previous line repeated 1 more times)
+#325 [٠٣:٤٠:٤٧.٦٥٣] S0 GETPKGINFO pkg=com.google.android.gms
+#326 [٠٣:٤٠:٤٧.٦٥٤] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#327 [٠٣:٤٠:٤٧.٦٥٥] S0 GETPKGINFO pkg=com.tencent.ig
+#328 [٠٣:٤٠:٤٧.٦٧٣] S0 GETPKGINFO pkg=com.facebook.katana
+#329 [٠٣:٤٠:٤٧.٦٧٤] S0 GETPKGINFO pkg=com.google.android.play.games
+#330 [٠٣:٤٠:٤٧.٧١١] S0 GETPKGINFO pkg=com.facebook.katana
+#331 [٠٣:٤٠:٤٧.٧٤٥] S0 BINDSVC act=com.google.android.play.deku.action.BIND_DEKU_BROKER_SERVICE dat=null cmp=null pkg=com.android.vending
+#332 [٠٣:٤٠:٤٧.٧٩٩] S0 BINDSVC act=com.google.android.chimera.BoundService.START dat=chimera-action:com.google.android.gms.appset.service.START cmp=ComponentInfo{com.google.android.gms/com.google.android.gms.chimera.GmsApiService} pkg=null
+#333 [٠٣:٤٠:٤٨.٢٠٥] S0 BINDSVC act=com.google.android.c2dm.intent.REGISTER dat=null cmp=null pkg=com.google.android.gms
+#334 [٠٣:٤٠:٤٨.٣٦٣] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#335 [٠٣:٤٠:٤٨.٣٨٦] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#336 [٠٣:٤٠:٤٨.٤٣٦] S0     ^ (previous line repeated 11 more times)
+#337 [٠٣:٤٠:٤٨.٤٣٦] S0 GETPKGINFO pkg=com.android.vending
+#338 [٠٣:٤٠:٤٨.٤٣٨] S0 BINDSVC act=com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE dat=null cmp=ComponentInfo{com.android.vending/com.google.android.finsky.externalreferrer.GetInstallReferrerService} pkg=null
+#339 [٠٣:٤٠:٤٨.٤٥٢] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#340 [٠٣:٤٠:٤٨.٥٨٩] S0     ^ (previous line repeated 1 more times)
+#341 [٠٣:٤٠:٤٨.٥٨٩] S0 GETPKGINFO pkg=com.tencent.ig
+#342 [٠٣:٤٠:٤٩.١٧٥] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#343 [٠٣:٤٠:٤٩.٤٩٩] S0 BINDSVC act=com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE dat=null cmp=ComponentInfo{com.android.vending/com.google.android.finsky.externalreferrer.GetInstallReferrerService} pkg=null
+#344 [٠٣:٤٠:٥١.٥٧٢] S0     ^ (previous line repeated 1 more times)
+#345 [٠٣:٤٠:٥١.٩٠٩] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#346 [٠٣:٤٠:٥٢.٨٦٧] S0     ^ (previous line repeated 5 more times)
+#347 [٠٣:٤٠:٥٢.٨٦٨] S0 BINDSVC act=com.google.android.chimera.BoundService.START dat=chimera-action:com.google.android.gms.common.telemetry.service.START cmp=ComponentInfo{com.google.android.gms/com.google.android.gms.chimera.PersistentApiService} pkg=null
+#348 [٠٣:٤٠:٥٤.٤٤٧] S0 BINDSVC act=com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE dat=null cmp=ComponentInfo{com.android.vending/com.google.android.finsky.externalreferrer.GetInstallReferrerService} pkg=null
+#349 [٠٣:٤٠:٥٤.٦١١] S0 BINDSVC act=com.google.android.gms.phenotype.service.START dat=null cmp=null pkg=com.google.android.gms
+#350 [٠٣:٤٠:٥٨.٦٦٦] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#351 [٠٣:٤٠:٥٨.٩٠٨] S0 BINDSVC act=com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE dat=null cmp=ComponentInfo{com.android.vending/com.google.android.finsky.externalreferrer.GetInstallReferrerService} pkg=null
+#352 [٠٣:٤١:٠٠.٧٠٣] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#353 [٠٣:٤١:٠١.٣٠٦] S0     ^ (previous line repeated 1 more times)
+#354 [٠٣:٤١:٠١.٣٠٦] S0 BINDSVC act=com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE dat=null cmp=ComponentInfo{com.android.vending/com.google.android.finsky.externalreferrer.GetInstallReferrerService} pkg=null
+#355 [٠٣:٤١:٠١.٦٧٠] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#356 [٠٣:٤١:٠٣.٠١٩] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#357 [٠٣:٤١:٠٣.٦٤٩] S0     ^ (previous line repeated 5 more times)
+#358 [٠٣:٤١:٠٥.٩٨٠] S0     ^ (previous line repeated 6 more times)
+#359 [٠٣:٤١:٠٥.٩٨١] S0 QUERY_ACT act=android.intent.action.MAIN dat=null cmp=null pkg=com.tencent.ig
+#360 [٠٣:٤١:٠٥.٩٨٥] S0 STARTACT act=null dat=null cmp=ComponentInfo{com.tencent.ig/com.tencent.imsdk.android.base.IMSDKProxyActivity} pkg=null
+#361 [٠٣:٤١:٠٦.٠٣٧] S0 BINDSVC act=com.google.android.gms.games.internal.appshortcuts.service.START dat=null cmp=null pkg=com.google.android.gms
+#362 [٠٣:٤١:٠٦.٠٦٧] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#363 [٠٣:٤١:٠٦.٠٩٥] S0 ACT_onCreate com.tencent.imsdk.android.base.IMSDKProxyActivity
+#364 [٠٣:٤١:٠٦.١٠١] S0 BINDSVC act=com.google.android.gms.games.internal.connect.service.START dat=null cmp=null pkg=com.google.android.gms
+#365 [٠٣:٤١:٠٦.١١٥] S0 GETPKGINFO pkg=com.google.android.gms
+#366 [٠٣:٤١:٠٦.١٣١] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#367 [٠٣:٤١:١١.٧٣٦] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#368 [٠٣:٤١:١٣.٧٠٥] S0     ^ (previous line repeated 23 more times)
+#369 [٠٣:٤١:١٥.٧١٨] S0     ^ (previous line repeated 6 more times)
+#370 [٠٣:٤١:١٦.١٨٤] S0 GETPKGINFO pkg=com.google.android.webview
+#371 [٠٣:٤١:١٦.٢٦٩] S0 STARTACT act=null dat=null cmp=ComponentInfo{com.tencent.ig/com.tencent.imsdk.android.base.IMSDKProxyActivity} pkg=null
+#372 [٠٣:٤١:١٦.٣٤٩] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#373 [٠٣:٤١:١٦.٣٧٩] S0 ACT_onCreate com.tencent.imsdk.android.base.IMSDKProxyActivity
+#374 [٠٣:٤١:١٦.٣٩١] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#375 [٠٣:٤١:١٦.٣٩١] S0 RESOLVE_ACT act=NATIVE_WITH_FALLBACK dat=null cmp=ComponentInfo{com.tencent.ig/com.facebook.FacebookActivity} pkg=null
+#376 [٠٣:٤١:١٦.٣٩٥] S0 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#377 [٠٣:٤١:١٦.٣٩٥] S0 STARTACT act=NATIVE_WITH_FALLBACK dat=null cmp=ComponentInfo{com.tencent.ig/com.facebook.FacebookActivity} pkg=null
+#378 [٠٣:٤١:١٦.٤٣٧] S0 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#379 [٠٣:٤١:١٦.٤٩٠] S0 ACT_onCreate com.facebook.FacebookActivity
+======== LOGIN SESSION #1 START :: fb1036341366506456://authorize/ ========
+#380 [٠٣:٤١:١٦.٥٠٨] S1 QUERY_ACT act=android.intent.action.VIEW dat=fb1036341366506456://authorize/ cmp=null pkg=null
+======== LOGIN SESSION #2 START :: fbconnect://cct.com.tencent.ig ========
+#381 [٠٣:٤١:١٦.٥١٠] S2 QUERY_ACT act=android.intent.action.VIEW dat=fbconnect://cct.com.tencent.ig cmp=null pkg=null
+#382 [٠٣:٤١:١٦.٥١٦] S2 STARTACT act=null dat=null cmp=ComponentInfo{com.facebook.katana/com.facebook.katana.ProxyAuth} pkg=null
+#383 [٠٣:٤١:١٦.٥١٦] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#384 [٠٣:٤١:١٦.٥٢١] S2 STARTACT act=null dat=null cmp=ComponentInfo{com.facebook.wakizashi/com.facebook.katana.ProxyAuth} pkg=null
+#385 [٠٣:٤١:١٦.٥٤٠] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#386 [٠٣:٤١:١٦.٥٤٥] S2 GETPKGINFO pkg=com.google.android.webview
+#387 [٠٣:٤١:١٦.٥٤٥] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#388 [٠٣:٤١:١٦.٥٧٤] S2 GETPKGINFO pkg=com.android.vending
+#389 [٠٣:٤١:١٦.٥٧٧] S2 GETPKGINFO pkg=com.google.android.gms
+#390 [٠٣:٤١:١٦.٥٨٨] S2 BINDSVC act=com.google.android.gms.safetynet.service.START dat=null cmp=null pkg=com.google.android.gms
+#391 [٠٣:٤١:١٦.٦٠٠] S2 BINDSVC act=com.google.android.chimera.BoundService.START dat=chimera-action:com.google.android.gms.safebrowsing.SafeBrowsingService.START cmp=ComponentInfo{com.google.android.gms/com.google.android.gms.chimera.GmsBoundBrokerService} pkg=null
+#392 [٠٣:٤١:١٦.٦٠٣] S2 BINDSVC act=com.google.android.gms.usagereporting.service.START dat=null cmp=null pkg=com.google.android.gms
+#393 [٠٣:٤١:١٦.٦٢٢] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#394 [٠٣:٤١:١٦.٧٢٣] S2     ^ (previous line repeated 5 more times)
+#395 [٠٣:٤١:١٦.٧٢٣] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#396 [٠٣:٤١:١٦.٧٥٣] S2     ^ (previous line repeated 1 more times)
+#397 [٠٣:٤١:١٦.٧٥٤] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#398 [٠٣:٤١:١٧.٧٣٩] S2     ^ (previous line repeated 120 more times)
+#399 [٠٣:٤١:١٩.٠٥١] S2     ^ (previous line repeated 151 more times)
+#400 [٠٣:٤١:١٩.٠٥٣] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.android_webview.services.VariationsSeedServer} pkg=null
+#401 [٠٣:٤١:١٩.٠٥٣] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#402 [٠٣:٤١:١٩.٠٦٢] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.android_webview.services.MetricsBridgeService} pkg=null
+#403 [٠٣:٤١:١٩.٠٦٩] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#404 [٠٣:٤١:١٩.٧٥٩] S2     ^ (previous line repeated 56 more times)
+#405 [٠٣:٤١:٢١.٦٣٩] S2     ^ (previous line repeated 144 more times)
+#406 [٠٣:٤١:٢١.٦٤٠] S2 BINDSVC act=com.google.android.chimera.BoundService.START dat=chimera-action:com.google.android.gms.common.telemetry.service.START cmp=ComponentInfo{com.google.android.gms/com.google.android.gms.chimera.PersistentApiService} pkg=null
+#407 [٠٣:٤١:٢١.٦٥٠] S2     ^ (previous line repeated 1 more times)
+#408 [٠٣:٤١:٢١.٦٥١] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#409 [٠٣:٤١:٢١.٧٧٩] S2     ^ (previous line repeated 8 more times)
+#410 [٠٣:٤١:٢٣.٨٠٣] S2     ^ (previous line repeated 168 more times)
+#411 [٠٣:٤١:٢٥.٨٣٣] S2     ^ (previous line repeated 163 more times)
+#412 [٠٣:٤١:٢٧.٨٥٣] S2     ^ (previous line repeated 169 more times)
+#413 [٠٣:٤١:٢٩.٨٦٩] S2     ^ (previous line repeated 191 more times)
+#414 [٠٣:٤١:٣١.٣٩٨] S2     ^ (previous line repeated 127 more times)
+#415 [٠٣:٤١:٣١.٣٩٩] S2 BINDSVC act=com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE dat=null cmp=ComponentInfo{com.android.vending/com.google.android.finsky.externalreferrer.GetInstallReferrerService} pkg=null
+#416 [٠٣:٤١:٣١.٤٠٣] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#417 [٠٣:٤١:٣١.٨٨٠] S2     ^ (previous line repeated 49 more times)
+#418 [٠٣:٤١:٣٣.١٨٢] S2     ^ (previous line repeated 124 more times)
+#419 [٠٣:٤١:٣٣.١٨٣] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#420 [٠٣:٤١:٣٣.٢٠٩] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#421 [٠٣:٤١:٣٣.٢٦٣] S2     ^ (previous line repeated 3 more times)
+#422 [٠٣:٤١:٣٣.٢٦٤] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#423 [٠٣:٤١:٣٣.٢٧٩] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#424 [٠٣:٤١:٣٣.٣٨٥] S2     ^ (previous line repeated 8 more times)
+#425 [٠٣:٤١:٣٣.٣٨٦] S2 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#426 [٠٣:٤١:٣٣.٣٨٧] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#427 [٠٣:٤١:٣٣.٣٨٧] S2 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#428 [٠٣:٤١:٣٣.٤٠٩] S2     ^ (previous line repeated 4 more times)
+#429 [٠٣:٤١:٣٣.٤٠٩] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#430 [٠٣:٤١:٣٣.٨٩٢] S2     ^ (previous line repeated 63 more times)
+#431 [٠٣:٤١:٣٥.٤٣٢] S2     ^ (previous line repeated 168 more times)
+#432 [٠٣:٤١:٣٥.٤٣٢] S2 GETPKGINFO pkg=com.twitter.android
+#433 [٠٣:٤١:٣٥.٤٣٣] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#434 [٠٣:٤١:٣٥.٤٤٥] S2     ^ (previous line repeated 1 more times)
+#435 [٠٣:٤١:٣٥.٤٤٥] S2 STARTACT act=null dat=null cmp=ComponentInfo{com.tencent.ig/com.tencent.imsdk.android.base.IMSDKProxyActivity} pkg=null
+#436 [٠٣:٤١:٣٥.٤٤٦] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#437 [٠٣:٤١:٣٥.٥٠٢] S2     ^ (previous line repeated 4 more times)
+#438 [٠٣:٤١:٣٥.٥٠٣] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#439 [٠٣:٤١:٣٥.٥٠٤] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#440 [٠٣:٤١:٣٥.٥٢٨] S2 ACT_onCreate com.tencent.imsdk.android.base.IMSDKProxyActivity
+#441 [٠٣:٤١:٣٥.٥٢٩] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#442 [٠٣:٤١:٣٥.٥٣٣] S2 STARTACT act=null dat=null cmp=ComponentInfo{com.tencent.ig/com.tencent.twitterwrapper.TwitterWebActivity} pkg=null
+#443 [٠٣:٤١:٣٥.٥٣٥] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#444 [٠٣:٤١:٣٥.٥٧٨] S2     ^ (previous line repeated 4 more times)
+#445 [٠٣:٤١:٣٥.٥٧٨] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#446 [٠٣:٤١:٣٥.٥٨٠] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#447 [٠٣:٤١:٣٥.٦٣٣] S2     ^ (previous line repeated 3 more times)
+#448 [٠٣:٤١:٣٥.٦٣٣] S2 ACT_onCreate com.tencent.twitterwrapper.TwitterWebActivity
+#449 [٠٣:٤١:٣٥.٦٣٤] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#450 [٠٣:٤١:٣٥.٦٧٠] S2     ^ (previous line repeated 4 more times)
+#451 [٠٣:٤١:٣٥.٦٧٠] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#452 [٠٣:٤١:٣٥.٦٧٢] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#453 [٠٣:٤١:٣٥.٩١٥] S2     ^ (previous line repeated 25 more times)
+#454 [٠٣:٤١:٣٧.٩٢٦] S2     ^ (previous line repeated 160 more times)
+#455 [٠٣:٤١:٣٩.٩٥٧] S2     ^ (previous line repeated 109 more times)
+#456 [٠٣:٤١:٤١.٦٠٩] S2     ^ (previous line repeated 82 more times)
+#457 [٠٣:٤١:٤١.٦١٠] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#458 [٠٣:٤١:٤١.٦٣٠] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#459 [٠٣:٤١:٤١.٦٨٧] S2     ^ (previous line repeated 5 more times)
+#460 [٠٣:٤١:٤١.٦٨٧] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#461 [٠٣:٤١:٤١.٦٩١] S2     ^ (previous line repeated 1 more times)
+#462 [٠٣:٤١:٤١.٦٩١] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#463 [٠٣:٤١:٤١.٩٨٦] S2     ^ (previous line repeated 29 more times)
+#464 [٠٣:٤١:٤٢.٠٧٨] S2     ^ (previous line repeated 6 more times)
+#465 [٠٣:٤١:٤٢.٠٧٨] S2 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#466 [٠٣:٤١:٤٢.٠٨٢] S2     ^ (previous line repeated 1 more times)
+#467 [٠٣:٤١:٤٢.٠٨٣] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#468 [٠٣:٤١:٤٢.٠٩١] S2 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#470 [٠٣:٤١:٤٢.٠٩٣] S2 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#469 [٠٣:٤١:٤٢.٠٩٣] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#471 [٠٣:٤١:٤٢.١٠٥] S2     ^ (previous line repeated 2 more times)
+#472 [٠٣:٤١:٤٢.١٠٦] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#473 [٠٣:٤١:٤٤.٠٠٢] S2     ^ (previous line repeated 174 more times)
+#474 [٠٣:٤١:٤٤.٣٤٤] S2     ^ (previous line repeated 32 more times)
+#475 [٠٣:٤١:٤٤.٣٤٥] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#476 [٠٣:٤١:٤٤.٣٥٢] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#477 [٠٣:٤١:٤٦.٠١٧] S2     ^ (previous line repeated 123 more times)
+#478 [٠٣:٤١:٤٦.٣٦١] S2     ^ (previous line repeated 19 more times)
+#479 [٠٣:٤١:٤٦.٣٦٣] S2 BINDSVC act=com.google.android.gms.measurement.START dat=null cmp=null pkg=com.google.android.gms
+#480 [٠٣:٤١:٤٦.٣٦٣] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#481 [٠٣:٤١:٥٠.٧١٤] S2     ^ (previous line repeated 89 more times)
+#482 [٠٣:٤١:٥٠.٧٧٥] S2 BINDSVC act=com.google.android.gms.ads.identifier.service.START dat=null cmp=null pkg=com.google.android.gms
+#483 [٠٣:٤١:٥٠.٧٨٥] S2     ^ (previous line repeated 1 more times)
+#485 [٠٣:٤١:٥٠.٧٨٧] S2 BINDSVC act=null dat=null cmp=ComponentInfo{com.google.android.webview/org.chromium.content.app.SandboxedProcessService0} pkg=null
+#484 [٠٣:٤١:٥٠.٧٨٥] S2 BINDSVC act=com.google.android.finsky.BIND_GET_INSTALL_REFERRER_SERVICE dat=null cmp=ComponentInfo{com.android.vending/com.google.android.finsky.externalreferrer.GetInstallReferrerService} pkg=null
+#486 [٠٣:٤١:٥٢.٧٩٨] S2     ^ (previous line repeated 114 more times)
+#487 [٠٣:٤١:٥٤.٨٣١] S2     ^ (previous line repeated 137 more times)
+#488 [٠٣:٤١:٥٦.٨٥٩] S2     ^ (previous line repeated 143 more times)
+#489 [٠٣:٤١:٥٨.٨٨٠] S2     ^ (previous line repeated 146 more times)
+#490 [٠٣:٤٢:٠٠.٩٢٨] S2     ^ (previous line repeated 130 more times)
+#491 [٠٣:٤٢:٠٢.٩٧٠] S2     ^ (previous line repeated 150 more times)
+#492 [٠٣:٤٢:٠٥.٠٠٣] S2     ^ (previous line repeated 151 more times)
+#493 [٠٣:٤٢:٠٧.٠٣٠] S2     ^ (previous line repeated 153 more times)
+#494 [٠٣:٤٢:٠٩.١٠٢] S2     ^ (previous line repeated 142 more times)

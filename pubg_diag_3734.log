@@ -1,0 +1,22 @@
+----------------------------------------
+Diagnostic Summary
+----------------------------------------
+Session ID: 0
+Process PID: 3734
+Duration: 0m 38s
+Events Logged: 4
+LoginSessions: 0
+startActivity: 0
+blockedHttpView: 0
+onNewIntent: 0
+Exceptions: 0
+Export Status: SUCCESS
+Output File:
+Download/pubg_diag_3734.log
+----------------------------------------
+
+---- FULL LOG (oldest first) ----
+#1 [٠٣:٣٩:٢٦.٧٣١] S0 LOADLIB_boxapp_ok
+#2 [٠٣:٣٩:٢٦.٧٣٤] S0 APP_attachBaseContext
+#3 [٠٣:٣٩:٢٦.٧٣٦] S0 CRASH_HANDLER_INSTALLED
+#4 [٠٣:٣٩:٢٦.٨٤٧] S0 APP_onCreate

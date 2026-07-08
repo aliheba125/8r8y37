@@ -1,0 +1,22 @@
+----------------------------------------
+Diagnostic Summary
+----------------------------------------
+Session ID: 0
+Process PID: 20720
+Duration: 0m 2s
+Events Logged: 4
+LoginSessions: 0
+startActivity: 0
+blockedHttpView: 0
+onNewIntent: 0
+Exceptions: 0
+Export Status: SUCCESS
+Output File:
+Download/pubg_diag_20720.log
+----------------------------------------
+
+---- FULL LOG (oldest first) ----
+#1 [٠٣:٤٠:١٩.٠١٨] S0 LOADLIB_boxapp_ok
+#2 [٠٣:٤٠:١٩.٠٢٠] S0 APP_attachBaseContext
+#3 [٠٣:٤٠:١٩.٠٢٢] S0 CRASH_HANDLER_INSTALLED
+#4 [٠٣:٤٠:١٩.١٢٦] S0 APP_onCreate
